@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "745042862704",
+    "firebase_url": "https://love-cca.firebaseio.com",
+    "project_id": "love-cca",
+    "storage_bucket": "love-cca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745042862704:android:3219b53bd9a3b669",
+        "android_client_info": {
+          "package_name": "ca.colchesterchristianacademy.lovecca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745042862704-pa83r48gv44irg5985v9443kh1n303ie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.colchesterchristianacademy.lovecca",
+            "certificate_hash": "87d98a8f82426dc4ea28b85a5b9975e605e661f7"
+          }
+        },
+        {
+          "client_id": "745042862704-iim3ctncsp0kvn3loa33n7tc09hiiq35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZKgggj3nQ0jgAPPG0In26gSir9TIYOtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745042862704-qtpf3nh7b2egl2jd9vghbr53kolvo8i9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "745042862704-6smdr8srb2rik57r530jo3o89vrl1mg3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ca.colchesterchristianacademy.Love-CCA",
+                "app_store_id": "1001"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

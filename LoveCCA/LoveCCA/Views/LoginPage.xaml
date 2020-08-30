@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoveCCA.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Image Source="ccalarge.png"/>
+            <Entry
+            Placeholder="E-mail"
+            Keyboard="Email"
+            x:Name="EmailInput"
+                Text="{Binding Email}"                
+            />
+            <Entry
+            Placeholder="Password"
+            IsPassword="true"
+            x:Name="PasswordInput"
+                Text="{Binding Password}"                
+            />
+            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+            <Button Text="Or create a new account..." Command="{Binding SignUpCommand}" FontSize="Small" BorderWidth="0" 
+                    BackgroundColor="Transparent" TextColor="#10448C"/>
+            <Label Text="{Binding Message}" TextColor="Red" FontSize="Small" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

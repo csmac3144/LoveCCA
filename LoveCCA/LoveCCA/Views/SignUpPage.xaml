@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoveCCA.Views.SignUpPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Image Source="ccalarge.png"/>
+            <Entry
+            Placeholder="E-mail"
+            Keyboard="Email"
+            x:Name="EmailInput"
+                Text="{Binding Email}"                
+            />
+            <Label Text="Password must be at least 6 characters" FontSize="Micro"/>
+            <Entry
+            Placeholder="Password"
+            IsPassword="true"
+            x:Name="PasswordInput"
+                Text="{Binding Password}"                
+            />
+            <Entry
+            Placeholder="Confirm Password"
+            IsPassword="true"
+            x:Name="ConfirmPasswordInput"
+                Text="{Binding ConfirmPassword}"                
+            />
+            <Button VerticalOptions="Center" Text="Sign Up" Command="{Binding SignUpCommand}"/>
+            <Button Text="Go back to Login" Command="{Binding GoBackCommand}" FontSize="Small" BorderWidth="0" 
+                    BackgroundColor="Transparent" TextColor="#10448C"/>
+
+            <Label Text="{Binding Message}" TextColor="Red" FontSize="Small" />
+        </StackLayout>    
+    </ContentPage.Content>
+</ContentPage>
