@@ -30,6 +30,18 @@ namespace LoveCCA.ViewModels
         {
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
+
+        private void ClearFields()
+        {
+            Email = string.Empty;
+            Password = string.Empty;
+            ConfirmPassword = string.Empty;
+            Message = string.Empty;
+            OnPropertyChanged("Email");
+            OnPropertyChanged("Password");
+            OnPropertyChanged("ConfirmPassword");
+            OnPropertyChanged("Message");
+        }
         private async void OnSignUpClicked(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
@@ -80,7 +92,16 @@ namespace LoveCCA.ViewModels
                 {
                     Debug.WriteLine("Can't save credentials");
                 }
-                await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                try
+                {
+                    await auth.SendAccountVerificationLink();
+                }
+                catch (Exception)
+                {
+                    Debug.WriteLine("Could not send verification email");
+                }
+                ClearFields();
+                await Shell.Current.GoToAsync($"//{nameof(AccountVerificationPage)}");
             }
             else
             {

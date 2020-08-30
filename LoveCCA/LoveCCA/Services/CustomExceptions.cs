@@ -22,6 +22,18 @@ namespace LoveCCA.Services
         {
         }
     }
+    public class UpdatePasswordException : Exception
+    {
+        public UpdatePasswordException() 
+        {
+        }
+    }
+    public class SendAccountVerificationLinkException : Exception
+    {
+        public SendAccountVerificationLinkException() 
+        {
+        }
+    }
     public class SignUpErrorException : Exception
     {
         public SignUpErrorException() 

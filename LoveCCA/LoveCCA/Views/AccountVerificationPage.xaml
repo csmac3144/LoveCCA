@@ -3,20 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true"
-             x:Class="LoveCCA.Views.ForgotPasswordPage">
+             x:Class="LoveCCA.Views.AccountVerificationPage">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" >
             <Image Source="ccalarge.png"/>
-            <Entry
-            Placeholder="E-mail"
-            Keyboard="Email"
-            x:Name="EmailInput"
-                Text="{Binding Email}"                
-            />
-            <Button VerticalOptions="Center" Text="Send Reset Password Email" Command="{Binding SendLinkCommand}"/>
+            <Label Text="A verification email has been sent to the email address you used to sign up. Please check your email and follow instuctions to verify your account."/>
+            <Button VerticalOptions="Center" Text="Verify" Command="{Binding VerifyCommand}"/>
+            <Button Text="Resend Verification Email" Command="{Binding ResendCommand}" FontSize="Small" BorderWidth="0" 
+                    BackgroundColor="Transparent" TextColor="#10448C"/>
             <Button Text="Go back to Login" Command="{Binding GoBackCommand}" FontSize="Small" BorderWidth="0" 
                     BackgroundColor="Transparent" TextColor="#10448C"/>
             <Label Text="{Binding Message}" TextColor="Red" FontSize="Small" />
+            <Label Text="{Binding ConfirmationMessage}" TextColor="Green" FontSize="Small" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

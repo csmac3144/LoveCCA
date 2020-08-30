@@ -11,6 +11,49 @@ namespace LoveCCA.Droid
 {
     public class AuthDroid : IAuth
     {
+        public void SignOut()
+        {
+            FirebaseAuth.Instance.SignOut();
+        }
+
+        public async Task UpdatePassword(string password)
+        {
+            try
+            {
+                await FirebaseAuth.Instance.CurrentUser.UpdatePasswordAsync(password);
+            }
+            catch (Exception)
+            {
+                throw new UpdatePasswordException();
+            }
+        }
+
+        public async Task<bool> IsCurrentUserVerified(bool refresh)
+        {
+            try
+            {
+                if (refresh)
+                    await FirebaseAuth.Instance.CurrentUser.ReloadAsync();
+                return FirebaseAuth.Instance.CurrentUser.IsEmailVerified;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+
+        public async Task SendAccountVerificationLink()
+        {
+            try
+            {
+                await FirebaseAuth.Instance.CurrentUser.SendEmailVerificationAsync(null);
+            }
+            catch (Exception)
+            {
+                throw new SendAccountVerificationLinkException();
+            }
+        }
         public async Task SendResetPasswordLink(string email)
         {
             try

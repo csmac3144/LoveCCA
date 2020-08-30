@@ -162,4 +162,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\ccalarge.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash.jpg" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:vm="clr-namespace:LoveCCA.ViewModels"
+             xmlns:local="clr-namespace:LoveCCA.ViewModels"  
+             xmlns:model="clr-namespace:LoveCCA.Models"  
+             x:Class="LoveCCA.Views.ServicesPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:ServicesViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#10448C</Color>
+            <Color x:Key="Accent">#D9E7F3</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <ScrollView Grid.Row="1">
+                    <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand"
+                                             Padding="10" x:DataType="model:ServicesModel">
+                                    <Label FontSize="Title" VerticalTextAlignment="Center" Text="{Binding Icon}" 
+                            LineBreakMode="NoWrap" />
+                                    <Label FontSize="Medium" VerticalTextAlignment="Center"  Text="{Binding Description}" 
+                            LineBreakMode="NoWrap"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ServicesViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                                        </TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
