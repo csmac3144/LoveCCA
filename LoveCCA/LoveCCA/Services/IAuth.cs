@@ -9,5 +9,6 @@ namespace LoveCCA.Services
     {
         Task<string> LoginWithEmailPassword(string email, string password);
         Task<string> CreateUserWithEmailPassword(string email, string password);
+        Task SendResetPasswordLink(string email);
     }
 }

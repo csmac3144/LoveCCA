@@ -28,8 +28,7 @@ namespace LoveCCA.ViewModels
         }
         private async void OnGoBackClicked(object obj)
         {
-            //await Shell.Current.GoToAsync(nameof(LoginPage));
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
         private async void OnSignUpClicked(object obj)
         {

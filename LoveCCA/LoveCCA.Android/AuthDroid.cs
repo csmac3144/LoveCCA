@@ -11,6 +11,17 @@ namespace LoveCCA.Droid
 {
     public class AuthDroid : IAuth
     {
+        public async Task SendResetPasswordLink(string email)
+        {
+            try
+            {
+                await FirebaseAuth.Instance.SendPasswordResetEmailAsync(email);
+            }
+            catch (Exception)
+            {
+                throw new SendPasswordResetLinkException();
+            }
+        }
         public async Task<string> LoginWithEmailPassword(string email, string password)
         {
             try
@@ -39,6 +50,10 @@ namespace LoveCCA.Droid
             catch (FirebaseAuthInvalidCredentialsException)
             {
                 throw new BadEmailFormatException();
+            }
+            catch (FirebaseAuthUserCollisionException)
+            {
+                throw new EmailInUseException();
             }
             catch (Exception e)
             {

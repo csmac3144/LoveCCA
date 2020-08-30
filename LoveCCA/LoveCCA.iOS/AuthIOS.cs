@@ -11,6 +11,17 @@ namespace LoveCCA.iOS
 {
     public class AuthIOS : IAuth
     {
+        public async Task SendResetPasswordLink(string email)
+        {
+            try
+            {
+                await Auth.DefaultInstance.SendPasswordResetAsync(email);
+            }
+            catch (Exception)
+            {
+                throw new SendPasswordResetLinkException();
+            }
+        }
         public async Task<string> LoginWithEmailPassword(string email, string password)
         {
             try

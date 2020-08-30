@@ -11,6 +11,7 @@ namespace LoveCCA.ViewModels
         IAuth auth;
         public Command LoginCommand { get; }
         public Command SignUpCommand { get; }
+        public Command ForgotPasswordCommand { get; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string Message { get; set; }
@@ -19,9 +20,14 @@ namespace LoveCCA.ViewModels
         {
             LoginCommand = new Command(OnLoginClicked);
             SignUpCommand = new Command(OnSignUpClicked);
+            ForgotPasswordCommand = new Command(OnForgotPasswordClicked);
             auth = DependencyService.Get<IAuth>();
         }
 
+        private async void OnForgotPasswordClicked(object obj)
+        {
+            await Shell.Current.GoToAsync($"//{nameof(ForgotPasswordPage)}");
+        }
         private async void OnSignUpClicked(object obj)
         {
             await Shell.Current.GoToAsync($"//{nameof(SignUpPage)}");

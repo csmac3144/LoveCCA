@@ -34,7 +34,7 @@ namespace LoveCCA
                 }
                 catch (Exception)
                 {
-                    MainPage = new LoginPage();
+                    await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
                 }
             });
 

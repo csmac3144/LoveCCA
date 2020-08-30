@@ -16,6 +16,12 @@ namespace LoveCCA.Services
         {
         }
     }
+    public class SendPasswordResetLinkException : Exception
+    {
+        public SendPasswordResetLinkException() 
+        {
+        }
+    }
     public class SignUpErrorException : Exception
     {
         public SignUpErrorException() 
