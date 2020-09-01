@@ -22,6 +22,10 @@ namespace LoveCCA.Droid
             {
                 await FirebaseAuth.Instance.CurrentUser.UpdatePasswordAsync(password);
             }
+            catch (FirebaseAuthWeakPasswordException)
+            {
+                throw new WeakPasswordException();
+            }
             catch (Exception)
             {
                 throw new UpdatePasswordException();

@@ -25,14 +25,14 @@
                 <ScrollView Grid.Row="1">
                     <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
-                SelectionMode="None">
+                SelectionMode="Single">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand"
                                              Padding="10" x:DataType="model:ServicesModel">
-                                    <Label FontSize="Title" VerticalTextAlignment="Center" Text="{Binding Icon}" 
+                                    <Label FontSize="60" VerticalTextAlignment="Center" Text="{Binding Icon}" 
                             LineBreakMode="NoWrap" />
-                                    <Label FontSize="Medium" VerticalTextAlignment="Center"  Text="{Binding Description}" 
+                                    <Label FontSize="Title" VerticalTextAlignment="Center"  Text="{Binding Description}" 
                             LineBreakMode="NoWrap"/>
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer 

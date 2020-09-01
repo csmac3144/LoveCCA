@@ -1,12 +1,10 @@
-﻿using System;
-
+﻿
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 using Firebase;
+using System.Threading.Tasks;
 
 namespace LoveCCA.Droid
 {
@@ -16,7 +14,12 @@ namespace LoveCCA.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             FirebaseApp.InitializeApp(Android.App.Application.Context);
-            
+
+            Task.Run(async () => {
+                var o = new DatabaseDroid();
+                await o.GetAllPersons();
+            });
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

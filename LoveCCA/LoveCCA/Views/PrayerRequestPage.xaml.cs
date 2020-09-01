@@ -1,5 +1,4 @@
-﻿using LoveCCA.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace LoveCCA.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ChangePasswordPage : ContentPage
+    public partial class PrayerRequestPage : ContentPage
     {
-        public ChangePasswordPage()
+        public PrayerRequestPage()
         {
             InitializeComponent();
-            this.BindingContext = new ChangePasswordViewModel();
         }
     }
 }
