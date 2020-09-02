@@ -15,6 +15,9 @@ namespace LoveCCA.Droid
         {
             FirebaseApp.InitializeApp(Android.App.Application.Context);
 
+            var o = new DatabaseDroid();
+            o.Connect(FirebaseApp.Instance);
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -23,6 +26,7 @@ namespace LoveCCA.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

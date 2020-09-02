@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Threading.Tasks;
+using Android.Gms.Extensions;
 using Firebase.Auth;
 using LoveCCA.Droid;
 using LoveCCA.Services;
@@ -74,8 +75,8 @@ namespace LoveCCA.Droid
             try
             {
                 var user = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
-                var token = await user.User.GetIdTokenAsync(false);
-                return token.Token;
+                var token = await user.User.GetIdToken(false);
+                return ((GetTokenResult)token).Token;
             }
             catch (FirebaseAuthInvalidUserException e)
             {
@@ -87,8 +88,8 @@ namespace LoveCCA.Droid
             try
             {
                 var user = await FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);
-                var token = await user.User.GetIdTokenAsync(false);
-                return token.Token;
+                var token = await user.User.GetIdToken(false);
+                return ((GetTokenResult)token).Token;
             }
             catch (FirebaseAuthWeakPasswordException)
             {
