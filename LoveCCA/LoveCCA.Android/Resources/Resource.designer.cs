@@ -9748,10 +9748,13 @@ namespace LoveCCA.Droid
 			public const int path_password_strike_through = 2131558477;
 			
 			// aapt resource value: 0x7F0D004E
-			public const int search_menu_title = 2131558478;
+			public const int project_id = 2131558478;
 			
 			// aapt resource value: 0x7F0D004F
-			public const int status_bar_notification_info_overflow = 2131558479;
+			public const int search_menu_title = 2131558479;
+			
+			// aapt resource value: 0x7F0D0050
+			public const int status_bar_notification_info_overflow = 2131558480;
 			
 			static String()
 			{

@@ -15,11 +15,6 @@ namespace LoveCCA.Droid
         {
             FirebaseApp.InitializeApp(Android.App.Application.Context);
 
-            Task.Run(async () => {
-                var o = new DatabaseDroid();
-                await o.GetAllPersons();
-            });
-
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
