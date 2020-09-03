@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:vm="clr-namespace:LoveCCA.ViewModels"
+             Title="My Kids"
+             x:Class="LoveCCA.Views.MyKidsPage">
+
+    <ContentPage.BindingContext>
+        <vm:MyKidsViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#10448C</Color>
+            <Color x:Key="Accent">#D9E7F3</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbarItemAdd" Text="Add"
+                 Clicked="ToolbarItemAdd_Clicked"
+                 IconImageSource="plus.png"
+                 Order="Primary"
+                 Priority="0" />
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+
+            <CollectionView x:Name="collectionView"
+                ItemsSource="{Binding Kids}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView Padding="8">
+                            <SwipeView.LeftItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Delete"
+                                   IconImageSource="cancel.png"
+                                   BackgroundColor="LightPink"
+                                               Invoked="SwipeItem_Invoked"
+                                     />
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+                            <Grid BackgroundColor="White"
+                              Padding="10">
+                            <Label Text="{Binding .}"/>
+                        </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+    </ContentPage.Content>
+</ContentPage>

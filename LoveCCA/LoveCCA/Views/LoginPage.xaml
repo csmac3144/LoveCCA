@@ -22,7 +22,7 @@
                     BackgroundColor="Transparent" TextColor="#10448C"/>
             <Button Text="Sign Up" Command="{Binding SignUpCommand}" FontSize="Small" BorderWidth="0" 
                     BackgroundColor="Transparent" TextColor="#10448C"/>
-            <Label Text="{Binding Message}" TextColor="Red" FontSize="Small" />
+            <Label Text="{Binding Message}" TextColor="Red" FontSize="Small"  />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

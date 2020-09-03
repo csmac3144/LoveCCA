@@ -1,4 +1,5 @@
 ﻿using LoveCCA.Models;
+using LoveCCA.Views;
 using Plugin.CloudFirestore;
 using System;
 using System.Diagnostics;
@@ -7,19 +8,21 @@ using System.Threading.Tasks;
 
 namespace LoveCCA.Services
 {
-    public interface IUserProfileService
+    //public interface IUserProfileService
+    //{
+    //    UserProfile CurrentUserProfile { get; }
+    //    Task LoadUserProfile(string email);
+    //    Task<UserProfile> GetUserProfile(string email);
+    //    Task RemoveKid(string name);
+    //    Task AddKid(string name);
+    //}
+
+    public class UserProfileService 
     {
-        UserProfile CurrentUserProfile { get; }
-        Task LoadUserProfile(string email);
-        Task<UserProfile> GetUserProfile(string email);
-    }
 
-    public class UserProfileService : IUserProfileService
-    {
+        private static UserProfileService _instance;
 
-        private static IUserProfileService _instance;
-
-        public static IUserProfileService Instance
+        public static UserProfileService Instance
         {
             get
             {
@@ -80,6 +83,51 @@ namespace LoveCCA.Services
                 Debug.WriteLine("Error fetching user profile");
             }
             return null;
+        }
+
+        public async Task UpdateCurrentProfile()
+        {
+            await CrossCloudFirestore.Current
+             .Instance
+             .GetCollection("user_profiles")
+             .GetDocument(CurrentUserProfile.Id)
+             .UpdateDataAsync(new { Email = CurrentUserProfile.Email, 
+                Name = CurrentUserProfile.Name,
+                CellPhone = CurrentUserProfile.CellPhone,
+                AllowNotifications = CurrentUserProfile.AllowNotifications,
+                Kids =  CurrentUserProfile.Kids});
+        }
+
+        public async Task AddKid(string name)
+        {
+            if (CurrentUserProfile != null)
+            {
+                if (CurrentUserProfile.Kids != null)
+                {
+                    if (!CurrentUserProfile.Kids.Any(i => i == name))
+                    {
+                        CurrentUserProfile.Kids.Add(name);
+                        await UpdateCurrentProfile();
+                    }
+                }
+            }
+        }
+
+
+        public async Task RemoveKid(string name)
+        {
+            if (CurrentUserProfile != null)
+            {
+                if (CurrentUserProfile.Kids != null)
+                {
+                    var item = CurrentUserProfile.Kids.FirstOrDefault(i => i == name);
+                    if (item != null)
+                    {
+                        CurrentUserProfile.Kids.Remove(item);
+                        await UpdateCurrentProfile();
+                    }
+                }
+            }
         }
     }
 }

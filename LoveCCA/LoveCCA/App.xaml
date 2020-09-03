@@ -28,6 +28,10 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="Opacity" Value="1"></Setter>
+            </Style>
         </ResourceDictionary>        
     </Application.Resources>
 </Application>

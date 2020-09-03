@@ -1,5 +1,7 @@
 ﻿using Plugin.CloudFirestore.Attributes;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LoveCCA.Models
 {
@@ -24,5 +26,6 @@ namespace LoveCCA.Models
         public string CellPhone { get; set; }
         public List<string> Kids { get; set; }
         public bool AllowNotifications { get; set; }
+
     }
 }

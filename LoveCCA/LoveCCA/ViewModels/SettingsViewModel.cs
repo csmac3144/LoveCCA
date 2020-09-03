@@ -1,19 +1,26 @@
 ﻿using LoveCCA.Services;
+using LoveCCA.Views;
 using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace LoveCCA.ViewModels
 {
     public class SettingsViewModel : BaseViewModel
     {
+        public Command MyKidsCommand { get; }
+
         public SettingsViewModel()
         {
             Title = "Settings";
             AllowNotificaitons = UserProfileService.Instance.CurrentUserProfile.AllowNotifications;
-            Kids = UserProfileService.Instance.CurrentUserProfile.Kids;
+            MyKidsCommand = new Command(OnMyKidsTapped);
         }
 
         public bool AllowNotificaitons { get; set; }
 
-        public List<string> Kids { get; set; }
+        private async void OnMyKidsTapped(object obj)
+        {
+            await Shell.Current.GoToAsync($"{nameof(MyKidsPage)}");
+        }
     }
 }

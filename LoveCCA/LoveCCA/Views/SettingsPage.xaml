@@ -11,11 +11,12 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#D9E7F3</Color>
+            <Color x:Key="Primary">#10448C</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
         <ScrollView>
-        <Grid Padding="10,10,10,10">
+        <Grid Padding="10,10,10,10" RowSpacing="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -26,14 +27,23 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Text="Allow Notifications"/>
+            <Label Grid.Row="0" Grid.Column="0" Text="Allow Notifications" FontSize="Medium"/>
             <Switch  Grid.Row="0" Grid.Column="1" IsToggled="{Binding AllowNotificaitons}"/>
-            <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
-                HorizontalOptions="FillAndExpand" Color="Gray" HeightRequest="1"
-            />
-            <Label Grid.Row="2" Grid.Column="0" Text="My Kids" FontSize="Medium" />
-            <Button Grid.Row="2" Grid.Column="1" Text="Add"/>
-            <CollectionView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding Kids}" />
+            <Button Grid.Row="1" Grid.ColumnSpan="2" Text="Manage My Kids" Command="{Binding MyKidsCommand}"/>
+            <!--<CollectionView Grid.Row="2" 
+                            Grid.Column="0" 
+                            Grid.ColumnSpan="2" 
+                            ItemsSource="{Binding Kids}">
+                <CollectionView.Header>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Padding="8,8,8,8">
+                        <Label Margin="10,0,0,0"
+                   Text="My Kids"
+                   FontSize="Medium"
+                   FontAttributes="Bold" />
+                        <Button Text="Add" TextColor="#10448C" BackgroundColor="Transparent"/>
+                    </StackLayout>
+                </CollectionView.Header>
+            </CollectionView>-->
         </Grid>
         </ScrollView>
 </ContentPage>
