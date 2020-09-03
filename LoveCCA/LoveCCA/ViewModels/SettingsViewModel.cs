@@ -1,7 +1,5 @@
-﻿using System;
-using System.Windows.Input;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+﻿using LoveCCA.Services;
+using System.Collections.Generic;
 
 namespace LoveCCA.ViewModels
 {
@@ -10,7 +8,12 @@ namespace LoveCCA.ViewModels
         public SettingsViewModel()
         {
             Title = "Settings";
+            AllowNotificaitons = UserProfileService.Instance.CurrentUserProfile.AllowNotifications;
+            Kids = UserProfileService.Instance.CurrentUserProfile.Kids;
         }
 
+        public bool AllowNotificaitons { get; set; }
+
+        public List<string> Kids { get; set; }
     }
 }

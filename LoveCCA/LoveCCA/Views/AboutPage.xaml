@@ -23,7 +23,7 @@
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
-                    <Image Source="splash.jpg" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="300"/>
+                    <Image Source="splash.png"  VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="160"/>
                 </ContentView>
             </StackLayout>
         </StackLayout>

@@ -7,11 +7,9 @@ namespace LoveCCA.ViewModels
 {
     public class AccountVerificationViewModel : BaseViewModel
     {
-        IAuth auth;
         public Command VerifyCommand { get; }
         public Command ResendCommand { get; }
         public Command GoBackCommand { get; }
-        public string Message { get; set; }
         public string ConfirmationMessage { get; set; }
 
         public AccountVerificationViewModel()
@@ -19,7 +17,7 @@ namespace LoveCCA.ViewModels
             VerifyCommand = new Command(OnVerifyClicked);
             ResendCommand = new Command(OnResendClicked);
             GoBackCommand = new Command(OnGoBackToLoginClicked);
-            auth = DependencyService.Get<IAuth>();
+            
         }
 
         private async void OnGoBackToLoginClicked(object obj)
@@ -30,7 +28,6 @@ namespace LoveCCA.ViewModels
         private void ClearMessages()
         {
             Message = string.Empty;
-            OnPropertyChanged("Message");
             ConfirmationMessage = string.Empty;
             OnPropertyChanged("ConfirmationMessage");
 
@@ -38,42 +35,29 @@ namespace LoveCCA.ViewModels
 
         private async void OnResendClicked(object obj)
         {
-            try
-            {
-                await auth.SendAccountVerificationLink();
+            if (await LoginService.Instance.SendAccountVerificationLink())
+            { 
                 ClearMessages();
                 ConfirmationMessage = "Verification email sent";
                 OnPropertyChanged("ConfirmationMessage");
             }
-            catch (Exception)
+            else
             {
                 ClearMessages();
                 Message = "Error sending verification email";
-                OnPropertyChanged("Message");
             }
         }
 
         private async void OnVerifyClicked(object obj)
         {
-            try
+            if (await LoginService.Instance.IsCurrentUserVerified(refresh: true))
             {
-                bool verified = await auth.IsCurrentUserVerified(refresh: true);
-                if (verified)
-                {
-                    await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
-                }
-                else
-                {
-                    ClearMessages();
-                    Message = "Could not verify your account";
-                    OnPropertyChanged("Message");
-                }
+                await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             }
-            catch (Exception)
+            else
             {
                 ClearMessages();
                 Message = "Could not verify your account";
-                OnPropertyChanged("Message");
             }
         }
     }

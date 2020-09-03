@@ -78,9 +78,13 @@ namespace LoveCCA.Droid
                 var token = await user.User.GetIdToken(false);
                 return ((GetTokenResult)token).Token;
             }
-            catch (FirebaseAuthInvalidUserException e)
+            catch (FirebaseAuthInvalidUserException)
             {
                 throw new InvalidLoginException();
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
         public async Task<string> CreateUserWithEmailPassword(string email, string password)

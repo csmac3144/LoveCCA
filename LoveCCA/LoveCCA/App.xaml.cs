@@ -1,8 +1,6 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using LoveCCA.Services;
+﻿using LoveCCA.Services;
 using LoveCCA.Views;
+using Xamarin.Forms;
 
 namespace LoveCCA
 {
@@ -13,31 +11,16 @@ namespace LoveCCA
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
+         
 
             Device.BeginInvokeOnMainThread(async () =>
             {
-                try
-                {
-                    var credentials = await StorageVault.GetCredentials();
-                    var auth = DependencyService.Get<IAuth>();
-                    var token = await auth.LoginWithEmailPassword(credentials.Item1, credentials.Item2);
-                    if (!string.IsNullOrEmpty(token))
-                    {
-                        await StorageVault.SetToken(token);
-                    }
-                    else
-                    {
-                        await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-                    }
-                }
-                catch (Exception)
+                if (!(await LoginService.Instance.TrySilentLogin()))
                 {
                     await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
                 }
             });
-
         }
 
         protected override void OnStart()

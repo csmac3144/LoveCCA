@@ -8,17 +8,17 @@ namespace LoveCCA.ViewModels
 {
     public class ForgotPasswordViewModel : BaseViewModel
     {
-        IAuth auth;
+        
+
         public Command SendLinkCommand { get; }
         public Command GoBackCommand { get; }
         public string Email { get; set; }
-        public string Message { get; set; }
 
         public ForgotPasswordViewModel()
         {
             SendLinkCommand = new Command(OnSendLinkClicked);
             GoBackCommand = new Command(OnGoBackClicked);
-            auth = DependencyService.Get<IAuth>();
+            
         }
 
         private async void OnGoBackClicked(object obj)
@@ -28,16 +28,13 @@ namespace LoveCCA.ViewModels
 
         private async void OnSendLinkClicked(object obj)
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            try
+            if (await LoginService.Instance.SendResetPasswordLink(Email)) 
             {
-                await auth.SendResetPasswordLink(Email);
                 await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-            }
-            catch (Exception)
+            } 
+            else
             {
                 Message = "Cannot send reset link - please check email address";
-                OnPropertyChanged("Message");
             }
         }
     }

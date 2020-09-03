@@ -15,16 +15,25 @@
     </ContentPage.Resources>
 
         <ScrollView>
-        <Grid>
+        <Grid Padding="10,10,10,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            
+            <Label Grid.Row="0" Grid.Column="0" Text="Allow Notifications"/>
+            <Switch  Grid.Row="0" Grid.Column="1" IsToggled="{Binding AllowNotificaitons}"/>
+            <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                HorizontalOptions="FillAndExpand" Color="Gray" HeightRequest="1"
+            />
+            <Label Grid.Row="2" Grid.Column="0" Text="My Kids" FontSize="Medium" />
+            <Button Grid.Row="2" Grid.Column="1" Text="Add"/>
+            <CollectionView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding Kids}" />
         </Grid>
         </ScrollView>
 </ContentPage>

@@ -12,7 +12,20 @@ namespace LoveCCA.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        private string _message;
+        public string Message
+        {
+            get
+            {
+                return _message;
+            }
+            set
+            {
+                _message = value;
+                OnPropertyChanged("Message");
+            }
+        }
+
 
         bool isBusy = false;
         public bool IsBusy

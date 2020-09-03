@@ -5,18 +5,20 @@ using Android.Runtime;
 using Android.OS;
 using Firebase;
 using System.Threading.Tasks;
+using Android.Gms.Tasks;
+using Firebase.Firestore;
+using System;
+using Plugin.CloudFirestore;
 
 namespace LoveCCA.Droid
 {
-    [Activity(Label = "LoveCCA", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
+    [Activity(Label = "LoveCCA", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             FirebaseApp.InitializeApp(Android.App.Application.Context);
 
-            var o = new DatabaseDroid();
-            o.Connect(FirebaseApp.Instance);
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
@@ -34,5 +36,8 @@ namespace LoveCCA.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
+
+
 }

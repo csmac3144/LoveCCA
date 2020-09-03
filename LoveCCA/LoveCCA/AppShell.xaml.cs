@@ -21,16 +21,7 @@ namespace LoveCCA
 
         private async void OnSignOutClicked(object sender, EventArgs e)
         {
-            try
-            {
-                var auth = DependencyService.Get<IAuth>();
-                auth.SignOut();
-                StorageVault.ClearCredentials();
-            }
-            catch (Exception)
-            {
-                Debug.WriteLine("Could not sign out"); 
-            }
+            LoginService.Instance.SignOut();
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
         private async void OnChangePasswordClicked(object sender, EventArgs e)
