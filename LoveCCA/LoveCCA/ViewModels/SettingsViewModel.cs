@@ -16,6 +16,9 @@ namespace LoveCCA.ViewModels
             MyKidsCommand = new Command(OnMyKidsTapped);
         }
 
+        public string Name { get; set; }
+        public string CellPhone { get; set; }
+
         public bool AllowNotificaitons { get; set; }
 
         private async void OnMyKidsTapped(object obj)

@@ -155,7 +155,7 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\plus.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\drawable\cancel.png" />
+    <AndroidResource Include="Resources\drawable\cancel.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\cancel.png" />

@@ -22,28 +22,17 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Text="Allow Notifications" FontSize="Medium"/>
-            <Switch  Grid.Row="0" Grid.Column="1" IsToggled="{Binding AllowNotificaitons}"/>
-            <Button Grid.Row="1" Grid.ColumnSpan="2" Text="Manage My Kids" Command="{Binding MyKidsCommand}"/>
-            <!--<CollectionView Grid.Row="2" 
-                            Grid.Column="0" 
-                            Grid.ColumnSpan="2" 
-                            ItemsSource="{Binding Kids}">
-                <CollectionView.Header>
-                    <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Padding="8,8,8,8">
-                        <Label Margin="10,0,0,0"
-                   Text="My Kids"
-                   FontSize="Medium"
-                   FontAttributes="Bold" />
-                        <Button Text="Add" TextColor="#10448C" BackgroundColor="Transparent"/>
-                    </StackLayout>
-                </CollectionView.Header>
-            </CollectionView>-->
+            <Entry Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Placeholder="My Full Name" Text="{Binding Name}"/>
+            <Entry Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Placeholder="My Mobile Phone Number" Text="{Binding CellPhone}"/>
+            <Label Grid.Row="2" Grid.Column="0" Text="Allow Notifications" FontSize="Medium"/>
+            <Switch  Grid.Row="2" Grid.Column="1" IsToggled="{Binding AllowNotificaitons}"/>
+            <Button Grid.Row="3" Grid.ColumnSpan="2" Text="Manage My Kids" Command="{Binding MyKidsCommand}"/>
         </Grid>
         </ScrollView>
 </ContentPage>

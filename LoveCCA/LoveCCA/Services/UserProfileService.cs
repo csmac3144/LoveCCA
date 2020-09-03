@@ -46,7 +46,8 @@ namespace LoveCCA.Services
                     profile = new UserProfile
                     {
                         Id = email,
-                        Email = email
+                        Email = email,
+                        AllowNotifications = true
                     };
                     await CrossCloudFirestore.Current
                                  .Instance
