@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LoveCCA.ViewModels;
+using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +12,12 @@ namespace LoveCCA.Views
         public SettingsPage()
         {
             InitializeComponent();
+        }
+
+
+        private async void toolbarItemSave_Clicked(object sender, EventArgs e)
+        {
+            await ((SettingsViewModel)BindingContext).SaveChanges();
         }
     }
 }
