@@ -47,7 +47,6 @@ namespace LoveCCA.Services
             ProductType = productType;
             if (_schoolYearSettings == null)
                 _schoolYearSettings = await _holidayService.LoadSchoolSettings();
-
             _initWeekStart = initDate.StartOfWeek(DayOfWeek.Sunday);
             LoadWeeks();
 

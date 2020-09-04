@@ -15,10 +15,12 @@ namespace LoveCCA.Services
         {
             if (DateTime.Now.Month > 7)
             {
-                if (DateTime.Now.Year > schoolStartYear)
-                    return false;
+                return schoolStartYear == DateTime.Now.Year;
+            } 
+            else
+            {
+                return (DateTime.Now.Year == schoolStartYear + 1);
             }
-            return (DateTime.Now.Year > schoolStartYear + 1);
         }
 
         public virtual async Task<SchoolYearSettings> LoadSchoolSettings()

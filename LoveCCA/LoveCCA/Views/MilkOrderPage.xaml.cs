@@ -28,5 +28,10 @@ namespace LoveCCA.Views
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
+
+        private void Switch_Toggled(object sender, ToggledEventArgs e)
+        {
+            //Send to vm
+        }
     }
 }

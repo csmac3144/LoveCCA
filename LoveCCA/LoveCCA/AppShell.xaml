@@ -82,6 +82,7 @@
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
         <ShellContent Title="Services" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:ServicesPage}" />
+        <ShellContent Title="Cart" Icon="shopping_cart.png" ContentTemplate="{DataTemplate local:ShoppingCartPage}" />
         <ShellContent Title="Settings" Icon="settings.png" ContentTemplate="{DataTemplate local:SettingsPage}" />
     </FlyoutItem>
 

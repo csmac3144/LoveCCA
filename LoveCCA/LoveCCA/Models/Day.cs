@@ -19,7 +19,13 @@ namespace LoveCCA.Models
         public string DateLabel {  
             get
             {
-                return Date.ToString("D");
+                return Date.ToString("M");
+            }
+        }
+        public string DayOfWeekLabel {  
+            get
+            {
+                return Date.DayOfWeek.ToString();
             }
         }
         public string Description { get; set; }
@@ -27,6 +33,21 @@ namespace LoveCCA.Models
         public OrderStatus OrderStatus { get; internal set; }
         public string OrderChild { get; set; }
         public string OrderProductType { get; set; }
+        private bool _isPending;
+        public bool IsPending { 
+            get
+            {
+                return OrderStatus == OrderStatus.Pending;
+            }
+            set
+            {
+                _isPending = value;
+                if (_isPending)
+                    OrderStatus = OrderStatus.Pending;
+                else
+                    OrderStatus = OrderStatus.None;
+            }
+        }
 
     }
 }

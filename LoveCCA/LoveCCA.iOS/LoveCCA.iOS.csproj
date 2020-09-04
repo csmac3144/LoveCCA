@@ -213,4 +213,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\save.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shopping_cart%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shopping_cart%402x.png" />
+  </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@
              x:Class="LoveCCA.Views.MilkOrderPage"
              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
              xmlns:model="clr-namespace:LoveCCA.Models"  
+             xmlns:local="clr-namespace:LoveCCA.Views"  
              Title="Milk Order">
 
     <ContentPage.BindingContext>
@@ -14,6 +15,89 @@
         <ResourceDictionary>
             <Color x:Key="Accent">#D9E7F3</Color>
             <Color x:Key="Primary">#10448C</Color>
+            <DataTemplate x:Key="previousOrderTemplate">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" >
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding DayOfWeekLabel}" 
+                            TextColor="Gray"
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" FontAttributes="Bold" />
+                            <Label Text="{Binding DateLabel}" 
+                            TextColor="Gray"
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="12" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="EndAndExpand">
+                            <Switch IsToggled="True" IsEnabled="False"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="validPersonTemplate">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding DayOfWeekLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" FontAttributes="Bold" />
+                            <Label Text="{Binding DateLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="12" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="EndAndExpand">
+                            <Switch IsToggled="{Binding IsPending}" Toggled="Switch_Toggled"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="invalidPersonTemplate">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding DayOfWeekLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" FontAttributes="Bold" />
+                            <Label Text="{Binding DateLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="12" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding Description}" FontSize="13" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="weekendTemplate">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource Primary}">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding DayOfWeekLabel}"
+                            TextColor="White"
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" FontAttributes="Bold" />
+                            <Label Text="{Binding DateLabel}" 
+                            TextColor="White"
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="12" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+            <local:PersonDataTemplateSelector x:Key="personDataTemplateSelector"
+                ValidTemplate="{StaticResource validPersonTemplate}"
+                InvalidTemplate="{StaticResource invalidPersonTemplate}" 
+                WeekendTemplate="{StaticResource weekendTemplate}"
+                PreviouslyOrderedTemplate="{StaticResource previousOrderTemplate}"
+            />
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -34,27 +118,12 @@
                 </StackLayout>
 
             </Grid>
-            <RefreshView x:DataType="vm:MilkOrderViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <RefreshView x:DataType="vm:MilkOrderViewModel" Command="{Binding LoadItemsCommand}" 
+                IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
+                ItemTemplate="{StaticResource personDataTemplateSelector}"                                
                 SelectionMode="None">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout Padding="10" x:DataType="model:Day">
-                                <Label Text="{Binding DateLabel}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                                <!--<StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer 
-                                NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
-                                CommandParameter="{Binding .}">
-                                        </TapGestureRecognizer>
-                                    </StackLayout.GestureRecognizers>-->
-                            </StackLayout>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
                 </CollectionView>
             </RefreshView>
         </StackLayout>
