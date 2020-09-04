@@ -29,6 +29,7 @@
                 </Setter>
             </Style>
             <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"></Setter>
                 <Setter Property="TextColor" Value="Black"></Setter>
                 <Setter Property="Opacity" Value="1"></Setter>
             </Style>

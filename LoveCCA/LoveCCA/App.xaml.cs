@@ -1,5 +1,6 @@
 ﻿using LoveCCA.Services;
 using LoveCCA.Views;
+using System;
 using Xamarin.Forms;
 
 namespace LoveCCA
@@ -16,6 +17,7 @@ namespace LoveCCA
 
             Device.BeginInvokeOnMainThread(async () =>
             {
+                //await OrderCalendarService.Instance.Initialize(DateTime.Now);
                 if (!(await LoginService.Instance.TrySilentLogin()))
                 {
                     await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");

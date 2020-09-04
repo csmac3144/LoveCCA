@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using LoveCCA.Services;
 using UIKit;
 
 namespace LoveCCA.iOS
@@ -22,8 +23,11 @@ namespace LoveCCA.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental", "SwipeView_Experimental");
             global::Xamarin.Forms.Forms.Init();
+            global::Xamarin.Forms.DependencyService.RegisterSingleton<IHolidayService>(new HolidayService());
+            global::Xamarin.Forms.DependencyService.RegisterSingleton<IOrderCalendarService>(new OrderCalendarService());
             LoadApplication(new App());
             Firebase.Core.App.Configure();
             return base.FinishedLaunching(app, options);

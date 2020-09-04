@@ -1,5 +1,6 @@
 ﻿using LoveCCA.Models;
 using LoveCCA.Services;
+using LoveCCA.Views;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
@@ -31,6 +32,7 @@ namespace LoveCCA.ViewModels
                 case 0:
                     break;
                 case 1:
+                    await Shell.Current.GoToAsync($"{nameof(MilkOrderPage)}");
                     break;
                 case 2:
                     break;

@@ -8,14 +8,6 @@ using System.Threading.Tasks;
 
 namespace LoveCCA.Services
 {
-    //public interface IUserProfileService
-    //{
-    //    UserProfile CurrentUserProfile { get; }
-    //    Task LoadUserProfile(string email);
-    //    Task<UserProfile> GetUserProfile(string email);
-    //    Task RemoveKid(string name);
-    //    Task AddKid(string name);
-    //}
 
     public class UserProfileService 
     {

@@ -10,6 +10,7 @@ using Firebase.Firestore;
 using System;
 using Plugin.CloudFirestore;
 using Xamarin.Forms;
+using LoveCCA.Services;
 
 namespace LoveCCA.Droid
 {
@@ -25,9 +26,13 @@ namespace LoveCCA.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+
+
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental", "SwipeView_Experimental");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.Forms.DependencyService.RegisterSingleton<IHolidayService>(new HolidayService());
+            Xamarin.Forms.DependencyService.RegisterSingleton<IOrderCalendarService>(new OrderCalendarService());
             LoadApplication(new App());
 
         }
