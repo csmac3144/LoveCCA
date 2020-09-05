@@ -24,9 +24,9 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="33*" />
+                    <ColumnDefinition Width="33*" />
+                    <ColumnDefinition Width="33*" />
                 </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" FontSize="Large" Text="Cart Total:" VerticalTextAlignment="Center"/>
                     <Label Grid.Column="1" FontSize="Large" FontAttributes="Bold" Text="{Binding CartTotal}" VerticalTextAlignment="Center"/>
