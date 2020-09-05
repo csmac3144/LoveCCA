@@ -1,8 +1,10 @@
-﻿using LoveCCA.Services;
+﻿using LoveCCA.Models;
+using LoveCCA.Services;
 using LoveCCA.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -29,9 +31,15 @@ namespace LoveCCA.Views
             _viewModel.OnAppearing();
         }
 
-        private void Switch_Toggled(object sender, ToggledEventArgs e)
+        private async void Switch_Toggled(object sender, ToggledEventArgs e)
         {
-            //Send to vm
+            var day = ((Xamarin.Forms.Switch)sender).BindingContext as Day;
+            if (day != null)
+            {
+                Debug.WriteLine($"{day.DateLabel} {day.OrderId} {e.Value}");
+                await _viewModel.UpdateOrder(day);
+            }
+
         }
     }
 }

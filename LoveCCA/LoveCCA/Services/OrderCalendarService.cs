@@ -24,14 +24,18 @@ namespace LoveCCA.Services
         private DateTime _initWeekStart;
         private SchoolYearSettings _schoolYearSettings;
         private IHolidayService _holidayService;
-        public OrderCalendarService() : this(DependencyService.Get<IHolidayService>())
+        private IOrderHistoryService _orderHistoryService;
+        private List<Order> _relevantOrders;
+
+        public OrderCalendarService() : this(DependencyService.Get<IHolidayService>(), DependencyService.Get<IOrderHistoryService>())
         {
         }
 
         public SchoolYearSettings SchoolYearSettings => _schoolYearSettings;
 
-        public OrderCalendarService(IHolidayService holidayService)
+        public OrderCalendarService(IHolidayService holidayService, IOrderHistoryService orderHistoryService)
         {
+            _orderHistoryService = orderHistoryService;
             _holidayService = holidayService;
             WeekDays = new List<Day>();
         }
@@ -45,6 +49,10 @@ namespace LoveCCA.Services
         {
             Child = child;
             ProductType = productType;
+
+            await _orderHistoryService.LoadOrders();
+            _relevantOrders = _orderHistoryService.Orders.Where(o => o.Child == this.Child && o.ProductType == this.ProductType).ToList();
+
             if (_schoolYearSettings == null)
                 _schoolYearSettings = await _holidayService.LoadSchoolSettings();
             _initWeekStart = initDate.StartOfWeek(DayOfWeek.Sunday);
@@ -105,10 +113,32 @@ namespace LoveCCA.Services
 
             while (dateToAdd <= endDate)
             {
-                var day = new Day() { Date = dateToAdd };
-                WeekDays.Add(CheckIfHoliday(day));
+                var day = new Day() { Date = dateToAdd, OrderProductType = ProductType, OrderChild = Child };
+                day = CheckIfHoliday(day);
+                day = MarkOrderHistory(day);
+                WeekDays.Add(day);
                 dateToAdd = dateToAdd.AddDays(1);
             }
+        }
+
+        private Day MarkOrderHistory(Day day)
+        {
+            var order = _relevantOrders.FirstOrDefault(o => o.DeliveryDate.Date == day.Date.Date);
+            if (order != null)
+            {
+                day.OrderId = order.Id;
+                day.OrderChild = order.Child;
+                day.OrderProductType = order.ProductType;
+                if (order.Status == (int)OrderStatus.Completed)
+                {
+                    day.OrderStatus = OrderStatus.Completed;
+                }
+                if (order.Status == (int)OrderStatus.Pending)
+                {
+                    day.OrderStatus = OrderStatus.Pending;
+                }
+            }
+            return day;
         }
 
         public void CompleteOrder(Day schoolDay)

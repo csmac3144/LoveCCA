@@ -31,8 +31,10 @@ namespace LoveCCA.Droid
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental", "SwipeView_Experimental");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            Xamarin.Forms.DependencyService.RegisterSingleton<IHolidayService>(new HolidayService());
-            Xamarin.Forms.DependencyService.RegisterSingleton<IOrderCalendarService>(new OrderCalendarService());
+            global::Xamarin.Forms.DependencyService.RegisterSingleton<IHolidayService>(new HolidayService());
+            global::Xamarin.Forms.DependencyService.RegisterSingleton<IOrderHistoryService>(new OrderHistoryService());
+            global::Xamarin.Forms.DependencyService.RegisterSingleton<IShoppingCartService>(new ShoppingCartService());
+            global::Xamarin.Forms.DependencyService.RegisterSingleton<IOrderCalendarService>(new OrderCalendarService());
             LoadApplication(new App());
 
         }

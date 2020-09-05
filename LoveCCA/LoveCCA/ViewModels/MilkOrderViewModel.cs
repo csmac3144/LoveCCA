@@ -21,6 +21,7 @@ namespace LoveCCA.ViewModels
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
         private IOrderCalendarService _orderCalendarService;
+        private IOrderHistoryService _orderHistoryService;
 
         public MilkOrderViewModel()
         {
@@ -33,6 +34,7 @@ namespace LoveCCA.ViewModels
             AddItemCommand = new Command(OnAddItem);
 
             _orderCalendarService = DependencyService.Get<IOrderCalendarService>();
+            _orderHistoryService = DependencyService.Get<IOrderHistoryService>();
 
             Kids = new List<string>();
             if (UserProfileService.Instance.CurrentUserProfile.Kids.Count == 0)
@@ -119,6 +121,15 @@ namespace LoveCCA.ViewModels
 
             // This will push the ItemDetailPage onto the navigation stack
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+        }
+
+        internal async Task UpdateOrder(Day day)
+        {
+            string id = await _orderHistoryService.SaveOrder(day);
+            if (string.IsNullOrEmpty(day.OrderId) && !string.IsNullOrEmpty(id))
+            {
+                day.OrderId = id;
+            }
         }
     }
 }

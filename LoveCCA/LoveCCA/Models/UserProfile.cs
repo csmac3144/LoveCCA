@@ -26,6 +26,6 @@ namespace LoveCCA.Models
         public string CellPhone { get; set; }
         public List<string> Kids { get; set; }
         public bool AllowNotifications { get; set; }
-
+        public List<Order> OrderHistory { get; set; }
     }
 }

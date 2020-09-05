@@ -30,6 +30,7 @@ namespace LoveCCA.Models
         }
         public string Description { get; set; }
         public bool IsNotSchoolDay { get; set; }
+        public string OrderId { get; set; }
         public OrderStatus OrderStatus { get; internal set; }
         public string OrderChild { get; set; }
         public string OrderProductType { get; set; }
