@@ -47,7 +47,6 @@ namespace LoveCCA.ViewModels
 
         public string CartTotal { get; set; }
 
-
         async void OnItemSelected(Item item)
         {
             if (item == null)
@@ -70,6 +69,8 @@ namespace LoveCCA.ViewModels
                 {
                     Items.Add(item);
                 }
+                CartTotal = _shoppingCartService.GrandTotal.ToString("C");
+                OnPropertyChanged("CartTotal");
             }
             catch (Exception ex)
             {

@@ -13,6 +13,7 @@ namespace LoveCCA.Services
         Task Initialize();
         List<Product> Products { get; }
         List<CartItem> CartItems { get;  }
+        decimal GrandTotal { get; }
     }
     public class ShoppingCartService : IShoppingCartService
     {
@@ -31,6 +32,7 @@ namespace LoveCCA.Services
         public async Task Initialize()
         {
             string email = UserProfileService.Instance.CurrentUserProfile.Email;
+
             await LoadProducts();
             await _orderHistoryService.LoadOrders(forceRefresh: true);
             LoadCart();
@@ -38,6 +40,8 @@ namespace LoveCCA.Services
 
         private void LoadCart()
         {
+            CartItems.Clear();
+            GrandTotal = 0;
             var kids = UserProfileService.Instance.CurrentUserProfile.Kids;
             if (kids == null || kids.Count == 0)
             {
@@ -71,7 +75,7 @@ namespace LoveCCA.Services
                                 Total = total.ToString("C")
                             };
                             CartItems.Add(cartItem);
-
+                            GrandTotal += total;
                         }
                     }
                 }
@@ -87,6 +91,8 @@ namespace LoveCCA.Services
                 return _products;
             }
         }
+
+        public decimal GrandTotal { get; private set; }
 
         private async Task LoadProducts()
         {

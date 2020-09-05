@@ -22,16 +22,15 @@
             <Grid Padding="10,10,10,10" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <StackLayout Grid.Row="0" Spacing="20"  Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                    <Label Text="Total (incl. tax):" VerticalTextAlignment="Center"/>
-                    <Label x:Name="TotalLabel" Text="{Binding CartTotal}" HorizontalOptions="FillAndExpand" />
-                </StackLayout>
+                    <Label Grid.Column="0" FontSize="Large" Text="Cart Total:" VerticalTextAlignment="Center"/>
+                    <Label Grid.Column="1" FontSize="Large" FontAttributes="Bold" Text="{Binding CartTotal}" VerticalTextAlignment="Center"/>
+                    <Button Grid.Column="2" Text="Pay"/>
             </Grid>
             <RefreshView x:DataType="vm:ShoppingCartViewModel" Command="{Binding LoadItemsCommand}" 
                 IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
@@ -40,31 +39,37 @@
                 SelectionMode="None">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout Padding="10" x:DataType="model:CartItem">
-                                <Label Text="{Binding Glyph}" 
-                            LineBreakMode="NoWrap" 
-                            Style="{DynamicResource ListItemTextStyle}" 
-                            FontSize="16" />
-                                <Label Text="{Binding ProductType}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                                <Label Text="{Binding Child}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                                <Label Text="{Binding Quantity}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                                <Label Text="{Binding Price}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                                <Label Text="{Binding Total}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
+                            <Grid x:DataType="model:CartItem" Padding="10,10,10,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="15*"/>
+                                    <ColumnDefinition Width="25*"/>
+                                    <ColumnDefinition Width="40*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Label Text="{Binding Glyph}" 
+                                    LineBreakMode="NoWrap" HorizontalOptions="Center"
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    FontSize="Title" />
+                                    <Label Text="{Binding ProductType}" HorizontalOptions="Center"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                    FontSize="Micro" />
+                                </StackLayout>
+                                <Label Grid.Column="1" Text="{Binding Child}" VerticalTextAlignment="Center"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                    FontSize="Medium" />
+                                <Label  Grid.Column="2" Text="{Binding QuantityPriceLabel}"  VerticalTextAlignment="Center"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                    FontSize="Medium" />
+                                <Label  Grid.Column="3" Text="{Binding Total}"  VerticalTextAlignment="Center"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                    FontSize="Medium" />
+
+                            </Grid>
                                 <!--<StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
@@ -72,7 +77,6 @@
                                 CommandParameter="{Binding .}">
                                     </TapGestureRecognizer>
                                 </StackLayout.GestureRecognizers>-->
-                            </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>

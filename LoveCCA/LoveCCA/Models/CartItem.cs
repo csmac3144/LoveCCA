@@ -12,5 +12,12 @@ namespace LoveCCA.Models
         public string Quantity { get; set; }
         public string Child { get; internal set; }
         public string Total { get; internal set; }
+        public string QuantityPriceLabel
+        {
+            get
+            {
+                return $"{Quantity} @ {Price} ea.";
+            }
+        }
     }
 }
