@@ -14,12 +14,7 @@ namespace LoveCCA.Services
     {
         public UserProfileService()
         {
-            CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
-            {
 
-                System.Diagnostics.Debug.WriteLine("Received");
-
-            };
         }
 
         private static UserProfileService _instance;
