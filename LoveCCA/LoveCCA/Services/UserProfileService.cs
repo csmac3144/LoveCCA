@@ -1,6 +1,7 @@
 ﻿using LoveCCA.Models;
 using LoveCCA.Views;
 using Plugin.CloudFirestore;
+using Plugin.FirebasePushNotification;
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -11,6 +12,10 @@ namespace LoveCCA.Services
 
     public class UserProfileService 
     {
+        public UserProfileService()
+        {
+
+        }
 
         private static UserProfileService _instance;
 
