@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>745042862704-6smdr8srb2rik57r530jo3o89vrl1mg3.apps.googleusercontent.com</string>
+	<string>745042862704-l5e2c013b5q65vg7gnk4ajf4o9njilt8.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.745042862704-6smdr8srb2rik57r530jo3o89vrl1mg3</string>
+	<string>com.googleusercontent.apps.745042862704-l5e2c013b5q65vg7gnk4ajf4o9njilt8</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>745042862704-pa83r48gv44irg5985v9443kh1n303ie.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>ca.colchesterchristianacademy.Love-CCA</string>
+	<string>ca.colchesterchristianacademy.lovecca</string>
 	<key>PROJECT_ID</key>
 	<string>love-cca</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,7 +31,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:745042862704:ios:3f297ed33c45edc5</string>
+	<string>1:745042862704:ios:49f966155c5384de034ab5</string>
 	<key>DATABASE_URL</key>
 	<string>https://love-cca.firebaseio.com</string>
 </dict>
