@@ -8,7 +8,7 @@ namespace LoveCCA.Services
 
     }
 
-    public class PushNotificationService
+    public class PushNotificationService : IPushNotificationService
     {
         public PushNotificationService()
         {
