@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -122,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LoveCCA\LoveCCA.csproj">
-      <Project>{4B1F6F0D-69F7-42F6-A4EB-C5A95FE0F9F5}</Project>
+      <Project>{43CF7B28-B978-43B2-BC32-617EE132478D}</Project>
       <Name>LoveCCA</Name>
     </ProjectReference>
   </ItemGroup>
