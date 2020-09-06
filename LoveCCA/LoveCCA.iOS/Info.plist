@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string> Love CCA</string>
 	<key>CFBundleIdentifier</key>
-	<string>ca.colchesterchristianacademy.Love-CCA</string>
+	<string>ca.colchesterchristianacademy.lovecca</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
