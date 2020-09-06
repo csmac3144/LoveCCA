@@ -40,11 +40,10 @@
               "client_type": 3
             },
             {
-              "client_id": "745042862704-6smdr8srb2rik57r530jo3o89vrl1mg3.apps.googleusercontent.com",
+              "client_id": "745042862704-l5e2c013b5q65vg7gnk4ajf4o9njilt8.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "ca.colchesterchristianacademy.Love-CCA",
-                "app_store_id": "1001"
+                "bundle_id": "ca.colchesterchristianacademy.lovecca"
               }
             }
           ]

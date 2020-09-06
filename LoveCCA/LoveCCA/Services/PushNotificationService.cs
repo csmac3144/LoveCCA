@@ -14,7 +14,6 @@ namespace LoveCCA.Services
         {
             CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
             {
-
                 System.Diagnostics.Debug.WriteLine("Received");
 
             };

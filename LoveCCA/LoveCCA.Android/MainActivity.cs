@@ -1,16 +1,10 @@
 ﻿
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
 using Android.OS;
 using Firebase;
-using System.Threading.Tasks;
-using Android.Gms.Tasks;
-using Firebase.Firestore;
-using System;
-using Plugin.CloudFirestore;
-using Xamarin.Forms;
 using LoveCCA.Services;
+using Plugin.FirebasePushNotification;
 
 namespace LoveCCA.Droid
 {
@@ -38,14 +32,14 @@ namespace LoveCCA.Droid
             global::Xamarin.Forms.DependencyService.RegisterSingleton<IOrderCalendarService>(new OrderCalendarService());
             LoadApplication(new App());
 
-        }
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            FirebasePushNotificationManager.ProcessIntent(this, Intent);
 
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
+            CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
+            {
+                System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
+            };
 
+        }
     }
 
 
