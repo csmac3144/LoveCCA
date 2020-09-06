@@ -9,15 +9,20 @@ namespace LoveCCA.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsPage : ContentPage
     {
+        SettingsViewModel _viewModel;
         public SettingsPage()
         {
             InitializeComponent();
+            _viewModel = BindingContext as SettingsViewModel;
         }
 
 
-        private async void toolbarItemSave_Clicked(object sender, EventArgs e)
+
+        protected async override void OnDisappearing()
         {
-            await ((SettingsViewModel)BindingContext).SaveChanges();
+            base.OnDisappearing();
+            await _viewModel.SaveChanges();
         }
+
     }
 }

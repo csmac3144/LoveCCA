@@ -8,13 +8,13 @@
         <vm:SettingsViewModel />
     </ContentPage.BindingContext>
 
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem x:Name="toolbarItemSave" Text="Save"
                      Clicked="toolbarItemSave_Clicked"
                  IconImageSource="save.png"
                  Order="Primary"
                  Priority="0" />
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Resources>
         <ResourceDictionary>
