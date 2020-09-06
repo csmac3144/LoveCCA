@@ -87,9 +87,7 @@
   <ItemGroup>
     <Compile Include="AuthDroid.cs" />
     <Compile Include="DatabaseDroid.cs" />
-    <Compile Include="FirebaseIIDService.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="MyFirebaseMessagingService.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
