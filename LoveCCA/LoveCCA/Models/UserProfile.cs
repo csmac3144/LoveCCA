@@ -10,6 +10,7 @@ namespace LoveCCA.Models
         private string _email;
         public UserProfile()
         {
+            FCMTokens = new List<string>();
         }
 
         [Id]
@@ -27,5 +28,6 @@ namespace LoveCCA.Models
         public List<string> Kids { get; set; }
         public bool AllowNotifications { get; set; }
         public List<Order> OrderHistory { get; set; }
+        public List<string> FCMTokens { get; internal set; }
     }
 }

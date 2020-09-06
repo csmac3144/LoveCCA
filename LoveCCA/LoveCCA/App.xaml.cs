@@ -7,6 +7,7 @@ namespace LoveCCA
 {
     public partial class App : Application
     {
+        public static string FCMToken { get; set; }
 
         public App()
         {

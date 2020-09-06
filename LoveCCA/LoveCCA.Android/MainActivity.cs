@@ -36,6 +36,7 @@ namespace LoveCCA.Droid
 
             CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             {
+                App.FCMToken = p.Token;
                 System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
             };
 

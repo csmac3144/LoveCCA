@@ -53,6 +53,17 @@ namespace LoveCCA.Services
                     profile = await GetUserProfile(email);
                 }
                 CurrentUserProfile = profile;
+
+                if(!string.IsNullOrEmpty(App.FCMToken))
+                {
+                    if (!CurrentUserProfile.FCMTokens.Any(t => t == App.FCMToken))
+                    {
+                        CurrentUserProfile.FCMTokens.Add(App.FCMToken);
+                        await UpdateCurrentProfile();
+
+                    }
+                }
+
             }
             catch (Exception)
             {
@@ -93,6 +104,7 @@ namespace LoveCCA.Services
                 Name = CurrentUserProfile.Name,
                 CellPhone = CurrentUserProfile.CellPhone,
                 AllowNotifications = CurrentUserProfile.AllowNotifications,
+                FCMTokens = CurrentUserProfile.FCMTokens,
                 Kids =  CurrentUserProfile.Kids});
         }
 
