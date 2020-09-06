@@ -1,7 +1,7 @@
 ﻿
+using Firebase.CloudMessaging;
 using Foundation;
 using LoveCCA.Services;
-using Plugin.FirebasePushNotification;
 using System;
 using UIKit;
 using UserNotifications;
@@ -14,7 +14,6 @@ namespace LoveCCA.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
-
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -27,7 +26,6 @@ namespace LoveCCA.iOS
 
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental", "SwipeView_Experimental");
             global::Xamarin.Forms.Forms.Init();
-            global::Xamarin.Forms.DependencyService.RegisterSingleton<IPushNotificationService>(new PushNotificationService());
             global::Xamarin.Forms.DependencyService.RegisterSingleton<IHolidayService>(new HolidayService());
             global::Xamarin.Forms.DependencyService.RegisterSingleton<IOrderHistoryService>(new OrderHistoryService());
             global::Xamarin.Forms.DependencyService.RegisterSingleton<IShoppingCartService>(new ShoppingCartService());
@@ -35,49 +33,7 @@ namespace LoveCCA.iOS
             LoadApplication(new App());
             Firebase.Core.App.Configure();
 
-            FirebasePushNotificationManager.Initialize(options, true);
-
-            CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
-            {
-                System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
-            };
-
-            //CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
-            //{
-
-            //    System.Diagnostics.Debug.WriteLine("Received");
-
-            //};
-
-
             return base.FinishedLaunching(app, options);
-        }
-
-        public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
-        {
-            FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
-        }
-
-        public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
-        {
-            FirebasePushNotificationManager.RemoteNotificationRegistrationFailed(error);
-
-        }
-        // To receive notifications in foregroung on iOS 9 and below.
-        // To receive notifications in background in any iOS version
-        public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
-        {
-            // If you are receiving a notification message while your app is in the background,
-            // this callback will not be fired 'till the user taps on the notification launching the application.
-
-            // If you disable method swizzling, you'll need to call this method. 
-            // This lets FCM track message delivery and analytics, which is performed
-            // automatically with method swizzling enabled.
-            FirebasePushNotificationManager.DidReceiveMessage(userInfo);
-            // Do your magic to handle the notification data
-            System.Console.WriteLine(userInfo);
-
-            completionHandler(UIBackgroundFetchResult.NewData);
         }
     }
 }
