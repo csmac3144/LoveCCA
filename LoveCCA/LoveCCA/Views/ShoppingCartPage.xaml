@@ -24,13 +24,14 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="33*" />
-                    <ColumnDefinition Width="33*" />
-                    <ColumnDefinition Width="33*" />
+                    <ColumnDefinition Width="50*" />
+                    <ColumnDefinition Width="50*" />
                 </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" FontSize="Large" Text="Cart Total:" VerticalTextAlignment="Center"/>
-                    <Label Grid.Column="1" FontSize="Large" FontAttributes="Bold" Text="{Binding CartTotal}" VerticalTextAlignment="Center"/>
-                    <Button Grid.Column="2" Text="Pay"/>
+                    <Label Grid.Column="1" FontSize="Large" FontAttributes="Bold" Text="{Binding CartTotal}" 
+                           HorizontalOptions="EndAndExpand"
+                           HorizontalTextAlignment="End"
+                           VerticalTextAlignment="Center"/>
             </Grid>
             <RefreshView x:DataType="vm:ShoppingCartViewModel" Command="{Binding LoadItemsCommand}" 
                 IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
@@ -81,6 +82,9 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </RefreshView>
+            <ContentView Padding="10,10">
+                <ImageButton Source="paypal_buy_now.png" HorizontalOptions="CenterAndExpand"/>
+            </ContentView>
         </StackLayout>    
     </ContentPage.Content>
 </ContentPage>

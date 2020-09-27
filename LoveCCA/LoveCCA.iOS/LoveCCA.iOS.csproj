@@ -237,4 +237,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\shopping_cart%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\paypal_donate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\paypal_buy_now.png" />
+  </ItemGroup>
 </Project>
