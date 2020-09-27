@@ -56,9 +56,7 @@ namespace LoveCCA.iOS.Services
 
         public void StartCheckout(string amount, string displayName, string currency = "CAD")
         {
-            // Example: Initialize BTAPIClient, if you haven't already
-            braintreeClient = new BTAPIClient("sandbox_pgtyn3vw_b57nx3qgs2q5d3kj");
-            //let payPalDriver = BTPayPalDriver(APIClient: braintreeClient)
+            braintreeClient = new BTAPIClient(PayPalConfig.AUTHORIZATION);
             var payPalDriver = new BTPayPalDriver(braintreeClient);
             payPalDriver.ViewControllerPresentingDelegate = new PresentingDelegate();
             payPalDriver.AppSwitchDelegate = new AppSwitchDelegate(); // Optional

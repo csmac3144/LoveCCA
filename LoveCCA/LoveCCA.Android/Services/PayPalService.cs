@@ -19,13 +19,11 @@ namespace LoveCCA.Droid.Droid.Services
         public PayPalService()
         {
             var activity = Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity;
-            _braintreeFragment = BraintreeFragment.NewInstance((AndroidX.Fragment.App.FragmentActivity)activity, "sandbox_pgtyn3vw_b57nx3qgs2q5d3kj");
+            _braintreeFragment = BraintreeFragment.NewInstance((AndroidX.Fragment.App.FragmentActivity)activity, PayPalConfig.AUTHORIZATION);
             var listener = new PaymentMethodNonceCreatedListener();
             _braintreeFragment.AddListener(listener);
             listener.OnPayPalNonceResult += Listener_OnPayPalNonceResult;
         }
-
-
 
         private void Listener_OnPayPalNonceResult(object sender, PayPalNonceObtainedEventArgs e)
         {
