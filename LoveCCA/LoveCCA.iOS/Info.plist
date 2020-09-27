@@ -38,5 +38,18 @@
 	</array>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<string>No</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Braintree Payments</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ca.colchesterchristianacademy.lovecca.payments</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+	</array>
 </dict>
 </plist>

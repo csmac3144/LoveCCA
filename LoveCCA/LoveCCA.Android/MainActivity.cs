@@ -1,4 +1,5 @@
 ﻿
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
@@ -18,6 +19,8 @@ namespace LoveCCA.Droid
             FirebaseApp.InitializeApp(Android.App.Application.Context);
 
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
+
+            UserDialogs.Init(this);
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;

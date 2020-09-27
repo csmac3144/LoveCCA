@@ -1,4 +1,5 @@
-﻿using LoveCCA.Models;
+﻿using Acr.UserDialogs;
+using LoveCCA.Models;
 using LoveCCA.Services;
 using LoveCCA.Services.PayPalService;
 using System;
@@ -14,7 +15,6 @@ namespace LoveCCA.ViewModels
 {
     public class ShoppingCartViewModel : BaseViewModel
     {
-        private string _transactionID;
         private Item _selectedItem;
         private IOrderHistoryService _orderHistoryService;
         private IShoppingCartService _shoppingCartService;
@@ -24,7 +24,7 @@ namespace LoveCCA.ViewModels
 
         public Command LoadItemsCommand { get; }
         public Command PayPalCommand { get; }
-
+        public bool PayPalButtonEnabled { get; set; }
         public ShoppingCartViewModel()
         {
             Title = "Shopping Cart";
@@ -43,28 +43,67 @@ namespace LoveCCA.ViewModels
 
         private async void OnPayPalResult(object sender, PayPalResult e)
         {
-            using (var client = new HttpClient())
+            if (e.IsSuccessful)
             {
-                var nvc = new List<KeyValuePair<string, string>>();
-                nvc.Add(new KeyValuePair<string, string>("payment_method_nonce", e.Nonce));
-                nvc.Add(new KeyValuePair<string, string>("amount", e.Amount));
-                var req = new HttpRequestMessage(HttpMethod.Post, "https://us-central1-love-cca.cloudfunctions.net/ccapay/checkout") { Content = new FormUrlEncodedContent(nvc) };
-                var res = await client.SendAsync(req);
-                if (res.IsSuccessStatusCode)
+                using (UserDialogs.Instance.Loading("Processing",null,null,true, MaskType.Clear))
                 {
-                    _transactionID = await res.Content.ReadAsStringAsync();
+                    using (var client = new HttpClient())
+                    {
+                        var nvc = new List<KeyValuePair<string, string>>();
+                        nvc.Add(new KeyValuePair<string, string>("payment_method_nonce", e.Nonce));
+                        nvc.Add(new KeyValuePair<string, string>("amount", e.Amount));
+                        var req = new HttpRequestMessage(HttpMethod.Post, "https://us-central1-love-cca.cloudfunctions.net/ccapay/checkout") { Content = new FormUrlEncodedContent(nvc) };
+                        var res = await client.SendAsync(req);
+                        if (res.IsSuccessStatusCode)
+                        {
+                            string transactionID = await res.Content.ReadAsStringAsync();
+                            await _shoppingCartService.PaymentComplete(transactionID);
+                        }
+                        else
+                        {
+                            ShowError();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (e.IsError)
+                {
+                    ShowError();
                 }
                 else
                 {
-                    throw new Exception("Payment failed");
+                    var aConfi = new AlertConfig()
+                        .SetMessage("Payment was cancelled.")
+                        .SetTitle("Cancelled")
+                        .SetOkText("Ok");
+                    UserDialogs.Instance.Alert(aConfi);
                 }
             }
+            IsBusy = true;
         }
 
+        private void ShowError()
+        {
+            var aConfi = new AlertConfig()
+                .SetMessage("Problem processing payment.")
+                .SetTitle("Error")
+                .SetOkText("Ok");
+            UserDialogs.Instance.Alert(aConfi);
+        }
+        bool _processing;
         public void CheckoutWithPayPal()
         {
-            string amount = _shoppingCartService.GrandTotal.ToString();
-            _payPalService.StartCheckout(amount, "CCA Purchases");
+            if (!_processing)
+            {
+                _processing = true;
+                if (_shoppingCartService.GrandTotal > 0)
+                {
+                    string amount = _shoppingCartService.GrandTotal.ToString();
+                    _payPalService.StartCheckout(amount, "CCA Purchases");
+                }
+            }
         }
 
         public void OnAppearing()
@@ -108,7 +147,9 @@ namespace LoveCCA.ViewModels
                     Items.Add(item);
                 }
                 CartTotal = _shoppingCartService.GrandTotal.ToString("C");
+                PayPalButtonEnabled = _shoppingCartService.GrandTotal > 0;
                 OnPropertyChanged("CartTotal");
+                OnPropertyChanged("PayPalButtonEnabled");
             }
             catch (Exception ex)
             {
@@ -117,6 +158,7 @@ namespace LoveCCA.ViewModels
             finally
             {
                 IsBusy = false;
+                _processing = false;
             }
         }
 

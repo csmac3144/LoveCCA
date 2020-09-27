@@ -25,14 +25,15 @@ namespace LoveCCA.Droid.Droid.Services
             listener.OnPayPalNonceResult += Listener_OnPayPalNonceResult;
         }
 
+
+
         private void Listener_OnPayPalNonceResult(object sender, PayPalNonceObtainedEventArgs e)
         {
-            //TODO: call checkout
 
             OnPayPalResult(this, new PayPalResult {
                 Nonce = e.Result.Nonce,
                 Amount = _amount,
-                IsSuccessful = true, TransactionID = "",
+                IsSuccessful = true, 
                 PayPalAccountNonceObtainedResult = e.Result });
         }
 

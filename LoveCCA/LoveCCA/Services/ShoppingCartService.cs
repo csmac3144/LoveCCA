@@ -14,6 +14,8 @@ namespace LoveCCA.Services
         List<Product> Products { get; }
         List<CartItem> CartItems { get;  }
         decimal GrandTotal { get; }
+
+        Task PaymentComplete(string transactionID);
     }
     public class ShoppingCartService : IShoppingCartService
     {
@@ -111,6 +113,12 @@ namespace LoveCCA.Services
 
                 System.Diagnostics.Debug.WriteLine("Error loading products");
             }
+        }
+
+        public async Task PaymentComplete(string transactionID)
+        {
+            await _orderHistoryService.CompletePendingOrders();
+            await Initialize();
         }
     }
 }

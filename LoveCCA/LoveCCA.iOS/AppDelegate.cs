@@ -1,4 +1,5 @@
-﻿using Firebase.CloudMessaging;
+﻿using BraintreeCore;
+using Firebase.CloudMessaging;
 using Foundation;
 using LoveCCA.Services;
 using Plugin.FirebasePushNotification;
@@ -48,6 +49,7 @@ namespace LoveCCA.iOS
             //    System.Diagnostics.Debug.WriteLine("Received");
 
             //};
+            BTAppSwitch.SetReturnURLScheme("ca.colchesterchristianacademy.lovecca.payments");
 
 
             return base.FinishedLaunching(app, options);

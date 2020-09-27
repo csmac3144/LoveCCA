@@ -11,6 +11,6 @@ namespace LoveCCA.Services.PayPalService
         public string Amount { get; set; }
         public string TransactionID { get; set; }
         public PayPalAccountNonceObtainedResult PayPalAccountNonceObtainedResult { get; set; }
-
+        public bool IsError { get; set; }
     }
 }

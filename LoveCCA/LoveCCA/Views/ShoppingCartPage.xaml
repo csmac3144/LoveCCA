@@ -77,6 +77,7 @@
             </RefreshView>
             <ContentView Padding="10,10">
                 <ImageButton Source="paypal_buy_now.png" 
+                             IsVisible="{Binding PayPalButtonEnabled}"
                              Clicked="ImageButton_Clicked"
                              HorizontalOptions="CenterAndExpand"/>
             </ContentView>

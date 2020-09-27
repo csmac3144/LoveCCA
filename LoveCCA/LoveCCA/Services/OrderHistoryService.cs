@@ -13,6 +13,7 @@ namespace LoveCCA.Services
         List<Order> Orders { get; }
         Task LoadOrders(bool forceRefresh = false);
         Task<string> SaveOrder(Day day);
+        Task CompletePendingOrders();
     }
 
     public class OrderHistoryService : IOrderHistoryService
@@ -34,7 +35,6 @@ namespace LoveCCA.Services
                     return await HandlePendingDayOrder(day);
                 case OrderStatus.Completed:
                     throw new NotImplementedException();
-                    break;
             }
             return null;
         }
@@ -167,6 +167,15 @@ namespace LoveCCA.Services
             }
 
 
+        }
+
+        public async Task CompletePendingOrders()
+        {
+            foreach (var order in Orders.Where(o => o.Status == (int)OrderStatus.Pending))
+            {
+                order.Status = (int)OrderStatus.Completed;
+                await UpdateOrderStatus(order.Id, (int)OrderStatus.Completed);
+            }
         }
     }
 }
