@@ -25,5 +25,10 @@ namespace LoveCCA.Views
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            _viewModel.CheckoutWithPayPal();
+        }
     }
 }

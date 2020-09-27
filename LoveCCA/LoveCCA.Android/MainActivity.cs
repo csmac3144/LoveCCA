@@ -5,6 +5,7 @@ using Android.OS;
 using Android.Runtime;
 using Firebase;
 using LoveCCA.Services;
+using Plugin.CurrentActivity;
 using Plugin.FirebasePushNotification;
 
 namespace LoveCCA.Droid
@@ -16,6 +17,7 @@ namespace LoveCCA.Droid
         {
             FirebaseApp.InitializeApp(Android.App.Application.Context);
 
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;

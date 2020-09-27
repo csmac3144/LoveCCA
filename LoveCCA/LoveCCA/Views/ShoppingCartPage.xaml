@@ -71,19 +71,14 @@
                                     FontSize="Medium" />
 
                             </Grid>
-                                <!--<StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer 
-                                NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
-                                CommandParameter="{Binding .}">
-                                    </TapGestureRecognizer>
-                                </StackLayout.GestureRecognizers>-->
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </RefreshView>
             <ContentView Padding="10,10">
-                <ImageButton Source="paypal_buy_now.png" HorizontalOptions="CenterAndExpand"/>
+                <ImageButton Source="paypal_buy_now.png" 
+                             Clicked="ImageButton_Clicked"
+                             HorizontalOptions="CenterAndExpand"/>
             </ContentView>
         </StackLayout>    
     </ContentPage.Content>
