@@ -11,6 +11,7 @@ namespace LoveCCA.Models
         public UserProfile()
         {
             FCMTokens = new List<string>();
+            Kids = new List<string>();
         }
 
         [Id]

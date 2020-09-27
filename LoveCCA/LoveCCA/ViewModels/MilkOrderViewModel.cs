@@ -37,13 +37,14 @@ namespace LoveCCA.ViewModels
             _orderHistoryService = DependencyService.Get<IOrderHistoryService>();
 
             Kids = new List<string>();
-            if (UserProfileService.Instance.CurrentUserProfile.Kids.Count == 0)
+            if (UserProfileService.Instance.CurrentUserProfile.Kids != null &&
+                UserProfileService.Instance.CurrentUserProfile.Kids.Count > 0)
             {
-                Kids.Add("My Child");
+                Kids = UserProfileService.Instance.CurrentUserProfile.Kids;
             }
             else
             {
-                Kids = UserProfileService.Instance.CurrentUserProfile.Kids;
+                Kids.Add("My Child");
             }
             OnPropertyChanged("Kids");
         }

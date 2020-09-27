@@ -3,6 +3,7 @@ using LoveCCA.Views;
 using Plugin.CloudFirestore;
 using Plugin.FirebasePushNotification;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -63,6 +64,9 @@ namespace LoveCCA.Services
 
                     }
                 }
+
+                if (CurrentUserProfile.Kids == null)
+                    CurrentUserProfile.Kids = new List<string>();
 
             }
             catch (Exception)
