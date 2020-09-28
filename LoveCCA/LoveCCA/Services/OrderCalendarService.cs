@@ -9,11 +9,11 @@ namespace LoveCCA.Services
 {
     public interface IOrderCalendarService
     {
-        Task Initialize(DateTime initDate, string child, string productType);
+        Task Initialize(DateTime initDate, Student kid, string productType);
         void CreatePendingOrder(Day schoolDay);
         void CompleteOrder(Day schoolDay);
         List<Day> WeekDays { get; }
-        string Child { get; }
+        Student Kid { get; }
         string ProductType { get; }
 
 
@@ -27,31 +27,28 @@ namespace LoveCCA.Services
         private IOrderHistoryService _orderHistoryService;
         private List<Order> _relevantOrders;
 
-        public OrderCalendarService() : this(DependencyService.Get<IHolidayService>(), DependencyService.Get<IOrderHistoryService>())
+        public OrderCalendarService()
         {
+            _orderHistoryService = new OrderHistoryService();
+            _holidayService = new HolidayService();
+            WeekDays = new List<Day>();
         }
 
         public SchoolYearSettings SchoolYearSettings => _schoolYearSettings;
 
-        public OrderCalendarService(IHolidayService holidayService, IOrderHistoryService orderHistoryService)
-        {
-            _orderHistoryService = orderHistoryService;
-            _holidayService = holidayService;
-            WeekDays = new List<Day>();
-        }
 
         public List<Day> WeekDays { get; private set; }
         public int Index { get; set; }
-        public string Child { get; private set; }
+        public Student Kid { get; private set; }
         public string ProductType { get; private set; }
 
-        public async Task Initialize(DateTime initDate, string child, string productType)
+        public async Task Initialize(DateTime initDate, Student kid, string productType)
         {
-            Child = child;
+            Kid = kid;
             ProductType = productType;
 
             await _orderHistoryService.LoadOrders();
-            _relevantOrders = _orderHistoryService.Orders.Where(o => o.Child == this.Child && o.ProductType == this.ProductType).ToList();
+            _relevantOrders = _orderHistoryService.Orders.Where(o => o.Kid.Id == this.Kid.Id && o.ProductType == this.ProductType).ToList();
 
             if (_schoolYearSettings == null)
                 _schoolYearSettings = await _holidayService.LoadSchoolSettings();
@@ -100,7 +97,7 @@ namespace LoveCCA.Services
         public void CreatePendingOrder(Day schoolDay)
         {
             schoolDay.OrderStatus = OrderStatus.Pending;
-            schoolDay.OrderChild = Child;
+            schoolDay.OrderKid = Kid;
             schoolDay.OrderProductType = ProductType;
         }
 
@@ -113,7 +110,7 @@ namespace LoveCCA.Services
 
             while (dateToAdd <= endDate)
             {
-                var day = new Day() { Date = dateToAdd, OrderProductType = ProductType, OrderChild = Child };
+                var day = new Day() { Date = dateToAdd, OrderProductType = ProductType, OrderKid = Kid };
                 day = CheckIfHoliday(day);
                 day = MarkOrderHistory(day);
                 WeekDays.Add(day);
@@ -127,7 +124,7 @@ namespace LoveCCA.Services
             if (order != null)
             {
                 day.OrderId = order.Id;
-                day.OrderChild = order.Child;
+                day.OrderKid = order.Kid;
                 day.OrderProductType = order.ProductType;
                 if (order.Status == (int)OrderStatus.Completed)
                 {
@@ -144,7 +141,7 @@ namespace LoveCCA.Services
         public void CompleteOrder(Day schoolDay)
         {
             schoolDay.OrderStatus = OrderStatus.Completed;
-            schoolDay.OrderChild = Child;
+            schoolDay.OrderKid = Kid;
             schoolDay.OrderProductType = ProductType;
         }
     }

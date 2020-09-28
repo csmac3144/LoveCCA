@@ -32,23 +32,8 @@ namespace LoveCCA.Models
         public bool IsNotSchoolDay { get; set; }
         public string OrderId { get; set; }
         public OrderStatus OrderStatus { get; internal set; }
-        public string OrderChild { get; set; }
+        public Student OrderKid { get; set; }
         public string OrderProductType { get; set; }
-        private bool _isPending;
-        public bool IsPending { 
-            get
-            {
-                return OrderStatus == OrderStatus.Pending;
-            }
-            set
-            {
-                _isPending = value;
-                if (_isPending)
-                    OrderStatus = OrderStatus.Pending;
-                else
-                    OrderStatus = OrderStatus.None;
-            }
-        }
-
+        public bool IsPending => OrderStatus == OrderStatus.Pending;
     }
 }

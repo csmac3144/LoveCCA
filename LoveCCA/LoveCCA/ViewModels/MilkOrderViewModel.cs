@@ -9,6 +9,7 @@ using LoveCCA.Models;
 using LoveCCA.Views;
 using System.Collections.Generic;
 using LoveCCA.Services;
+using System.Net.Http.Headers;
 
 namespace LoveCCA.ViewModels
 {
@@ -33,33 +34,30 @@ namespace LoveCCA.ViewModels
 
             AddItemCommand = new Command(OnAddItem);
 
-            _orderCalendarService = DependencyService.Get<IOrderCalendarService>();
-            _orderHistoryService = DependencyService.Get<IOrderHistoryService>();
+            _orderCalendarService = new OrderCalendarService();
+            _orderHistoryService = new OrderHistoryService();
 
-            Kids = new List<string>();
+            Kids = new List<Student>();
             if (UserProfileService.Instance.CurrentUserProfile.Kids != null &&
                 UserProfileService.Instance.CurrentUserProfile.Kids.Count > 0)
             {
                 Kids = UserProfileService.Instance.CurrentUserProfile.Kids;
-            }
-            else
-            {
-                Kids.Add("My Child");
+                _selectedKid = Kids[0];
             }
             OnPropertyChanged("Kids");
         }
 
 
-        public List<string> Kids { get; private set; }
+        public List<Student> Kids { get; private set; }
 
-        private string _selectedKid;
-        public string SelectedKid { 
+        private Student _selectedKid;
+        public Student SelectedKid { 
             get {
                 return _selectedKid;
             } 
             set
             {
-                if (!string.IsNullOrEmpty(_selectedKid) && value != _selectedKid)
+                if (_selectedKid != null && value.Id != _selectedKid.Id)
                 {
                     _selectedKid = value;
                     IsBusy = true;
@@ -69,6 +67,13 @@ namespace LoveCCA.ViewModels
                     _selectedKid = value;
                 }
             }
+        }
+
+        public void OnDisappearing()
+        {
+            Items.Clear();
+            SelectedItem = null;
+
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -124,13 +129,10 @@ namespace LoveCCA.ViewModels
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
 
-        internal async Task UpdateOrder(Day day)
+        internal async Task UpdateOrder(Day day, bool value)
         {
-            string id = await _orderHistoryService.SaveOrder(day);
-            if (string.IsNullOrEmpty(day.OrderId) && !string.IsNullOrEmpty(id))
-            {
-                day.OrderId = id;
-            }
+            string id = await _orderHistoryService.SaveOrder(day, value);
+            day.OrderId = id;
         }
     }
 }

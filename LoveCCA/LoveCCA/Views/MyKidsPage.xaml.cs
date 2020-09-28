@@ -24,11 +24,13 @@ namespace LoveCCA.Views
 
         private async void ToolbarItemAdd_Clicked(object sender, EventArgs e)
         {
-            var name = await DisplayPromptAsync("Add Child", "Enter the name of your child", "Save", "Cancel", "Child's name", 20);
-            if (!string.IsNullOrEmpty(name))
-            {
-                await ((LoveCCA.ViewModels.MyKidsViewModel)this.BindingContext).AddKid(name);
-            }
+            await Shell.Current.GoToAsync($"{nameof(EditKidPage)}");
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ((LoveCCA.ViewModels.MyKidsViewModel)this.BindingContext).RefreshKids();
         }
     }
 }

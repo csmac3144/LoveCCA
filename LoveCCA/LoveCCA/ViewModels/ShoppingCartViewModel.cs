@@ -97,6 +97,7 @@ namespace LoveCCA.ViewModels
         {
             if (!_processing)
             {
+                App.IsCheckout = true;
                 _processing = true;
                 if (_shoppingCartService.GrandTotal > 0)
                 {
@@ -159,6 +160,7 @@ namespace LoveCCA.ViewModels
             {
                 IsBusy = false;
                 _processing = false;
+                App.IsCheckout = false;
             }
         }
 

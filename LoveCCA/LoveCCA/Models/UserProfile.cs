@@ -11,7 +11,7 @@ namespace LoveCCA.Models
         public UserProfile()
         {
             FCMTokens = new List<string>();
-            Kids = new List<string>();
+            Kids = new List<Student>();
         }
 
         [Id]
@@ -26,7 +26,7 @@ namespace LoveCCA.Models
         }
         public string Name { get; set; }
         public string CellPhone { get; set; }
-        public List<string> Kids { get; set; }
+        public List<Student> Kids { get; set; }
         public bool AllowNotifications { get; set; }
         public List<Order> OrderHistory { get; set; }
         public List<string> FCMTokens { get; internal set; }

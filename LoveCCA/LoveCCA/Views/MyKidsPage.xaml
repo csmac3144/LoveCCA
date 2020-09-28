@@ -28,6 +28,12 @@
 
             <CollectionView x:Name="collectionView"
                 ItemsSource="{Binding Kids}">
+                <CollectionView.Header>
+                <StackLayout Orientation="Horizontal" Padding="18">
+                    <Label FontAttributes="Bold" Text="Name" HorizontalOptions="StartAndExpand"/>
+                    <Label FontAttributes="Bold" Text="Grade" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                </CollectionView.Header>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <SwipeView Padding="8">
@@ -42,7 +48,10 @@
                             </SwipeView.LeftItems>
                             <Grid BackgroundColor="White"
                               Padding="10">
-                            <Label Text="{Binding .}"/>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Label Text="{Binding Name}" HorizontalOptions="StartAndExpand"/>
+                                <Label Text="{Binding Grade}" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
                         </Grid>
                         </SwipeView>
                     </DataTemplate>

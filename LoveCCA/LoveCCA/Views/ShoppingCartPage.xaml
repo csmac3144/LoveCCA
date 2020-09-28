@@ -57,7 +57,7 @@
                                     Style="{DynamicResource ListItemDetailTextStyle}"
                                     FontSize="Micro" />
                                 </StackLayout>
-                                <Label Grid.Column="1" Text="{Binding Child}" VerticalTextAlignment="Center"
+                                <Label Grid.Column="1" Text="{Binding KidName}" VerticalTextAlignment="Center"
                                     LineBreakMode="NoWrap"
                                     Style="{DynamicResource ListItemDetailTextStyle}"
                                     FontSize="Medium" />

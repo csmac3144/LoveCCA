@@ -20,6 +20,7 @@ namespace LoveCCA
             Routing.RegisterRoute(nameof(MyKidsPage), typeof(MyKidsPage));
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(EditKidPage), typeof(EditKidPage));
         }
 
         private async void OnSignOutClicked(object sender, EventArgs e)

@@ -36,7 +36,7 @@ namespace LoveCCA.Services
             string email = UserProfileService.Instance.CurrentUserProfile.Email;
 
             await LoadProducts();
-            await _orderHistoryService.LoadOrders(forceRefresh: true);
+            await _orderHistoryService.LoadOrders();
             LoadCart();
         }
 
@@ -47,7 +47,7 @@ namespace LoveCCA.Services
             var kids = UserProfileService.Instance.CurrentUserProfile.Kids;
             if (kids == null || kids.Count == 0)
             {
-                kids = new List<string>() { "My Child" };
+                kids = new List<Student>() { new Student { LastName = "My Child" } };
             }
             foreach (var product in Products)
             {
@@ -56,7 +56,7 @@ namespace LoveCCA.Services
                 {
                     foreach (var kid in kids)
                     {
-                        var ordersByKid = productOrders.Where(o => o.Child == kid);
+                        var ordersByKid = productOrders.Where(o => o.Kid.Id == kid.Id);
                         if (ordersByKid.Any())
                         {
                             decimal total = 0;
@@ -72,7 +72,7 @@ namespace LoveCCA.Services
                                 Glyph = product.Glyph,
                                 Price = product.Price.ToString("C"),
                                 ProductType = product.Name,
-                                Child = kid,
+                                Kid = kid,
                                 Quantity = count.ToString(),
                                 Total = total.ToString("C")
                             };

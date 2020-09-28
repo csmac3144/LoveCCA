@@ -1,6 +1,5 @@
-﻿using LoveCCA.Services;
-using System;
-using System.Collections.Generic;
+﻿using LoveCCA.Models;
+using LoveCCA.Services;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,13 +21,15 @@ namespace LoveCCA.ViewModels
 
         private async void OnDelete(object obj)
         {
-            string name = obj as string;
-            if (string.IsNullOrEmpty(name))
+            Student kid = obj as Student;
+            if (kid == null)
                 return;
-            var item = Kids.FirstOrDefault(i => i == name);
+            var item = Kids.FirstOrDefault(i => i.FirstName.ToLower() == kid.FirstName.ToLower() &&
+                i.LastName.ToLower() == kid.LastName.ToLower() &&
+                i.Grade == kid.Grade);
             if (item != null)
             {
-                await UserProfileService.Instance.RemoveKid(name);
+                await UserProfileService.Instance.RemoveKid(kid);
                 Kids.Remove(item);
                 OnPropertyChanged("Kids");
             }
@@ -37,7 +38,7 @@ namespace LoveCCA.ViewModels
         public void RefreshKids()
         {
             if (Kids == null)
-                Kids = new ObservableCollection<string>();
+                Kids = new ObservableCollection<Student>();
             Kids.Clear();
             foreach (var kid in UserProfileService.Instance.CurrentUserProfile.Kids)
             {
@@ -45,21 +46,26 @@ namespace LoveCCA.ViewModels
             }
         }
 
-        internal async Task AddKid(string name)
+        internal async Task AddKid(Student kid)
         {
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(kid.FirstName) &&
+                string.IsNullOrEmpty(kid.LastName)) {
                 return;
-            var item = Kids.FirstOrDefault(i => i == name);
+
+            }
+            var item = Kids.FirstOrDefault(i => i.FirstName.ToLower() == kid.FirstName.ToLower() &&
+                i.LastName.ToLower() == kid.LastName.ToLower() &&
+                i.Grade == kid.Grade);
             if (item != null)
             {
                 return;
             }
-            await UserProfileService.Instance.AddKid(name);
-            Kids.Add(name);
+            await UserProfileService.Instance.AddKid(kid);
+            Kids.Add(kid);
             OnPropertyChanged("Kids");
 
         }
 
-        public ObservableCollection<string> Kids { get; set; }
+        public ObservableCollection<Student> Kids { get; set; }
     }
 }

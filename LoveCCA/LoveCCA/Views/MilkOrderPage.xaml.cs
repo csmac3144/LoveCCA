@@ -19,15 +19,22 @@ namespace LoveCCA.Views
         public MilkOrderPage()
         {
             InitializeComponent();
-            BindingContext = _viewModel = new MilkOrderViewModel();
+            _viewModel = (MilkOrderViewModel)BindingContext;
             var picker = (Picker)FindByName("ChildPicker");
-            picker.SelectedItem = picker.Items.FirstOrDefault();
+            picker.SelectedItem = _viewModel.Kids.FirstOrDefault();
         }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            _viewModel.OnDisappearing();
+        }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            if (App.IsCheckout)
+                return;
             _viewModel.OnAppearing();
         }
 
@@ -36,8 +43,18 @@ namespace LoveCCA.Views
             var day = ((Xamarin.Forms.Switch)sender).BindingContext as Day;
             if (day != null)
             {
+                if (day.OrderStatus == OrderStatus.Pending && e.Value)
+                {
+                    Debug.WriteLine("No change");
+                    return;
+                }
+                if (day.OrderStatus == OrderStatus.None && !e.Value)
+                {
+                    Debug.WriteLine("No change");
+                    return;
+                }
                 Debug.WriteLine($"{day.DateLabel} {day.OrderId} {e.Value}");
-                await _viewModel.UpdateOrder(day);
+                await _viewModel.UpdateOrder(day, e.Value);
             }
 
         }

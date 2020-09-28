@@ -66,7 +66,7 @@ namespace LoveCCA.Services
                 }
 
                 if (CurrentUserProfile.Kids == null)
-                    CurrentUserProfile.Kids = new List<string>();
+                    CurrentUserProfile.Kids = new List<Student>();
 
             }
             catch (Exception)
@@ -112,15 +112,22 @@ namespace LoveCCA.Services
                 Kids =  CurrentUserProfile.Kids});
         }
 
-        public async Task AddKid(string name)
+        public async Task AddKid(Student kid)
         {
+            if (string.IsNullOrEmpty(kid.Id))
+                kid.Id = $"{kid.LastName.ToLower()}_{kid.FirstName.ToLower()}_{kid.Grade}";
             if (CurrentUserProfile != null)
             {
                 if (CurrentUserProfile.Kids != null)
                 {
-                    if (!CurrentUserProfile.Kids.Any(i => i == name))
+                    var item = CurrentUserProfile.Kids.FirstOrDefault(i => i.FirstName.ToLower() == kid.FirstName.ToLower() &&
+                        i.LastName.ToLower() == kid.LastName.ToLower() &&
+                        i.Grade == kid.Grade);
+
+
+                    if (item == null)
                     {
-                        CurrentUserProfile.Kids.Add(name);
+                        CurrentUserProfile.Kids.Add(kid);
                         await UpdateCurrentProfile();
                     }
                 }
@@ -128,13 +135,16 @@ namespace LoveCCA.Services
         }
 
 
-        public async Task RemoveKid(string name)
+        public async Task RemoveKid(Student kid)
         {
             if (CurrentUserProfile != null)
             {
                 if (CurrentUserProfile.Kids != null)
                 {
-                    var item = CurrentUserProfile.Kids.FirstOrDefault(i => i == name);
+                    var item = CurrentUserProfile.Kids.FirstOrDefault(i => i.FirstName.ToLower() == kid.FirstName.ToLower() &&
+                        i.LastName.ToLower() == kid.LastName.ToLower() &&
+                        i.Grade == kid.Grade);
+
                     if (item != null)
                     {
                         CurrentUserProfile.Kids.Remove(item);

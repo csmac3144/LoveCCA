@@ -11,7 +11,7 @@ namespace LoveCCA.Models
         public DateTime OrderDate { get; set; }
         public DateTime DeliveryDate { get; set; }
         public int Status { get; set; }
-        public string Child { get; set; }
+        public Student Kid { get; set; }
         public string ProductType { get; set; }
         public int Quantity { get; set; }
     }

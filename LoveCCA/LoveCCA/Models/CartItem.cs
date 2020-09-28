@@ -10,8 +10,11 @@ namespace LoveCCA.Models
         public string Glyph { get; set; }
         public string Price { get; set; }
         public string Quantity { get; set; }
-        public string Child { get; internal set; }
+        public Student Kid { get; internal set; }
+        [Ignored]
+        public string KidName => $"{Kid?.FirstName}";
         public string Total { get; internal set; }
+        [Ignored]
         public string QuantityPriceLabel
         {
             get

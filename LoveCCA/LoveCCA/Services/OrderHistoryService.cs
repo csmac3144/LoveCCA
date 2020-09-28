@@ -11,8 +11,8 @@ namespace LoveCCA.Services
     public interface IOrderHistoryService
     {
         List<Order> Orders { get; }
-        Task LoadOrders(bool forceRefresh = false);
-        Task<string> SaveOrder(Day day);
+        Task LoadOrders();
+        Task<string> SaveOrder(Day day, bool value);
         Task CompletePendingOrders();
     }
 
@@ -25,8 +25,11 @@ namespace LoveCCA.Services
         }
         public List<Order> Orders { get; private set; }
 
-        public async Task<string> SaveOrder(Day day)
+        public async Task<string> SaveOrder(Day day, bool value)
         {
+            if (value) day.OrderStatus = OrderStatus.Pending;
+            else day.OrderStatus = OrderStatus.None;
+
             switch (day.OrderStatus)
             {
                 case OrderStatus.None:
@@ -41,35 +44,18 @@ namespace LoveCCA.Services
 
         private async Task<string> HandlePendingDayOrder(Day day)
         {
-            if (!string.IsNullOrEmpty(day.OrderId))
+            var order = new Order
             {
-                //Existing order
-                var oldrecord = Orders.FirstOrDefault(o => o.Id == day.OrderId);
-                if (oldrecord != null)
-                {
-                    if (oldrecord.Status == (int)day.OrderStatus)
-                        return day.OrderId;
-                    oldrecord.Status = (int)OrderStatus.Pending;
-                    await UpdateOrderStatus(oldrecord.Id, (int)OrderStatus.Pending);
-                }
-                return day.OrderId;
-            }
-            else
-            {
-                var order = new Order
-                {
-                    Email = UserProfileService.Instance.CurrentUserProfile.Email,
-                    Child = day.OrderChild,
-                    ProductType = day.OrderProductType,
-                    DeliveryDate = day.Date.Date,
-                    OrderDate = DateTime.Now.Date,
-                    Status = (int)day.OrderStatus,
-                    Quantity = 1
-                };
-                order = await AppendOrder(order);
-                Orders.Add(order);
-                return order.Id;
-            }
+                Email = UserProfileService.Instance.CurrentUserProfile.Email,
+                Kid = day.OrderKid,
+                ProductType = day.OrderProductType,
+                DeliveryDate = day.Date.Date,
+                OrderDate = DateTime.Now.Date,
+                Status = (int)day.OrderStatus,
+                Quantity = 1
+            };
+            order = await AppendOrder(order);
+            return order.Id;
         }
 
         private async Task<string> UpdateOrderStatus(string id, int status)
@@ -82,26 +68,22 @@ namespace LoveCCA.Services
                          .GetDocument(id)
                          .UpdateDataAsync(new { Status = status });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Debug.WriteLine("Error updating order status");
+                Debug.WriteLine("Error updating order status " + ex.Message);
+                throw;
             }
             return id;
         }
+
 
         private async Task<string> HandleNoneDayOrder(Day day)
         {
             if (!string.IsNullOrEmpty(day.OrderId)) 
             {
-                var oldrecord = Orders.FirstOrDefault(o => o.Id == day.OrderId);
-                if (oldrecord != null)
-                {
-                    await RemoveOrder(oldrecord.Id);
-                    Orders.Remove(oldrecord);
-                    return null;
-                }
+                await RemoveOrder(day.OrderId);
             }
-            return day.OrderId;
+            return null;
         }
 
         private async Task RemoveOrder(string id)
@@ -139,31 +121,28 @@ namespace LoveCCA.Services
         }
 
 
-        public async Task LoadOrders(bool forceRefresh = false)
+        public async Task LoadOrders()
         {
             //TODO: Only this year's orders
 
             try
             {
-                if (forceRefresh || !_loaded)
-                {
-                    Orders.Clear();
-                    string email = UserProfileService.Instance.CurrentUserProfile.Email;
-                    var query = await CrossCloudFirestore.Current
-                             .Instance
-                             .GetCollection("orders")
-                             .WhereEqualsTo("Email", email.ToLower())
-                             .OrderBy("OrderDate", false)
-                             .GetDocumentsAsync();
+                Orders.Clear();
+                string email = UserProfileService.Instance.CurrentUserProfile.Email;
+                var query = await CrossCloudFirestore.Current
+                            .Instance
+                            .GetCollection("orders")
+                            .WhereEqualsTo("Email", email.ToLower())
+                            .OrderBy("OrderDate", false)
+                            .GetDocumentsAsync();
 
-                    Orders = query.ToObjects<Order>().ToList();
-                    _loaded = true;
-                }
+                Orders = query.ToObjects<Order>().ToList();
+                System.Diagnostics.Debug.WriteLine("LOADED ORDERS");
             }
             catch (System.Exception)
             {
-
                 System.Diagnostics.Debug.WriteLine("Error loading orders");
+                throw;
             }
 
 
@@ -171,10 +150,11 @@ namespace LoveCCA.Services
 
         public async Task CompletePendingOrders()
         {
-            foreach (var order in Orders.Where(o => o.Status == (int)OrderStatus.Pending))
+            var ids = Orders.Where(o => o.Status == (int)OrderStatus.Pending).Select(o => o.Id).ToList();
+            Orders.Clear();
+            foreach (var id in ids)
             {
-                order.Status = (int)OrderStatus.Completed;
-                await UpdateOrderStatus(order.Id, (int)OrderStatus.Completed);
+                await UpdateOrderStatus(id, (int)OrderStatus.Completed);
             }
         }
     }
