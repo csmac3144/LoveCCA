@@ -39,5 +39,11 @@ namespace LoveCCA
             Shell.Current.FlyoutIsPresented = false;
             await Shell.Current.GoToAsync($"{nameof(SettingsPage)}");
         }
+
+        private async void MyKids_Clicked(object sender, EventArgs e)
+        {
+            Shell.Current.FlyoutIsPresented = false;
+            await Shell.Current.GoToAsync($"{nameof(MyKidsPage)}");
+        }
     }
 }

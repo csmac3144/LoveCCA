@@ -10,6 +10,7 @@ using LoveCCA.Views;
 using System.Collections.Generic;
 using LoveCCA.Services;
 using System.Net.Http.Headers;
+using System.Data;
 
 namespace LoveCCA.ViewModels
 {
@@ -17,9 +18,10 @@ namespace LoveCCA.ViewModels
     {
         private Item _selectedItem;
 
-        public ObservableCollection<Day> Items { get; }
+        public ObservableCollection<Day> Items { get; private set; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
+        public Command DoneCommand { get; }
         public Command<Item> ItemTapped { get; }
         private IOrderCalendarService _orderCalendarService;
         private IOrderHistoryService _orderHistoryService;
@@ -34,6 +36,8 @@ namespace LoveCCA.ViewModels
 
             AddItemCommand = new Command(OnAddItem);
 
+            DoneCommand = new Command(async () => await Done());
+
             _orderCalendarService = new OrderCalendarService();
             _orderHistoryService = new OrderHistoryService();
 
@@ -47,6 +51,10 @@ namespace LoveCCA.ViewModels
             OnPropertyChanged("Kids");
         }
 
+        public async Task Done()
+        {
+            await Shell.Current.GoToAsync($"..");
+        }
 
         public List<Student> Kids { get; private set; }
 
@@ -71,9 +79,11 @@ namespace LoveCCA.ViewModels
 
         public void OnDisappearing()
         {
-            Items.Clear();
+            Items?.Clear();
+            Items = null;
+            _orderHistoryService = null;
+            _orderCalendarService = null;
             SelectedItem = null;
-
         }
 
         async Task ExecuteLoadItemsCommand()

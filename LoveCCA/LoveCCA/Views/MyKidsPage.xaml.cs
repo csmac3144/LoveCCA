@@ -19,7 +19,7 @@ namespace LoveCCA.Views
 
         private void SwipeItem_Invoked(object sender, EventArgs e)
         {
-            ((LoveCCA.ViewModels.MyKidsViewModel)this.BindingContext).DeleteCommand.Execute(((SwipeItem)sender).BindingContext as string);
+            ((LoveCCA.ViewModels.MyKidsViewModel)this.BindingContext).DeleteCommand.Execute(((SwipeItem)sender).BindingContext);
         }
 
         private async void ToolbarItemAdd_Clicked(object sender, EventArgs e)

@@ -5,11 +5,13 @@
              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
              xmlns:model="clr-namespace:LoveCCA.Models"  
              xmlns:local="clr-namespace:LoveCCA.Views"  
+             Shell.PresentationMode="ModalAnimated"
              Title="Milk Order">
 
     <ContentPage.BindingContext>
         <vm:MilkOrderViewModel />
     </ContentPage.BindingContext>
+
     
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -114,9 +116,9 @@
                 </Grid.ColumnDefinitions>
                 <StackLayout Grid.Row="0" Spacing="20"  Orientation="Horizontal" HorizontalOptions="FillAndExpand" 
                              VerticalOptions="CenterAndExpand" >
-                    <Label Text="Please select child:" VerticalTextAlignment="Center"/>
                     <Picker x:Name="ChildPicker" ItemsSource="{Binding Kids}" ItemDisplayBinding="{Binding Name}"
-                            SelectedItem="{Binding SelectedKid}" HorizontalOptions="FillAndExpand" />
+                            SelectedItem="{Binding SelectedKid}" HorizontalOptions="StartAndExpand" />
+                    <Button Text="Done" Command="{Binding DoneCommand}" HorizontalOptions="EndAndExpand"/>
                 </StackLayout>
 
             </Grid>

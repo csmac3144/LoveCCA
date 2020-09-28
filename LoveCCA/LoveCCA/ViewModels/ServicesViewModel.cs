@@ -1,7 +1,10 @@
-﻿using LoveCCA.Models;
+﻿using Acr.UserDialogs;
+using LoveCCA.Models;
 using LoveCCA.Services;
 using LoveCCA.Views;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace LoveCCA.ViewModels
@@ -32,7 +35,10 @@ namespace LoveCCA.ViewModels
                 case 0:
                     break;
                 case 1:
-                    await Shell.Current.GoToAsync($"{nameof(MilkOrderPage)}");
+                    if (await SettingsOK())
+                    {
+                        await Shell.Current.GoToAsync($"{nameof(MilkOrderPage)}");
+                    }
                     break;
                 case 2:
                     break;
@@ -48,5 +54,14 @@ namespace LoveCCA.ViewModels
 
         }
 
+        private async Task<bool> SettingsOK()
+        {
+            if (UserProfileService.Instance.CurrentUserProfile.Kids.Count == 0)
+            {
+                await UserDialogs.Instance.AlertAsync("Please go to 'My Kids' in the menu to add a student to the app.", "No CCA Student Found", "OK");
+                return false;
+            }
+            return true;
+        }
     }
 }

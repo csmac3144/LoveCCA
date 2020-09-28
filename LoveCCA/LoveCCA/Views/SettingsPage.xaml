@@ -3,18 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
              x:Class="LoveCCA.Views.SettingsPage"
+             Shell.PresentationMode="ModalAnimated"
              Title="{Binding Title}">
     <ContentPage.BindingContext>
         <vm:SettingsViewModel />
     </ContentPage.BindingContext>
-
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="toolbarItemSave" Text="Save"
-                     Clicked="toolbarItemSave_Clicked"
-                 IconImageSource="save.png"
-                 Order="Primary"
-                 Priority="0" />
-    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -36,11 +29,11 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <Entry Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Placeholder="My Full Name" Text="{Binding Name}" />
-            <Entry Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Placeholder="My Mobile Phone Number" Text="{Binding CellPhone}" />
-            <Label Grid.Row="2" Grid.Column="0" Text="Allow Notifications" FontSize="Medium"/>
-            <Switch  Grid.Row="2" Grid.Column="1" IsToggled="{Binding AllowNotificaitons}"/>
-            <Button Grid.Row="3" Grid.ColumnSpan="2" Text="Manage My Kids" Command="{Binding MyKidsCommand}"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Done" Command="{Binding DoneCommand}"/>
+            <Entry Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Placeholder="My Full Name" Text="{Binding Name}" />
+            <Entry Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Placeholder="My Mobile Phone Number" Text="{Binding CellPhone}" />
+            <Label Grid.Row="3" Grid.Column="0" Text="Allow Notifications" FontSize="Medium"/>
+            <Switch  Grid.Row="3" Grid.Column="1" IsToggled="{Binding AllowNotificaitons}"/>
         </Grid>
         </ScrollView>
 </ContentPage>

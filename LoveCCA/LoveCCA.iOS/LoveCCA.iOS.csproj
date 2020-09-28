@@ -253,4 +253,31 @@
   <ItemGroup>
     <BundleResource Include="Resources\paypal_buy_now.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user_group_man_woman%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user_group_man_woman%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user_group_man_woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\exit%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\exit%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\password%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\password%402x.png" />
+  </ItemGroup>
 </Project>

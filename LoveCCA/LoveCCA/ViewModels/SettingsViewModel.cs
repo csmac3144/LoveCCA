@@ -7,7 +7,7 @@ namespace LoveCCA.ViewModels
 {
     public class SettingsViewModel : BaseViewModel
     {
-        public Command MyKidsCommand { get; }
+        public Command DoneCommand { get; }
 
         public SettingsViewModel()
         {
@@ -15,7 +15,12 @@ namespace LoveCCA.ViewModels
             AllowNotificaitons = UserProfileService.Instance.CurrentUserProfile.AllowNotifications;
             Name = UserProfileService.Instance.CurrentUserProfile.Name;
             CellPhone = UserProfileService.Instance.CurrentUserProfile.CellPhone;
-            MyKidsCommand = new Command(OnMyKidsTapped);
+            DoneCommand = new Command(async () => await Done());
+        }
+
+        public async Task Done()
+        {
+            await Shell.Current.GoToAsync($"..");
         }
 
         public string Name { get; set; }
@@ -31,9 +36,5 @@ namespace LoveCCA.ViewModels
 
         public bool AllowNotificaitons { get; set; }
 
-        private async void OnMyKidsTapped(object obj)
-        {
-            await Shell.Current.GoToAsync($"{nameof(MyKidsPage)}");
-        }
     }
 }

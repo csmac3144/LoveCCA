@@ -38,6 +38,7 @@ namespace LoveCCA.Views
             _viewModel.OnAppearing();
         }
 
+
         private async void Switch_Toggled(object sender, ToggledEventArgs e)
         {
             var day = ((Xamarin.Forms.Switch)sender).BindingContext as Day;
