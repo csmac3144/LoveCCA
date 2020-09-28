@@ -31,7 +31,7 @@ namespace LoveCCA.ViewModels
             if (await LoginService.Instance.SendResetPasswordLink(Email)) 
             {
                 await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-            } 
+            }
             else
             {
                 Message = "Cannot send reset link - please check email address";

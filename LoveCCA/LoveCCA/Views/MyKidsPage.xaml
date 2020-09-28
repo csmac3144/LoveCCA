@@ -16,24 +16,28 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem x:Name="toolbarItemAdd" Text="Add"
                  Clicked="ToolbarItemAdd_Clicked"
                  IconImageSource="plus.png"
                  Order="Primary"
                  Priority="0" />
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
 
 
     <ContentPage.Content>
-
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" HorizontalOptions="FillAndExpand">
+                <Button Text="Add Child" Command="{Binding AddCommand}" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Done" Command="{Binding DoneCommand}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
             <CollectionView x:Name="collectionView"
                 ItemsSource="{Binding Kids}">
                 <CollectionView.Header>
-                <StackLayout Orientation="Horizontal" Padding="18">
-                    <Label FontAttributes="Bold" Text="Name" HorizontalOptions="StartAndExpand"/>
-                    <Label FontAttributes="Bold" Text="Grade" HorizontalOptions="EndAndExpand"/>
-                </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="18">
+                        <Label FontAttributes="Bold" Text="Name" HorizontalOptions="StartAndExpand"/>
+                        <Label FontAttributes="Bold" Text="Grade" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
                 </CollectionView.Header>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -49,14 +53,16 @@
                             </SwipeView.LeftItems>
                             <Grid BackgroundColor="White"
                               Padding="10">
-                            <StackLayout Orientation="Horizontal" Padding="10">
-                                <Label Text="{Binding Name}" HorizontalOptions="StartAndExpand"/>
-                                <Label Text="{Binding Grade}" HorizontalOptions="EndAndExpand"/>
-                            </StackLayout>
-                        </Grid>
+                                <StackLayout Orientation="Horizontal" Padding="10">
+                                    <Label Text="{Binding Name}" HorizontalOptions="StartAndExpand"/>
+                                    <Label Text="{Binding Grade}" WidthRequest="40" HorizontalTextAlignment="End" HorizontalOptions="End"/>
+                                </StackLayout>
+                            </Grid>
                         </SwipeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+        </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

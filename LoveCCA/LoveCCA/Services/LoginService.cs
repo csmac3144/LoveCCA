@@ -9,6 +9,7 @@ namespace LoveCCA.Services
 {
     public interface ILoginService
     {
+        bool IsAuthenticated { get; }
         Task<bool> TrySilentLogin();
         Task<bool> SendAccountVerificationLink();
         Task<bool> IsCurrentUserVerified(bool refresh);
@@ -35,6 +36,8 @@ namespace LoveCCA.Services
                 return _instance;
             }
         }
+
+        public bool IsAuthenticated { get; private set; }
 
         public LoginService()
         {
@@ -70,6 +73,7 @@ namespace LoveCCA.Services
         {
             try
             {
+                IsAuthenticated = false;
                 string token = await _auth.LoginWithEmailPassword(email, password);
                 if (!string.IsNullOrEmpty(token))
                 {
@@ -78,27 +82,23 @@ namespace LoveCCA.Services
                         await StorageVault.SetCredentials(email, password);
                         await StorageVault.SetToken(token);
                         await UserProfileService.Instance.LoadUserProfile(email);
-
+                        IsAuthenticated = true;
                     }
                     catch (Exception)
                     {
                         Debug.WriteLine("Either can't save credentials or load profile");
                     }
-                    return true;
-                }
-                else
-                {
-                    return false;
                 }
             }
             catch (InvalidLoginException)
             {
-                return false;
+                Debug.WriteLine("Invalid login exception");
             }
             catch (Exception)
             {
                 throw;
             }
+            return IsAuthenticated;
         }
 
         public async Task<bool> SendAccountVerificationLink()

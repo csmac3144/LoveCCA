@@ -16,6 +16,8 @@ namespace LoveCCA.ViewModels
 
         public SignUpViewModel()
         {
+            Title = "Sign Up for this App";
+
             SignUpCommand = new Command(OnSignUpClicked);
             GoBackCommand = new Command(OnGoBackClicked);
         }

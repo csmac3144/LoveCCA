@@ -1,5 +1,7 @@
 ﻿using LoveCCA.Services;
 using LoveCCA.Views;
+using System;
+using System.Reflection;
 using Xamarin.Forms;
 
 namespace LoveCCA.ViewModels
@@ -13,11 +15,13 @@ namespace LoveCCA.ViewModels
         public string Email { get; set; }
         public string Password { get; set; }
 
-        public LoginViewModel()
+        public LoginViewModel() 
         {
+            Title = "Love CCA Login";
             LoginCommand = new Command(OnLoginClicked);
             SignUpCommand = new Command(OnSignUpClicked);
             ForgotPasswordCommand = new Command(OnForgotPasswordClicked);
+            
             
         }
 
@@ -62,6 +66,11 @@ namespace LoveCCA.ViewModels
                 }
             }
             catch (InvalidLoginException)
+            {
+                Message = "Invalid login attempt";
+                OnPropertyChanged("Message");
+            }
+            catch (Exception)
             {
                 Message = "Invalid login attempt";
                 OnPropertyChanged("Message");

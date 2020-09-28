@@ -13,15 +13,22 @@ namespace LoveCCA.ViewModels
     public class EditKidViewModel : BaseViewModel
     {
         public Command SaveCommand { get; }
+        public Command CancelCommand { get; }
         public EditKidViewModel()
         {
             Title = "Add CCA Student";
             SaveCommand = new Command(OnSaveClicked);
+            CancelCommand = new Command(OnCancelClicked);
         }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Grade { get; set; }
+
+        private async void OnCancelClicked(object obj)
+        {
+            await Shell.Current.GoToAsync($"..");
+        }
 
         private async void OnSaveClicked(object obj)
         {

@@ -17,7 +17,7 @@ namespace LoveCCA.ViewModels
             VerifyCommand = new Command(OnVerifyClicked);
             ResendCommand = new Command(OnResendClicked);
             GoBackCommand = new Command(OnGoBackToLoginClicked);
-            
+            Title = "Email Address Verification";
         }
 
         private async void OnGoBackToLoginClicked(object obj)

@@ -16,6 +16,7 @@ namespace LoveCCA.ViewModels
 
         public ChangePasswordViewModel()
         {
+            Title = "Change Password";
             UpdatePasswordCommand = new Command(OnUpdatePasswordClicked);
             GoBackCommand = new Command(OnGoBackClicked);
             
@@ -23,7 +24,9 @@ namespace LoveCCA.ViewModels
 
         private async void OnGoBackClicked(object obj)
         {
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            await Shell.Current.Navigation.PopModalAsync();
+            //await Shell.Current.GoToAsync("..");
+            //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
         }
 
         private async void OnUpdatePasswordClicked(object obj)

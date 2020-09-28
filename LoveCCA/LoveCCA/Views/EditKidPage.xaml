@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
+             Shell.PresentationMode="ModalAnimated"
              x:Class="LoveCCA.Views.EditKidPage"
              Title="{Binding Title}">
 
@@ -15,9 +16,10 @@
             <Entry Placeholder="First Name" Text="{Binding FirstName}" />
             <Entry Placeholder="Last Name" Text="{Binding LastName}" />
             <Entry Placeholder="Grade" Text="{Binding Grade}" Keyboard="Numeric" />
-            <ContentView Padding="10">
-                <Button Text="Save" Command="{Binding SaveCommand}"/>
-            </ContentView>
+            <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" HorizontalOptions="FillAndExpand">
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" BackgroundColor="Red"/>
+                <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

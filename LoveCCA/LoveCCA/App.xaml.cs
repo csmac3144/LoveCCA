@@ -15,16 +15,6 @@ namespace LoveCCA
             InitializeComponent();
 
             MainPage = new AppShell();
-         
-
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                //await OrderCalendarService.Instance.Initialize(DateTime.Now);
-                if (!(await LoginService.Instance.TrySilentLogin()))
-                {
-                    await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-                }
-            });
         }
 
         protected override void OnStart()

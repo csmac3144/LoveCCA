@@ -22,10 +22,6 @@ namespace LoveCCA.Views
             ((LoveCCA.ViewModels.MyKidsViewModel)this.BindingContext).DeleteCommand.Execute(((SwipeItem)sender).BindingContext);
         }
 
-        private async void ToolbarItemAdd_Clicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync($"{nameof(EditKidPage)}");
-        }
 
         protected override void OnAppearing()
         {

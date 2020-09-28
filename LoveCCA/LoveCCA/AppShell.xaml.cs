@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using LoveCCA.Services;
 using LoveCCA.ViewModels;
 using LoveCCA.Views;
@@ -21,17 +22,39 @@ namespace LoveCCA
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(EditKidPage), typeof(EditKidPage));
+
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                if (LoginService.Instance.IsAuthenticated || await LoginService.Instance.TrySilentLogin())
+                {
+                    if (!(await LoginService.Instance.IsCurrentUserVerified(false)))
+                    {
+                        await Navigation.PushModalAsync(new AccountVerificationPage());
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    await Navigation.PushModalAsync(new LoginPage());
+                }
+            });
         }
+
 
         private async void OnSignOutClicked(object sender, EventArgs e)
         {
             LoginService.Instance.SignOut();
-            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            Shell.Current.FlyoutIsPresented = false;
+            await Shell.Current.Navigation.PushModalAsync(new LoginPage());
         }
+
         private async void OnChangePasswordClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync($"//{nameof(ChangePasswordPage)}");
-
+            Shell.Current.FlyoutIsPresented = false;
+            await Shell.Current.Navigation.PushModalAsync(new ChangePasswordPage());
         }
 
         private async void Settings_Clicked(object sender, EventArgs e)

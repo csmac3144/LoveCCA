@@ -101,7 +101,7 @@
     -->
     <ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:LoginPage}" />
     <ShellContent Route="SignUpPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:SignUpPage}" />
-    <ShellContent Route="ForgotPasswordPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:ForgotPasswordPage}" />
+    <ShellContent Route="ForgotPasswordPage" Shell.FlyoutBehavior="Disabled" Shell.PresentationMode="ModalAnimated" ContentTemplate="{DataTemplate local:ForgotPasswordPage}" />
     <ShellContent Route="ChangePasswordPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:ChangePasswordPage}" />
     <ShellContent Route="AccountVerificationPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:AccountVerificationPage}" />
 
