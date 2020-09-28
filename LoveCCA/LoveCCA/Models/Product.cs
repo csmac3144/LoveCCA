@@ -1,4 +1,5 @@
 ﻿using Plugin.CloudFirestore.Attributes;
+using System;
 
 namespace LoveCCA.Models
 {
@@ -11,5 +12,7 @@ namespace LoveCCA.Models
         public string Glyph { get; set; }
         public decimal Price { get; set; }
         public bool Taxable { get; set; }
+        public DayOfWeek DayOfWeek { get; set; }
+        public int Option { get; set; }
     }
 }
