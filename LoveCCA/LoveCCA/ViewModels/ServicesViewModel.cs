@@ -45,6 +45,7 @@ namespace LoveCCA.ViewModels
                     }
                     break;
                 case 2:
+                    await Shell.Current.GoToAsync($"{nameof(SchoolCalendarPage)}");
                     break;
                 case 3:
                     break;

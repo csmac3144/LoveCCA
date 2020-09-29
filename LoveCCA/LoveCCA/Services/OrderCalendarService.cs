@@ -76,7 +76,7 @@ namespace LoveCCA.Services
                 if (day.Date.Date == specialDay.Date.Date)
                 {
                     
-                    day.IsNotSchoolDay = !specialDay.IsSchoolDay;
+                    day.IsNotSchoolDay = (!specialDay.IsSchoolDay || specialDay.IsEarlyDismissal);
                     day.Description = specialDay.Description;
                 }
             }
@@ -88,7 +88,7 @@ namespace LoveCCA.Services
             foreach (var specialDay in _schoolYearConfiguration.SpecialDays.Where(h => h.IsRange)) {
                 if (day.Date.Date >= specialDay.Date.Date && day.Date.Date <= specialDay.EndDate.Date)
                 {
-                    day.IsNotSchoolDay = !specialDay.IsSchoolDay;
+                    day.IsNotSchoolDay = (!specialDay.IsSchoolDay || specialDay.IsEarlyDismissal);
                     day.Description = specialDay.Description;
                     break;
                 }

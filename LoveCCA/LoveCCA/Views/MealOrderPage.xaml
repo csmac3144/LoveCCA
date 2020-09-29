@@ -37,10 +37,9 @@
                     </StackLayout>
                 </StackLayout>
             </DataTemplate>
-            <DataTemplate x:Key="validPersonTemplate">
-                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="White">
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="StartAndExpand">
+            <DataTemplate x:Key="validTemplate">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="Orange">
+                        <StackLayout HorizontalOptions="StartAndExpand" BackgroundColor="Aqua">
                             <Label Text="{Binding DayOfWeekLabel}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
@@ -50,13 +49,23 @@
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="12" />
                         </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand">
-                            <Switch IsToggled="{Binding IsPending}" Toggled="Switch_Toggled"/>
-                        </StackLayout>
-                    </StackLayout>
+                        <CollectionView x:DataType="model:Day" VerticalOptions="Start" ItemsSource="{Binding MenuOptions}" SelectionMode="Single" BackgroundColor="Chartreuse">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80*"/>
+                                            <ColumnDefinition Width="20*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" x:DataType="model:MenuOption" LineBreakMode="WordWrap" Text="{Binding Description}"/>
+                                        <Label Grid.Column="1" x:DataType="model:MenuOption" Text="{Binding Price}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
                 </StackLayout>
             </DataTemplate>
-            <DataTemplate x:Key="invalidPersonTemplate">
+            <DataTemplate x:Key="invalidTemplate">
                 <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray">
                     <StackLayout Orientation="Horizontal">
                         <StackLayout HorizontalOptions="StartAndExpand">
@@ -93,9 +102,9 @@
                     </StackLayout>
                 </StackLayout>
             </DataTemplate>
-            <local:PersonDataTemplateSelector x:Key="personDataTemplateSelector"
-                ValidTemplate="{StaticResource validPersonTemplate}"
-                InvalidTemplate="{StaticResource invalidPersonTemplate}" 
+            <local:MealOrderDataTemplateSelector x:Key="mealDataTemplateSelector"
+                ValidTemplate="{StaticResource validTemplate}"
+                InvalidTemplate="{StaticResource invalidTemplate}" 
                 WeekendTemplate="{StaticResource weekendTemplate}"
                 PreviouslyOrderedTemplate="{StaticResource previousOrderTemplate}"
             />
@@ -124,9 +133,9 @@
             <RefreshView x:DataType="vm:MealOrderViewModel" Command="{Binding LoadItemsCommand}" 
                 IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView x:Name="ItemsListView"
-                ItemsSource="{Binding Items}"
-                ItemTemplate="{StaticResource personDataTemplateSelector}"                                
-                SelectionMode="None">
+                    ItemsSource="{Binding Items}"
+                    ItemTemplate="{StaticResource mealDataTemplateSelector}"                                
+                    SelectionMode="None">
                 </CollectionView>
             </RefreshView>
         </StackLayout>

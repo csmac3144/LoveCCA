@@ -207,7 +207,7 @@ namespace LoveCCA.Services
                         Description = "Garden Salad.",
                         Price = 3 }
                     }},
-                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Wednesday, MenuNumber = 2,
+                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Thursday, MenuNumber = 2,
                     Options = new List<MenuOption>() {new MenuOption {
                         Description = "Quesadillas - chicken and cheese",
                         Price = 4.5M },

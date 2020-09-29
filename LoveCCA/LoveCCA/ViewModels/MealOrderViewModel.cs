@@ -1,5 +1,6 @@
 ﻿using LoveCCA.Models;
 using LoveCCA.Services;
+using LoveCCA.Services.MealService;
 using LoveCCA.Views;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace LoveCCA.ViewModels
         public Command AddItemCommand { get; }
         public Command DoneCommand { get; }
         public Command<Item> ItemTapped { get; }
-        private IOrderCalendarService _orderCalendarService;
+        private MealCalendarService _mealCalendarService;
         private IOrderHistoryService _orderHistoryService;
 
         public MealOrderViewModel()
@@ -34,7 +35,7 @@ namespace LoveCCA.ViewModels
 
             DoneCommand = new Command(async () => await Done());
 
-            _orderCalendarService = new OrderCalendarService();
+            _mealCalendarService = new MealCalendarService();
             _orderHistoryService = new OrderHistoryService();
 
             Kids = new List<Student>();
@@ -78,7 +79,7 @@ namespace LoveCCA.ViewModels
             Items?.Clear();
             Items = null;
             _orderHistoryService = null;
-            _orderCalendarService = null;
+            _mealCalendarService = null;
             SelectedItem = null;
         }
 
@@ -89,8 +90,8 @@ namespace LoveCCA.ViewModels
             try
             {
                 Items.Clear();
-                await _orderCalendarService.Initialize(DateTime.Now,_selectedKid,"Hot Meal");
-                foreach (var item in _orderCalendarService.WeekDays)
+                await _mealCalendarService.Initialize(DateTime.Now,_selectedKid,"Hot Meal");
+                foreach (var item in _mealCalendarService.WeekDays)
                 {
                     Items.Add(item);
                 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace LoveCCA.Models
@@ -13,7 +14,7 @@ namespace LoveCCA.Models
         public Day()
         {
             OrderStatus = OrderStatus.None;
-
+            MenuOptions = new ObservableCollection<MenuOption>();
         }
         public DateTime Date { get; set; }
         public string DateLabel {  
@@ -35,5 +36,7 @@ namespace LoveCCA.Models
         public Student OrderKid { get; set; }
         public string OrderProductType { get; set; }
         public bool IsPending => OrderStatus == OrderStatus.Pending;
+        public ObservableCollection<MenuOption> MenuOptions { get; set; }
+        public int SelectedMealOption { get; set; }
     }
 }
