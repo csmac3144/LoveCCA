@@ -18,6 +18,7 @@ namespace LoveCCA
 
             Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
             Routing.RegisterRoute(nameof(MilkOrderPage), typeof(MilkOrderPage));
+            Routing.RegisterRoute(nameof(MealOrderPage), typeof(MealOrderPage));
             Routing.RegisterRoute(nameof(MyKidsPage), typeof(MyKidsPage));
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));

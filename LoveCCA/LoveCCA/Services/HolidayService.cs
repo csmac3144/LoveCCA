@@ -11,6 +11,19 @@ namespace LoveCCA.Services
     }
     public class HolidayService : IHolidayService
     {
+        public static DateTime GetStartOfCurrentSchoolYear()
+        {
+            if (DateTime.Now.Month > 7)
+            {
+                return new DateTime(DateTime.Now.Year,9,1);
+            }
+            else
+            {
+                return new DateTime(DateTime.Now.Year - 1, 9, 1);
+            }
+
+        }
+
         public bool IsCurrentSchoolYear(int schoolStartYear)
         {
             if (DateTime.Now.Month > 7)

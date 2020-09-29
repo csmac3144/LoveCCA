@@ -18,7 +18,6 @@ namespace LoveCCA.Services
 
     public class OrderHistoryService : IOrderHistoryService
     {
-        bool _loaded = false;
         public OrderHistoryService()
         {
             Orders = new List<Order>();
@@ -133,16 +132,16 @@ namespace LoveCCA.Services
                             .Instance
                             .GetCollection("orders")
                             .WhereEqualsTo("Email", email.ToLower())
+                            .WhereGreaterThan("OrderDate", HolidayService.GetStartOfCurrentSchoolYear())
                             .OrderBy("OrderDate", false)
                             .GetDocumentsAsync();
 
                 Orders = query.ToObjects<Order>().ToList();
-                System.Diagnostics.Debug.WriteLine("LOADED ORDERS");
+                Debug.WriteLine("LOADED ORDERS");
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Error loading orders");
-                throw;
+                System.Diagnostics.Debug.WriteLine($"Error loading orders {ex.Message}");
             }
 
 
