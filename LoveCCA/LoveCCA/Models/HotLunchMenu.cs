@@ -4,17 +4,18 @@ using System.Text;
 
 namespace LoveCCA.Models
 {
-    class Menu
+    public class HotLunchMenu
     {
-        public Menu()
+        public HotLunchMenu()
         {
             Options = new List<MenuOption>();
         }
-        public DayOfWeek DayOfWeek { get; set; }
+        public int MenuNumber { get; set; }
+        public int DayOfWeek { get; set; }
         public List<MenuOption> Options { get; set; }
     }
 
-    class MenuOption { 
+    public class MenuOption { 
         public string Description { get; set; }
         public decimal Price { get; set; }
     }

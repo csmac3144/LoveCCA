@@ -1,16 +1,12 @@
-﻿using System;
+﻿using LoveCCA.Models;
+using LoveCCA.Services;
+using LoveCCA.Views;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
-using LoveCCA.Models;
-using LoveCCA.Views;
-using System.Collections.Generic;
-using LoveCCA.Services;
-using System.Net.Http.Headers;
-using System.Data;
 
 namespace LoveCCA.ViewModels
 {

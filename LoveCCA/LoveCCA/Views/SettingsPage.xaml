@@ -17,7 +17,7 @@
     </ContentPage.Resources>
 
         <ScrollView>
-        <Grid Padding="10,10,10,10" RowSpacing="20">
+        <Grid x:Name="SettingsGrid" Padding="10,10,10,10" RowSpacing="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />

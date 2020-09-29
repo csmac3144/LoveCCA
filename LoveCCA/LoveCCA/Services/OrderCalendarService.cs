@@ -1,4 +1,5 @@
 ﻿using LoveCCA.Models;
+using Plugin.CloudFirestore.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace LoveCCA.Services
     public class OrderCalendarService : IOrderCalendarService
     {
         private DateTime _initWeekStart;
-        private SchoolYearSettings _schoolYearSettings;
+        private SchoolYearConfiguration _schoolYearConfiguration;
         private IHolidayService _holidayService;
         private IOrderHistoryService _orderHistoryService;
         private List<Order> _relevantOrders;
@@ -34,7 +35,7 @@ namespace LoveCCA.Services
             WeekDays = new List<Day>();
         }
 
-        public SchoolYearSettings SchoolYearSettings => _schoolYearSettings;
+        public SchoolYearConfiguration SchoolYearSettings => _schoolYearConfiguration;
 
 
         public List<Day> WeekDays { get; private set; }
@@ -42,7 +43,7 @@ namespace LoveCCA.Services
         public Student Kid { get; private set; }
         public string ProductType { get; private set; }
 
-        public async Task Initialize(DateTime initDate, Student kid, string productType)
+        public virtual async Task Initialize(DateTime initDate, Student kid, string productType)
         {
             Kid = kid;
             ProductType = productType;
@@ -50,8 +51,8 @@ namespace LoveCCA.Services
             await _orderHistoryService.LoadOrders();
             _relevantOrders = _orderHistoryService.Orders.Where(o => o.Kid.Id == this.Kid.Id && o.ProductType == this.ProductType).ToList();
 
-            if (_schoolYearSettings == null)
-                _schoolYearSettings = await _holidayService.LoadSchoolSettings();
+            if (_schoolYearConfiguration == null)
+                _schoolYearConfiguration = await SchoolConfigurationService.Instance.GetSchoolConfiguration();
             _initWeekStart = initDate.StartOfWeek(DayOfWeek.Sunday);
             LoadWeeks();
 
@@ -60,7 +61,7 @@ namespace LoveCCA.Services
 
         private Day CheckIfHoliday(Day day)
         {
-            day.IsNotSchoolDay = (day.Date < _schoolYearSettings.YearStart);
+            day.IsNotSchoolDay = (day.Date < _schoolYearConfiguration.YearStart);
             day.IsNotSchoolDay |= (day.Date.Date.DayOfWeek == DayOfWeek.Saturday || day.Date.Date.DayOfWeek == DayOfWeek.Sunday);
             day = DateIsWithinRanges(day);
             day = DateIsHoliday(day);
@@ -70,12 +71,13 @@ namespace LoveCCA.Services
 
         private Day DateIsHoliday(Day day)
         {
-            foreach (var holiday in _schoolYearSettings.Holidays.Where(h => !h.IsRange))
+            foreach (var specialDay in _schoolYearConfiguration.SpecialDays.Where(h => !h.IsRange))
             {
-                if (day.Date.Date == holiday.Date.Date)
+                if (day.Date.Date == specialDay.Date.Date)
                 {
-                    day.IsNotSchoolDay = true;
-                    day.Description = holiday.Description;
+                    
+                    day.IsNotSchoolDay = !specialDay.IsSchoolDay;
+                    day.Description = specialDay.Description;
                 }
             }
             return day;
@@ -83,11 +85,11 @@ namespace LoveCCA.Services
 
         private Day DateIsWithinRanges(Day day)
         {
-            foreach (var holiday in _schoolYearSettings.Holidays.Where(h => h.IsRange)) {
-                if (day.Date.Date >= holiday.Date.Date && day.Date.Date <= holiday.EndDate.Date)
+            foreach (var specialDay in _schoolYearConfiguration.SpecialDays.Where(h => h.IsRange)) {
+                if (day.Date.Date >= specialDay.Date.Date && day.Date.Date <= specialDay.EndDate.Date)
                 {
-                    day.IsNotSchoolDay = true;
-                    day.Description = holiday.Description;
+                    day.IsNotSchoolDay = !specialDay.IsSchoolDay;
+                    day.Description = specialDay.Description;
                     break;
                 }
             }
@@ -105,7 +107,7 @@ namespace LoveCCA.Services
         {
             WeekDays.Clear();
             var startDate = _initWeekStart.AddDays(Index * 7);
-            var endDate = _schoolYearSettings.YearEnd;
+            var endDate = _schoolYearConfiguration.YearEnd;
             var dateToAdd = startDate;
 
             while (dateToAdd <= endDate)
@@ -148,19 +150,29 @@ namespace LoveCCA.Services
 
 
 
-    public class SchoolYearSettings
+    public class SchoolYearConfiguration
     {
+        public SchoolYearConfiguration()
+        {
+            SpecialDays = new List<SpecialDay>();
+            MealWeekMenuRotationSchedule = new List<MealWeekRotation>();
+        }
+        [Id]
+        public string Id { get; set; }
         public DateTime YearStart { get; set; }
         public DateTime YearEnd { get; set; }
-        public List<Holiday> Holidays { get; set; }
+        public List<SpecialDay> SpecialDays { get; set; }
+        public List<MealWeekRotation> MealWeekMenuRotationSchedule { get; set; }
+        public List<HotLunchMenu> HotLunchMenu { get; set; }
     }
 
-    public class Holiday
+    public class SpecialDay
     {
-        public Holiday()
+        public SpecialDay()
         {
             EndDate = DateTime.MinValue;
         }
+        [Ignored]
         public bool IsRange
         {
             get
@@ -168,6 +180,8 @@ namespace LoveCCA.Services
                 return EndDate > Date;
             }
         }
+        public bool IsSchoolDay { get; set; }
+        public bool IsEarlyDismissal { get; set; }
         public DateTime Date { get; set; }
         public DateTime EndDate { get; set; }
         public string Description { get; set; }
