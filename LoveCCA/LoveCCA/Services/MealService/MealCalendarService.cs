@@ -41,7 +41,7 @@ namespace LoveCCA.Services.MealService
                         {
                             day.MenuOptions.Add(new MenuOption(day) { 
                                 Description = option.Description,
-                                Glyph = option.Glyph,
+                                Glyph = string.IsNullOrEmpty(option.Glyph) ? "⚪" : option.Glyph,
                                 Price = option.Price
                             });
                         }

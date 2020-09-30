@@ -56,9 +56,9 @@
                             <DataTemplate>
                                 <Grid RowSpacing="10" Padding="10">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="10*"/>
+                                        <ColumnDefinition Width="15*"/>
                                         <ColumnDefinition Width="70*"/>
-                                        <ColumnDefinition Width="20*"/>
+                                        <ColumnDefinition Width="15*"/>
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*"/>
@@ -67,7 +67,7 @@
                                         <TapGestureRecognizer x:DataType="model:MenuOption" Command="{Binding TappedCommand}" CommandParameter="{Binding .}">
                                         </TapGestureRecognizer>
                                     </Grid.GestureRecognizers>
-                                    <Label Grid.Column="0" x:DataType="model:MenuOption" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Glyph}">
+                                    <Label Grid.Column="0" x:DataType="model:MenuOption" FontSize="Medium" LineBreakMode="WordWrap" Text="{Binding Glyph}">
                                     </Label>
                                     <Label Grid.Column="1" x:DataType="model:MenuOption" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Description}"/>
                                     <Label Grid.Column="2" x:DataType="model:MenuOption" FontSize="Small" FontAttributes="Bold" Text="{Binding PriceLabel}"/>

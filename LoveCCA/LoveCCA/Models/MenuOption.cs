@@ -12,6 +12,7 @@ namespace LoveCCA.Models
         public MenuOption(Day day) : this()
         {
             ParentDay = day;
+            Glyph = "⚪";
         }
 
         public MenuOption()

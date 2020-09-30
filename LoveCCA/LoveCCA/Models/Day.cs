@@ -25,19 +25,19 @@ namespace LoveCCA.Models
 
         public void SelectOption(MenuOption option)
         {
-            if (string.IsNullOrEmpty(option.Glyph))
+            if (option.Glyph == "⚪")
             {
                 foreach (var o in MenuOptions)
                 {
-                    o.Glyph = string.Empty;
+                    o.Glyph = "⚪";
                     o.Notify();
                 }
-                option.Glyph = "✔️";
+                option.Glyph = "⚫";
                 option.Notify();
             }
             else
             {
-                option.Glyph = string.Empty;
+                option.Glyph = "⚪";
                 option.Notify();
             }
 
