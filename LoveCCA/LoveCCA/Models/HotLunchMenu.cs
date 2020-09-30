@@ -15,10 +15,5 @@ namespace LoveCCA.Models
         public List<MenuOption> Options { get; set; }
     }
 
-    public class MenuOption { 
-        public string Description { get; set; }
-        public decimal Price { get; set; }
-    }
-
 
 }

@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LoveCCA.Views.MealOrderPage"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+              x:Class="LoveCCA.Views.MealOrderPage"
              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
              xmlns:model="clr-namespace:LoveCCA.Models"  
              xmlns:local="clr-namespace:LoveCCA.Views"  
@@ -38,31 +40,50 @@
                 </StackLayout>
             </DataTemplate>
             <DataTemplate x:Key="validTemplate">
-                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="Orange">
-                        <StackLayout HorizontalOptions="StartAndExpand" BackgroundColor="Aqua">
-                            <Label Text="{Binding DayOfWeekLabel}" 
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding DayOfWeekLabel}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" FontAttributes="Bold" />
-                            <Label Text="{Binding DateLabel}" 
+                        <Label Text="{Binding DateLabel}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="12" />
-                        </StackLayout>
-                        <CollectionView x:DataType="model:Day" VerticalOptions="Start" ItemsSource="{Binding MenuOptions}" SelectionMode="Single" BackgroundColor="Chartreuse">
+                    </StackLayout>
+                    <StackLayout BindableLayout.ItemsSource="{Binding MenuOptions}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="10" Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="10*"/>
+                                        <ColumnDefinition Width="70*"/>
+                                        <ColumnDefinition Width="20*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer x:DataType="model:MenuOption" Command="{Binding TappedCommand}" CommandParameter="{Binding .}">
+                                        </TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
+                                    <Label Grid.Column="0" x:DataType="model:MenuOption" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Glyph}">
+                                    </Label>
+                                    <Label Grid.Column="1" x:DataType="model:MenuOption" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Description}"/>
+                                    <Label Grid.Column="2" x:DataType="model:MenuOption" FontSize="Small" FontAttributes="Bold" Text="{Binding PriceLabel}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+
+                    <!--<CollectionView x:DataType="model:Day" HeightRequest="100" VerticalOptions="Start"
+                                ItemsSource="{Binding MenuOptions}" SelectionMode="Single">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="80*"/>
-                                            <ColumnDefinition Width="20*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Label Grid.Column="0" x:DataType="model:MenuOption" LineBreakMode="WordWrap" Text="{Binding Description}"/>
-                                        <Label Grid.Column="1" x:DataType="model:MenuOption" Text="{Binding Price}"/>
-                                    </Grid>
+        
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
-                        </CollectionView>
+                        </CollectionView>-->
                 </StackLayout>
             </DataTemplate>
             <DataTemplate x:Key="invalidTemplate">

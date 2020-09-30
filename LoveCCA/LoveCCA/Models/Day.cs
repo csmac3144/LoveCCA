@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 
 namespace LoveCCA.Models
 {
@@ -16,6 +14,7 @@ namespace LoveCCA.Models
             OrderStatus = OrderStatus.None;
             MenuOptions = new ObservableCollection<MenuOption>();
         }
+
         public DateTime Date { get; set; }
         public string DateLabel {  
             get
@@ -23,6 +22,27 @@ namespace LoveCCA.Models
                 return Date.ToString("M");
             }
         }
+
+        public void SelectOption(MenuOption option)
+        {
+            if (string.IsNullOrEmpty(option.Glyph))
+            {
+                foreach (var o in MenuOptions)
+                {
+                    o.Glyph = string.Empty;
+                    o.Notify();
+                }
+                option.Glyph = "✔️";
+                option.Notify();
+            }
+            else
+            {
+                option.Glyph = string.Empty;
+                option.Notify();
+            }
+
+        }
+
         public string DayOfWeekLabel {  
             get
             {

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,7 +36,15 @@ namespace LoveCCA.Services.MealService
 
                     if (menu != null)
                     {
-                        day.MenuOptions = new ObservableCollection<MenuOption>(menu.Options);
+                        day.MenuOptions = new ObservableCollection<MenuOption>();
+                        foreach (var option in menu.Options)
+                        {
+                            day.MenuOptions.Add(new MenuOption(day) { 
+                                Description = option.Description,
+                                Glyph = option.Glyph,
+                                Price = option.Price
+                            });
+                        }
                     }                         
                 }
             }
