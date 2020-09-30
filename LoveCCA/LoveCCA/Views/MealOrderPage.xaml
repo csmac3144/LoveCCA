@@ -61,7 +61,7 @@
                                         <ColumnDefinition Width="20*"/>
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <Grid.GestureRecognizers>
                                         <TapGestureRecognizer x:DataType="model:MenuOption" Command="{Binding TappedCommand}" CommandParameter="{Binding .}">
