@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -22,7 +23,6 @@ namespace LoveCCA.ViewModels
         public Command<Item> ItemTapped { get; }
         private MealCalendarService _mealCalendarService;
         private IOrderHistoryService _orderHistoryService;
-
         public MealOrderViewModel()
         {
             Title = "Hot Meal Order";
@@ -46,7 +46,23 @@ namespace LoveCCA.ViewModels
                 _selectedKid = Kids[0];
             }
             OnPropertyChanged("Kids");
+            _subTotal = 0M;
         }
+
+        private Decimal _subTotal;
+        public Decimal Subtotal { 
+            get
+            {
+                return _subTotal;
+            }
+            set
+            {
+                _subTotal = value;
+                OnPropertyChanged(nameof(SubtotalLabel));
+            }
+        }
+        public string SubtotalLabel => Subtotal.ToString("C");
+
 
         public async Task Done()
         {
@@ -90,11 +106,23 @@ namespace LoveCCA.ViewModels
             try
             {
                 Items.Clear();
+                Subtotal = 0M;
                 await _mealCalendarService.Initialize(DateTime.Now,_selectedKid,"Hot Meal");
                 foreach (var item in _mealCalendarService.WeekDays)
                 {
+                    item.Parent = this;
                     Items.Add(item);
+                    if (item.OrderStatus == OrderStatus.Pending)
+                    {
+                        
+                        if (item.SelectedMenuOption != null)
+                        {
+                            Subtotal += item.SelectedMenuOption.Price;
+                        }
+                    }
                 }
+                OnPropertyChanged(nameof(SubtotalLabel));
+
             }
             catch (Exception ex)
             {
@@ -136,9 +164,9 @@ namespace LoveCCA.ViewModels
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
 
-        internal async Task UpdateOrder(Day day, bool value)
+        internal async Task UpdateOrder(Day day)
         {
-            string id = await _orderHistoryService.SaveOrder(day, value);
+            string id = await _orderHistoryService.SaveMealOrder(day);
             day.OrderId = id;
         }
     }

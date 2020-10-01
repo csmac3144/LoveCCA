@@ -12,8 +12,9 @@ namespace LoveCCA.Services
     {
         List<Order> Orders { get; }
         Task LoadOrders();
-        Task<string> SaveOrder(Day day, bool value);
+        Task<string> SaveMilkOrder(Day day, bool value);
         Task CompletePendingOrders();
+        Task<string> SaveMealOrder(Day day);
     }
 
     public class OrderHistoryService : IOrderHistoryService
@@ -24,7 +25,7 @@ namespace LoveCCA.Services
         }
         public List<Order> Orders { get; private set; }
 
-        public async Task<string> SaveOrder(Day day, bool value)
+        public async Task<string> SaveMilkOrder(Day day, bool value)
         {
             if (value) day.OrderStatus = OrderStatus.Pending;
             else day.OrderStatus = OrderStatus.None;
@@ -43,6 +44,11 @@ namespace LoveCCA.Services
 
         private async Task<string> HandlePendingDayOrder(Day day)
         {
+            if (!string.IsNullOrEmpty(day.OrderId))
+            {
+                await RemoveOrder(day.OrderId);
+            }
+
             var order = new Order
             {
                 Email = UserProfileService.Instance.CurrentUserProfile.Email,
@@ -51,7 +57,8 @@ namespace LoveCCA.Services
                 DeliveryDate = day.Date.Date,
                 OrderDate = DateTime.Now.Date,
                 Status = (int)day.OrderStatus,
-                Quantity = 1
+                Quantity = 1,
+                SelectedOptionID = day.SelectedMenuOption?.Id
             };
             order = await AppendOrder(order);
             return order.Id;
@@ -155,6 +162,20 @@ namespace LoveCCA.Services
             {
                 await UpdateOrderStatus(id, (int)OrderStatus.Completed);
             }
+        }
+
+        public async Task<string> SaveMealOrder(Day day)
+        {
+            switch (day.OrderStatus)
+            {
+                case OrderStatus.None:
+                    return await HandleNoneDayOrder(day);
+                case OrderStatus.Pending:
+                    return await HandlePendingDayOrder(day);
+                case OrderStatus.Completed:
+                    throw new NotImplementedException();
+            }
+            return null;
         }
     }
 }

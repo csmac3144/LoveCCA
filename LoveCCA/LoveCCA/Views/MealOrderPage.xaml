@@ -19,25 +19,55 @@
             <Color x:Key="Accent">#D9E7F3</Color>
             <Color x:Key="Primary">#10448C</Color>
             <DataTemplate x:Key="previousOrderTemplate">
-                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="Azure">
                     <StackLayout Orientation="Horizontal">
                         <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="{Binding DayOfWeekLabel}" 
-                            TextColor="Gray"
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" FontAttributes="Bold" />
-                            <Label Text="{Binding DateLabel}" 
-                            TextColor="Gray"
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="12" />
+                            <Label Opacity="0.33" Text="{Binding DayOfWeekLabel}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" FontAttributes="Bold" />
+                            <Label Opacity="0.33" Text="{Binding DateLabel}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="12" />
                         </StackLayout>
                         <StackLayout HorizontalOptions="EndAndExpand">
-                            <Switch IsToggled="True" IsEnabled="False"/>
+                            <Label Opacity="0.33" Text="Order Completed On" 
+                                TextColor="#10448C"
+                                LineBreakMode="NoWrap"
+                                HorizontalTextAlignment="End"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" FontAttributes="Bold" />
+                            <Label Opacity="0.33" Text="{Binding OrderDateLabel}" 
+                                LineBreakMode="NoWrap"
+                                TextColor="#10448C"
+                                HorizontalTextAlignment="End"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="12" />
                         </StackLayout>
                     </StackLayout>
-                </StackLayout>
+                    <StackLayout BindableLayout.ItemsSource="{Binding MenuOptions}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="10" Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="15*"/>
+                                        <ColumnDefinition Width="70*"/>
+                                        <ColumnDefinition Width="15*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Opacity="0.33" Grid.Column="0" x:DataType="model:MenuOption" FontSize="Medium" LineBreakMode="WordWrap" Text="{Binding Glyph}">
+                                    </Label>
+                                    <Label Opacity="0.33" Grid.Column="1" x:DataType="model:MenuOption" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Description}"/>
+                                    <Label Opacity="0.33" Grid.Column="2" x:DataType="model:MenuOption" FontSize="Small" FontAttributes="Bold" Text="{Binding PriceLabel}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                    <BoxView Opacity="0.2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#10448C"/>
+                </StackLayout>            
             </DataTemplate>
             <DataTemplate x:Key="validTemplate">
                 <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand">
@@ -75,15 +105,7 @@
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
                     </StackLayout>
-
-                    <!--<CollectionView x:DataType="model:Day" HeightRequest="100" VerticalOptions="Start"
-                                ItemsSource="{Binding MenuOptions}" SelectionMode="Single">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-        
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>-->
+                    <BoxView Opacity="0.2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#10448C"/>
                 </StackLayout>
             </DataTemplate>
             <DataTemplate x:Key="invalidTemplate">
@@ -103,6 +125,7 @@
                             <Label Text="{Binding Description}" FontSize="13" FontAttributes="Bold" VerticalTextAlignment="Center"/>
                         </StackLayout>
                     </StackLayout>
+                    <BoxView Opacity="0.2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"/>
                 </StackLayout>
             </DataTemplate>
             <DataTemplate x:Key="weekendTemplate">
@@ -159,6 +182,10 @@
                     SelectionMode="None">
                 </CollectionView>
             </RefreshView>
+            <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#10448C" Orientation="Horizontal">
+                <Label Text="Subtotal:" FontAttributes="Bold" FontSize="Medium" TextColor="White" Margin="4,4,20,4"/>
+                <Label Text="{Binding SubtotalLabel}" FontAttributes="Bold" FontSize="Medium" TextColor="White" Margin="4,4,20,4"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -39,11 +39,23 @@ namespace LoveCCA.Services.MealService
                         day.MenuOptions = new ObservableCollection<MenuOption>();
                         foreach (var option in menu.Options)
                         {
-                            day.MenuOptions.Add(new MenuOption(day) { 
+                            var mo = new MenuOption(day)
+                            {
+                                Id = option.Id,
                                 Description = option.Description,
-                                Glyph = string.IsNullOrEmpty(option.Glyph) ? "⚪" : option.Glyph,
-                                Price = option.Price
-                            });
+                                Price = option.Price,
+                                Glyph = "⚪"
+                            };
+                            day.MenuOptions.Add(mo);
+                        }
+                        if (!string.IsNullOrEmpty (day.SelectedMenuOptionID))
+                        {
+                            var selected = day.MenuOptions.FirstOrDefault(o => o.Id == day.SelectedMenuOptionID);
+                            if (selected != null)
+                            {
+                                day.SelectedMenuOption = selected;
+                                selected.Glyph = "⚫";
+                            }
                         }
                     }                         
                 }

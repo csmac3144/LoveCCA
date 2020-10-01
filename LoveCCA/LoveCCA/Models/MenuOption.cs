@@ -7,6 +7,7 @@ namespace LoveCCA.Models
 {
     public class MenuOption : INotifyPropertyChanged
     {
+        [Ignored]
         public Command TappedCommand { get; set; }
         private Day ParentDay { get; }
         public MenuOption(Day day) : this()
@@ -30,20 +31,21 @@ namespace LoveCCA.Models
             }
         }
 
-        public void OnTapped(object obj)
+        public async void OnTapped(object obj)
         {
-            ParentDay.SelectOption(obj as MenuOption);
+            await ParentDay.SelectOption(obj as MenuOption);
         }
 
         public void Notify()
         {
             OnPropertyChanged(nameof(Glyph));
         }
-
+        public string Id { get; set; }
+        [Ignored]
         public string Glyph { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        [Id]
+        [Ignored]
         public string PriceLabel => Price.ToString("C");
     }
 

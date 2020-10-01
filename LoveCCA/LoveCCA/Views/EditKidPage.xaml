@@ -19,7 +19,7 @@
             <Entry Placeholder="Last Name" Text="{Binding LastName}" />
             <Entry Placeholder="Grade" Text="{Binding Grade}" Keyboard="Numeric" />
             <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" HorizontalOptions="FillAndExpand">
-                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" BackgroundColor="Red"/>
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
                 <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
         </StackLayout>

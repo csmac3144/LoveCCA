@@ -141,7 +141,7 @@ namespace LoveCCA.ViewModels
 
         internal async Task UpdateOrder(Day day, bool value)
         {
-            string id = await _orderHistoryService.SaveOrder(day, value);
+            string id = await _orderHistoryService.SaveMilkOrder(day, value);
             day.OrderId = id;
         }
     }

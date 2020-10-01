@@ -37,27 +37,5 @@ namespace LoveCCA.Views
                 return;
             _viewModel.OnAppearing();
         }
-
-
-        private async void Switch_Toggled(object sender, ToggledEventArgs e)
-        {
-            var day = ((Xamarin.Forms.Switch)sender).BindingContext as Day;
-            if (day != null)
-            {
-                if (day.OrderStatus == OrderStatus.Pending && e.Value)
-                {
-                    Debug.WriteLine("No change");
-                    return;
-                }
-                if (day.OrderStatus == OrderStatus.None && !e.Value)
-                {
-                    Debug.WriteLine("No change");
-                    return;
-                }
-                Debug.WriteLine($"{day.DateLabel} {day.OrderId} {e.Value}");
-                await _viewModel.UpdateOrder(day, e.Value);
-            }
-
-        }
     }
 }
