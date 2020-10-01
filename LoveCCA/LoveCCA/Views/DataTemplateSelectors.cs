@@ -44,7 +44,7 @@ namespace LoveCCA.Views
             {
                 return WeekendTemplate;
             }
-            return day.IsNotSchoolDay || !day.MenuOptions.Any() ? InvalidTemplate : ValidTemplate;
+            return day.IsNotSchoolDay || !day.Products.Any() ? InvalidTemplate : ValidTemplate;
         }
     }
 }

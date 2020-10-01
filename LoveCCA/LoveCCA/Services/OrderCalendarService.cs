@@ -129,7 +129,7 @@ namespace LoveCCA.Services
                 day.OrderKid = order.Kid;
                 day.OrderDate = order.OrderDate;
                 day.OrderProductType = order.ProductType;
-                day.SelectedMenuOptionID = order.SelectedOptionID;
+                day.SelectedProductID = order.SelectedProductID;
                 if (order.Status == (int)OrderStatus.Completed)
                 {
                     day.OrderStatus = OrderStatus.Completed;

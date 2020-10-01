@@ -169,68 +169,89 @@ namespace LoveCCA.Services
                 new MealWeekRotation(DateTime.Parse("2021-06-07"),2)
             };
 
+            var prods = new List<Product>
+            {
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍱", MenuIndex = 1,
+                ShortDescription = "Lunchbox (ham and cheese)",
+                Description = "Lunchboxes - 1/2 Sub - Ham and cheese with mayo and lettuce, pkg of goldfish crackers, applesauce and juicebox.",
+                Price = 5 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍱", MenuIndex = 2,
+                ShortDescription = "Lunchbox (ham and salami)",
+                Description = "Lunchboxes - 1/2 Sub - Cold cut (ham and salami) with mayo and lettuce, pkg of goldfish crackers, applesauce and juicebox.",
+                Price = 5 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍱", MenuIndex = 3,
+                ShortDescription = "Lunchbox (sliced turkey)",
+                Description = "Lunchboxes - 1/2 Sub - Sliced turkey with mayo and lettuce, pkg of goldfish crackers, applesauce and juicebox.",
+                Price = 5 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥗", MenuIndex = 4,
+                ShortDescription = "Caesar Salad.",
+                Description = "Caesar Salad.",
+                Price = 3 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥖", MenuIndex = 5,
+                ShortDescription = "Sub (ham and cheese)",
+                Description = "Sub (approx. 9 inch) Ham and cheese with mayo and lettuce.",
+                Price = 4 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥖", MenuIndex = 6,
+                ShortDescription = "Sub (ham and salami)",
+                Description = "Sub (approx. 9 inch) Cold cut (ham and salami) with mayo and lettuce.",
+                Price = 4 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥖", MenuIndex = 7,
+                ShortDescription = "Sub (sliced turkey)",
+                Description = "Sub (approx. 9 inch) Sliced turkey with mayo and lettuce.",
+                Price = 4 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥗", MenuIndex = 8,
+                ShortDescription = "Caesar Salad",
+                Description = "Caesar Salad.",
+                Price = 3 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍽️", MenuIndex = 9,
+                ShortDescription = "Shepherd's Pie",
+                Description = "Shepherd's Pie.",
+                Price = 4 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥗", MenuIndex = 10,
+                ShortDescription = "Garden Salad",
+                Description = "Garden Salad.",
+                Price = 3 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🌯", MenuIndex = 112,
+                ShortDescription = "Quesadilla (chicken and cheese)",
+                Description = "Quesadillas - chicken and cheese",
+                Price = 4.5M },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🌯", MenuIndex = 12,
+                ShortDescription = "Quesadilla (cheese)",
+                Description = "Quesadillas - cheese",
+                Price = 4.5M },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥗", MenuIndex = 13,
+                ShortDescription = "Garden Salad",
+                Description = "Garden Salad.",
+                Price = 3 },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍕", MenuIndex = 14,
+                ShortDescription = "Pepperoni Pizza",
+                Description = "Pepperoni Pizza from Mario's Pizza.",
+                Price = 2.5M },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍕", MenuIndex = 15,
+                ShortDescription = "Cheese Pizza",
+                Description = "Cheese Pizza from Mario's Pizza.",
+                Price = 2.5M },
+                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥙", MenuIndex = 16,
+                ShortDescription = "Chicken Shawarma",
+                Description = "Chicken Shawarma wrap with lettuce and mayo, from Mezza Lebanese",
+                Price = 5M },
+                new Product { Id = Guid.NewGuid().ToString(),
+                ShortDescription = "Milk", Name = "Milk", Glyph = "🥛", MenuIndex = 0,
+                Description = "Single Serving of Milk", 
+                Price = 0.45M }
+            };
+
+            await ProductService.UpdateProducts(prods);
+
+
             var items = new List<HotLunchMenu>
             {
-                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Wednesday, MenuNumber = 1,
-                    Options = new List<MenuOption>() {new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Lunchboxes - 1/2 Sub - Ham and cheese with mayo and lettuce, pkg of goldfish crackers, applesauce and juicebox.",
-                        Price = 5 },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Lunchboxes - 1/2 Sub - Cold cut (ham and salami) with mayo and lettuce, pkg of goldfish crackers, applesauce and juicebox.",
-                        Price = 5 },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Lunchboxes - 1/2 Sub - Sliced turkey with mayo and lettuce, pkg of goldfish crackers, applesauce and juicebox.",
-                        Price = 5 },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Caesar Salad.",
-                        Price = 3 }
-                    }},
-                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Wednesday, MenuNumber = 2,
-                    Options = new List<MenuOption>() {new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Sub (approx. 9 inch) Ham and cheese with mayo and lettuce.",
-                        Price = 4 },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Sub (approx. 9 inch) Cold cut (ham and salami) with mayo and lettuce.",
-                        Price = 4 },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Sub (approx. 9 inch) Sliced turkey with mayo and lettuce.",
-                        Price = 4 },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Caesar Salad.",
-                        Price = 3 }
-                    }},
-                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Thursday, MenuNumber = 1,
-                    Options = new List<MenuOption>() {new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Shepherd's Pie.",
-                        Price = 4 },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Garden Salad.",
-                        Price = 3 }
-                    }},
-                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Thursday, MenuNumber = 2,
-                    Options = new List<MenuOption>() {new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Quesadillas - chicken and cheese",
-                        Price = 4.5M },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Quesadillas - cheese",
-                        Price = 4.5M },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Garden Salad.",
-                        Price = 3 }
-                    }},
-                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Friday, MenuNumber = 1,
-                    Options = new List<MenuOption>() {new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Pepperoni Pizza from Mario's Pizza.",
-                        Price = 2.5M },
-                        new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Cheese Pizza from Mario's Pizza.",
-                        Price = 2.5M }
-                    }},
-                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Friday, MenuNumber = 2,
-                    Options = new List<MenuOption>() {new MenuOption { Id = Guid.NewGuid().ToString(),
-                        Description = "Chicken Shawarma wrap with lettuce and mayo, from Mezza Lebanese",
-                        Price = 5M }
-                    }},
+                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Wednesday, MenuNumber = 1, ProductOptionIndexes = new List<int> {1,2,3,4}},
+                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Wednesday, MenuNumber = 2, ProductOptionIndexes = new List<int> {5,6,7,8}},
+                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Thursday, MenuNumber = 1, ProductOptionIndexes = new List<int> {9,10}},
+                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Thursday, MenuNumber = 2, ProductOptionIndexes = new List<int> {11,12,13}},
+                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Friday, MenuNumber = 1, ProductOptionIndexes = new List<int> {14,15}},
+                new HotLunchMenu { DayOfWeek = (int)DayOfWeek.Friday, MenuNumber = 2,ProductOptionIndexes = new List<int> {16}}
             };
 
             var specialDays = new List<SpecialDay>
@@ -263,6 +284,8 @@ namespace LoveCCA.Services
                 new SpecialDay { Date = new DateTime(2021,6,17), Description = "Graduation (Location/Time TBA)"},
                 new SpecialDay { Date = new DateTime(2021,6,18), Description = "Awards Night (Location/Time TBA)"},
             };
+
+
 
             var settings = new SchoolYearConfiguration();
             settings.YearStart = new DateTime(2020, 9, 9);

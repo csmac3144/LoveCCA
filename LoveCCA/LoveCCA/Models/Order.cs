@@ -13,7 +13,8 @@ namespace LoveCCA.Models
         public int Status { get; set; }
         public Student Kid { get; set; }
         public string ProductType { get; set; }
+        public string ProductDescription { get; set; }
         public int Quantity { get; set; }
-        public string SelectedOptionID { get; set; }
+        public string SelectedProductID { get; set; }
     }
 }

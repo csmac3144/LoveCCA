@@ -14,7 +14,7 @@ namespace LoveCCA.Models
         public Day()
         {
             OrderStatus = OrderStatus.None;
-            MenuOptions = new ObservableCollection<MenuOption>();
+            Products = new ObservableCollection<Product>();
         }
 
         public DateTime Date { get; set; }
@@ -32,16 +32,16 @@ namespace LoveCCA.Models
             }
         }
 
-        public async Task SelectOption(MenuOption option)
+        public async Task SelectOption(Product option)
         {
-            SelectedMenuOption = null;
-            SelectedMenuOptionID = null;
+            SelectedProduct = null;
+            SelectedProductID = null;
 
-            foreach (var opt in MenuOptions)
+            foreach (var opt in Products)
             {
                 if (opt == option)
                     continue;
-                if (opt.Glyph == "⚫")
+                if (opt.SelectionGlyph == "⚫")
                 {
                     Parent.Subtotal -= opt.Price;
                     break;
@@ -49,16 +49,16 @@ namespace LoveCCA.Models
             }
 
 
-            if (option.Glyph == "⚪")
+            if (option.SelectionGlyph == "⚪")
             {
-                foreach (var o in MenuOptions)
+                foreach (var o in Products)
                 {
-                    o.Glyph = "⚪";
+                    o.SelectionGlyph = "⚪";
                     o.Notify();
                 }
-                option.Glyph = "⚫";
-                SelectedMenuOption = option;
-                SelectedMenuOptionID = option.Id;
+                option.SelectionGlyph = "⚫";
+                SelectedProduct = option;
+                SelectedProductID = option.Id;
                 Parent.Subtotal += option.Price;
                 option.Notify();
                 OrderStatus = OrderStatus.Pending;
@@ -66,7 +66,7 @@ namespace LoveCCA.Models
             else
             {
                 Parent.Subtotal -= option.Price;
-                option.Glyph = "⚪";
+                option.SelectionGlyph = "⚪";
                 option.Notify();
                 OrderStatus = OrderStatus.None;
             }
@@ -87,9 +87,9 @@ namespace LoveCCA.Models
         public Student OrderKid { get; set; }
         public string OrderProductType { get; set; }
         public bool IsPending => OrderStatus == OrderStatus.Pending;
-        public ObservableCollection<MenuOption> MenuOptions { get; set; }
-        public MenuOption SelectedMenuOption { get; set; }
-        public string SelectedMenuOptionID { get; set; }
+        public ObservableCollection<Product> Products { get; set; }
+        public Product SelectedProduct { get; set; }
+        public string SelectedProductID { get; set; }
 
         public MealOrderViewModel Parent { get; internal set; }
     }

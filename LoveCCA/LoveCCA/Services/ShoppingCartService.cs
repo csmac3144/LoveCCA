@@ -64,7 +64,7 @@ namespace LoveCCA.Services
                             var cartItem = new CartItem
                             {
                                 Id = Guid.NewGuid().ToString(),
-                                Glyph = product.Glyph,
+                                Glyph = product.SelectionGlyph,
                                 Price = product.Price.ToString("C"),
                                 ProductType = product.Name,
                                 Kid = kid,

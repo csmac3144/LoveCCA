@@ -58,7 +58,7 @@ namespace LoveCCA.Services
                 OrderDate = DateTime.Now.Date,
                 Status = (int)day.OrderStatus,
                 Quantity = 1,
-                SelectedOptionID = day.SelectedMenuOption?.Id
+                SelectedProductID = day.SelectedProduct?.Id
             };
             order = await AppendOrder(order);
             return order.Id;

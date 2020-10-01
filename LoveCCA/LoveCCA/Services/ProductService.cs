@@ -30,6 +30,43 @@ namespace LoveCCA.Services
             }
         }
 
+        public static async Task UpdateProducts(List<Product> products)
+        {
+            try
+            {
+                var query = await CrossCloudFirestore.Current
+                         .Instance
+                         .GetCollection("products")
+                         .GetDocumentsAsync();
+
+                var documents = (query.ToObjects<Product>()).ToList();
+
+                foreach (var doc in documents)
+                {
+                    await CrossCloudFirestore.Current
+                             .Instance
+                             .GetCollection("products")
+                             .GetDocument(doc.Id)
+                             .DeleteDocumentAsync();
+                }
+
+                foreach (var p in products)
+                {
+                    await CrossCloudFirestore.Current
+                                 .Instance
+                                 .GetCollection("products")
+                                 .AddDocumentAsync(p);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
         public static async Task<List<Product>> LoadProducts()
         {
             try

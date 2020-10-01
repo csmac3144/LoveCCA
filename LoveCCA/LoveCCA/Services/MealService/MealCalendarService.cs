@@ -11,6 +11,7 @@ namespace LoveCCA.Services.MealService
 {
     class MealCalendarService : OrderCalendarService
     {
+        private List<Product> _products;
         public MealCalendarService()
         {
         }
@@ -19,11 +20,13 @@ namespace LoveCCA.Services.MealService
         {
             await base.Initialize(initDate, kid, productType);
             
-            UpdateDays();
+            await UpdateDays();
         }
 
-        public void UpdateDays()
+        public async Task UpdateDays()
         {
+            if (_products == null)
+                _products = await ProductService.LoadProducts();
 
             foreach (var rotation in base.SchoolYearSettings.MealWeekMenuRotationSchedule)
             {
@@ -36,25 +39,30 @@ namespace LoveCCA.Services.MealService
 
                     if (menu != null)
                     {
-                        day.MenuOptions = new ObservableCollection<MenuOption>();
-                        foreach (var option in menu.Options)
+                        day.Products = new ObservableCollection<Product>();
+                        foreach (int index in menu.ProductOptionIndexes)
                         {
-                            var mo = new MenuOption(day)
+                            var p = _products.FirstOrDefault(pr => pr.MenuIndex == index);
+                            if (p != null)
                             {
-                                Id = option.Id,
-                                Description = option.Description,
-                                Price = option.Price,
-                                Glyph = "⚪"
-                            };
-                            day.MenuOptions.Add(mo);
+                                var mo = new Product(day)
+                                {
+                                    Id = p.Id,
+                                    //Description = $"{p.Glyph} {p.Description}",
+                                    Description = p.Description,
+                                    Price = p.Price,
+                                    Glyph = p.Glyph,
+                                };
+                                day.Products.Add(mo);
+                            }
                         }
-                        if (!string.IsNullOrEmpty (day.SelectedMenuOptionID))
+                        if (!string.IsNullOrEmpty (day.SelectedProductID))
                         {
-                            var selected = day.MenuOptions.FirstOrDefault(o => o.Id == day.SelectedMenuOptionID);
+                            var selected = day.Products.FirstOrDefault(o => o.Id == day.SelectedProductID);
                             if (selected != null)
                             {
-                                day.SelectedMenuOption = selected;
-                                selected.Glyph = "⚫";
+                                day.SelectedProduct = selected;
+                                selected.SelectionGlyph = "⚫";
                             }
                         }
                     }                         

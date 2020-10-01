@@ -115,9 +115,9 @@ namespace LoveCCA.ViewModels
                     if (item.OrderStatus == OrderStatus.Pending)
                     {
                         
-                        if (item.SelectedMenuOption != null)
+                        if (item.SelectedProduct != null)
                         {
-                            Subtotal += item.SelectedMenuOption.Price;
+                            Subtotal += item.SelectedProduct.Price;
                         }
                     }
                 }
@@ -159,9 +159,9 @@ namespace LoveCCA.ViewModels
         {
             if (item == null)
                 return;
-
-            // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            await Task.Yield();
+            //// This will push the ItemDetailPage onto the navigation stack
+            //await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
 
         internal async Task UpdateOrder(Day day)

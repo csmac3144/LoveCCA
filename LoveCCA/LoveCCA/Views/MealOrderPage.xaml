@@ -46,7 +46,7 @@
                                 FontSize="12" />
                         </StackLayout>
                     </StackLayout>
-                    <StackLayout BindableLayout.ItemsSource="{Binding MenuOptions}">
+                    <StackLayout BindableLayout.ItemsSource="{Binding Products}">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
                                 <Grid RowSpacing="10" Padding="10">
@@ -58,10 +58,10 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <Label Opacity="0.33" Grid.Column="0" x:DataType="model:MenuOption" FontSize="Medium" LineBreakMode="WordWrap" Text="{Binding Glyph}">
+                                    <Label Opacity="0.33" Grid.Column="0" x:DataType="model:Product" FontSize="Medium" LineBreakMode="WordWrap" Text="{Binding SelectionGlyph}">
                                     </Label>
-                                    <Label Opacity="0.33" Grid.Column="1" x:DataType="model:MenuOption" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Description}"/>
-                                    <Label Opacity="0.33" Grid.Column="2" x:DataType="model:MenuOption" FontSize="Small" FontAttributes="Bold" Text="{Binding PriceLabel}"/>
+                                    <Label Opacity="0.33" Grid.Column="1" x:DataType="model:Product" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Description}"/>
+                                    <Label Opacity="0.33" Grid.Column="2" x:DataType="model:Product" FontSize="Small" FontAttributes="Bold" Text="{Binding PriceLabel}"/>
                                 </Grid>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
@@ -81,7 +81,7 @@
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="12" />
                     </StackLayout>
-                    <StackLayout BindableLayout.ItemsSource="{Binding MenuOptions}">
+                    <StackLayout BindableLayout.ItemsSource="{Binding Products}">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
                                 <Grid RowSpacing="10" Padding="10">
@@ -94,13 +94,13 @@
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <Grid.GestureRecognizers>
-                                        <TapGestureRecognizer x:DataType="model:MenuOption" Command="{Binding TappedCommand}" CommandParameter="{Binding .}">
+                                        <TapGestureRecognizer x:DataType="model:Product" Command="{Binding TappedCommand}" CommandParameter="{Binding .}">
                                         </TapGestureRecognizer>
                                     </Grid.GestureRecognizers>
-                                    <Label Grid.Column="0" x:DataType="model:MenuOption" FontSize="Medium" LineBreakMode="WordWrap" Text="{Binding Glyph}">
+                                    <Label Grid.Column="0" x:DataType="model:Product" FontSize="Medium" LineBreakMode="WordWrap" Text="{Binding SelectionGlyph}">
                                     </Label>
-                                    <Label Grid.Column="1" x:DataType="model:MenuOption" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Description}"/>
-                                    <Label Grid.Column="2" x:DataType="model:MenuOption" FontSize="Small" FontAttributes="Bold" Text="{Binding PriceLabel}"/>
+                                    <Label Grid.Column="1" x:DataType="model:Product" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Description}"/>
+                                    <Label Grid.Column="2" x:DataType="model:Product" FontSize="Small" FontAttributes="Bold" Text="{Binding PriceLabel}"/>
                                 </Grid>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
