@@ -13,7 +13,6 @@ namespace LoveCCA
         public App()
         {
             InitializeComponent();
-
             MainPage = new AppShell();
         }
 

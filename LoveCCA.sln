@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoveCCA.iOS", "LoveCCA\Love
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoveCCA", "LoveCCA\LoveCCA\LoveCCA.csproj", "{43CF7B28-B978-43B2-BC32-617EE132478D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{15382D09-7A5C-4FF9-96DD-9ED9F1E36DE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{15382D09-7A5C-4FF9-96DD-9ED9F1E36DE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

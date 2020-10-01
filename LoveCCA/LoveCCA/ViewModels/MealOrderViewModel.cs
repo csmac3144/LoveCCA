@@ -1,20 +1,18 @@
-﻿using System;
+﻿using LoveCCA.Models;
+using LoveCCA.Services;
+using LoveCCA.Services.MealService;
+using LoveCCA.Views;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
-using LoveCCA.Models;
-using LoveCCA.Views;
-using System.Collections.Generic;
-using LoveCCA.Services;
-using System.Net.Http.Headers;
-using System.Data;
 
 namespace LoveCCA.ViewModels
 {
-    public class MilkOrderViewModel : BaseViewModel
+    public class MealOrderViewModel : BaseViewModel
     {
         private Item _selectedItem;
 
@@ -23,12 +21,11 @@ namespace LoveCCA.ViewModels
         public Command AddItemCommand { get; }
         public Command DoneCommand { get; }
         public Command<Item> ItemTapped { get; }
-        private IOrderCalendarService _orderCalendarService;
+        private MealCalendarService _mealCalendarService;
         private IOrderHistoryService _orderHistoryService;
-
-        public MilkOrderViewModel()
+        public MealOrderViewModel()
         {
-            Title = "Milk Order";
+            Title = "Hot Meal Order";
             Items = new ObservableCollection<Day>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -38,7 +35,7 @@ namespace LoveCCA.ViewModels
 
             DoneCommand = new Command(async () => await Done());
 
-            _orderCalendarService = new OrderCalendarService();
+            _mealCalendarService = new MealCalendarService();
             _orderHistoryService = new OrderHistoryService();
 
             Kids = new List<Student>();
@@ -49,7 +46,23 @@ namespace LoveCCA.ViewModels
                 _selectedKid = Kids[0];
             }
             OnPropertyChanged("Kids");
+            _subTotal = 0M;
         }
+
+        private Decimal _subTotal;
+        public Decimal Subtotal { 
+            get
+            {
+                return _subTotal;
+            }
+            set
+            {
+                _subTotal = value;
+                OnPropertyChanged(nameof(SubtotalLabel));
+            }
+        }
+        public string SubtotalLabel => Subtotal.ToString("C");
+
 
         public async Task Done()
         {
@@ -82,7 +95,7 @@ namespace LoveCCA.ViewModels
             Items?.Clear();
             Items = null;
             _orderHistoryService = null;
-            _orderCalendarService = null;
+            _mealCalendarService = null;
             SelectedItem = null;
         }
 
@@ -93,11 +106,23 @@ namespace LoveCCA.ViewModels
             try
             {
                 Items.Clear();
-                await _orderCalendarService.Initialize(DateTime.Now,_selectedKid,"Milk");
-                foreach (var item in _orderCalendarService.WeekDays)
+                Subtotal = 0M;
+                await _mealCalendarService.Initialize(DateTime.Now,_selectedKid,"Hot Meal");
+                foreach (var item in _mealCalendarService.WeekDays)
                 {
+                    item.Parent = this;
                     Items.Add(item);
+                    if (item.OrderStatus == OrderStatus.Pending)
+                    {
+                        
+                        if (item.SelectedMenuOption != null)
+                        {
+                            Subtotal += item.SelectedMenuOption.Price;
+                        }
+                    }
                 }
+                OnPropertyChanged(nameof(SubtotalLabel));
+
             }
             catch (Exception ex)
             {
@@ -139,9 +164,9 @@ namespace LoveCCA.ViewModels
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
 
-        internal async Task UpdateOrder(Day day, bool value)
+        internal async Task UpdateOrder(Day day)
         {
-            string id = await _orderHistoryService.SaveMilkOrder(day, value);
+            string id = await _orderHistoryService.SaveMealOrder(day);
             day.OrderId = id;
         }
     }

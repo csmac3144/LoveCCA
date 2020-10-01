@@ -33,6 +33,10 @@ namespace LoveCCA.ViewModels
             switch (item.Id)
             {
                 case 0:
+                    if (await SettingsOK())
+                    {
+                        await Shell.Current.GoToAsync($"{nameof(MealOrderPage)}");
+                    }
                     break;
                 case 1:
                     if (await SettingsOK())
@@ -41,6 +45,7 @@ namespace LoveCCA.ViewModels
                     }
                     break;
                 case 2:
+                    await Shell.Current.GoToAsync($"{nameof(SchoolCalendarPage)}");
                     break;
                 case 3:
                     break;

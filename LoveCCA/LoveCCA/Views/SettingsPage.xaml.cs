@@ -1,4 +1,6 @@
-﻿using LoveCCA.ViewModels;
+﻿using LoveCCA.Services;
+using LoveCCA.Services.MealService;
+using LoveCCA.ViewModels;
 using System;
 
 using Xamarin.Forms;
@@ -14,6 +16,17 @@ namespace LoveCCA.Views
         {
             InitializeComponent();
             _viewModel = BindingContext as SettingsViewModel;
+
+#if DEBUG
+            var b = new Button { Text = "Run Data Tasks" };
+            Grid grid = this.FindByName("SettingsGrid") as Grid;
+            grid.Children.Add(b, 1, 1);
+            b.Clicked += async (object sender, System.EventArgs e) => {
+                var service = new SchoolConfigurationService();
+                await service.GenerateConfig();
+            };
+#endif
+
         }
 
 

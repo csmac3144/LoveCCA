@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+              x:Class="LoveCCA.Views.MealOrderPage"
+             xmlns:vm="clr-namespace:LoveCCA.ViewModels"
+             xmlns:model="clr-namespace:LoveCCA.Models"  
+             xmlns:local="clr-namespace:LoveCCA.Views"  
+             Shell.PresentationMode="ModalAnimated"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:MealOrderViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#D9E7F3</Color>
+            <Color x:Key="Primary">#10448C</Color>
+            <DataTemplate x:Key="previousOrderTemplate">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="Azure">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Opacity="0.33" Text="{Binding DayOfWeekLabel}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" FontAttributes="Bold" />
+                            <Label Opacity="0.33" Text="{Binding DateLabel}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="12" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="EndAndExpand">
+                            <Label Opacity="0.33" Text="Order Completed On" 
+                                TextColor="#10448C"
+                                LineBreakMode="NoWrap"
+                                HorizontalTextAlignment="End"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" FontAttributes="Bold" />
+                            <Label Opacity="0.33" Text="{Binding OrderDateLabel}" 
+                                LineBreakMode="NoWrap"
+                                TextColor="#10448C"
+                                HorizontalTextAlignment="End"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="12" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout BindableLayout.ItemsSource="{Binding MenuOptions}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="10" Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="15*"/>
+                                        <ColumnDefinition Width="70*"/>
+                                        <ColumnDefinition Width="15*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Opacity="0.33" Grid.Column="0" x:DataType="model:MenuOption" FontSize="Medium" LineBreakMode="WordWrap" Text="{Binding Glyph}">
+                                    </Label>
+                                    <Label Opacity="0.33" Grid.Column="1" x:DataType="model:MenuOption" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Description}"/>
+                                    <Label Opacity="0.33" Grid.Column="2" x:DataType="model:MenuOption" FontSize="Small" FontAttributes="Bold" Text="{Binding PriceLabel}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                    <BoxView Opacity="0.2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#10448C"/>
+                </StackLayout>            
+            </DataTemplate>
+            <DataTemplate x:Key="validTemplate">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding DayOfWeekLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" FontAttributes="Bold" />
+                        <Label Text="{Binding DateLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="12" />
+                    </StackLayout>
+                    <StackLayout BindableLayout.ItemsSource="{Binding MenuOptions}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="10" Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="15*"/>
+                                        <ColumnDefinition Width="70*"/>
+                                        <ColumnDefinition Width="15*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer x:DataType="model:MenuOption" Command="{Binding TappedCommand}" CommandParameter="{Binding .}">
+                                        </TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
+                                    <Label Grid.Column="0" x:DataType="model:MenuOption" FontSize="Medium" LineBreakMode="WordWrap" Text="{Binding Glyph}">
+                                    </Label>
+                                    <Label Grid.Column="1" x:DataType="model:MenuOption" FontSize="Small" LineBreakMode="WordWrap" Text="{Binding Description}"/>
+                                    <Label Grid.Column="2" x:DataType="model:MenuOption" FontSize="Small" FontAttributes="Bold" Text="{Binding PriceLabel}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                    <BoxView Opacity="0.2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#10448C"/>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="invalidTemplate">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding DayOfWeekLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" FontAttributes="Bold" />
+                            <Label Text="{Binding DateLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="12" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding Description}" FontSize="13" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <BoxView Opacity="0.2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"/>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="weekendTemplate">
+                <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource Primary}">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding DayOfWeekLabel}"
+                            TextColor="White"
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" FontAttributes="Bold" />
+                            <Label Text="{Binding DateLabel}" 
+                            TextColor="White"
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="12" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+            <local:MealOrderDataTemplateSelector x:Key="mealDataTemplateSelector"
+                ValidTemplate="{StaticResource validTemplate}"
+                InvalidTemplate="{StaticResource invalidTemplate}" 
+                WeekendTemplate="{StaticResource weekendTemplate}"
+                PreviouslyOrderedTemplate="{StaticResource previousOrderTemplate}"
+            />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource Accent}">
+            <Grid Padding="10,10,10,10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Row="0" Spacing="20"  Orientation="Horizontal" HorizontalOptions="FillAndExpand" 
+                             VerticalOptions="CenterAndExpand" >
+                    <Picker x:Name="ChildPicker" ItemsSource="{Binding Kids}" ItemDisplayBinding="{Binding Name}"
+                            SelectedItem="{Binding SelectedKid}" HorizontalOptions="StartAndExpand" />
+                    <Button Text="Done" Command="{Binding DoneCommand}" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+
+            </Grid>
+            <RefreshView x:DataType="vm:MealOrderViewModel" Command="{Binding LoadItemsCommand}" 
+                IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView x:Name="ItemsListView"
+                    ItemsSource="{Binding Items}"
+                    ItemTemplate="{StaticResource mealDataTemplateSelector}"                                
+                    SelectionMode="None">
+                </CollectionView>
+            </RefreshView>
+            <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#10448C" Orientation="Horizontal">
+                <Label Text="Subtotal:" FontAttributes="Bold" FontSize="Medium" TextColor="White" Margin="4,4,20,4"/>
+                <Label Text="{Binding SubtotalLabel}" FontAttributes="Bold" FontSize="Medium" TextColor="White" Margin="4,4,20,4"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

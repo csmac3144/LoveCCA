@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
-             x:Class="LoveCCA.Views.SettingsPage"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+              x:Class="LoveCCA.Views.SettingsPage"
              Shell.PresentationMode="ModalAnimated"
              Title="{Binding Title}">
     <ContentPage.BindingContext>
@@ -17,7 +19,7 @@
     </ContentPage.Resources>
 
         <ScrollView>
-        <Grid Padding="10,10,10,10" RowSpacing="20">
+        <Grid x:Name="SettingsGrid" Padding="10,10,10,10" RowSpacing="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />

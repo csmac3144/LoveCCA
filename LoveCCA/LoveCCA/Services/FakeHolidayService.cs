@@ -5,10 +5,10 @@ namespace LoveCCA.Services
 
     public class FakeHolidayService : HolidayService, IHolidayService
     {
-        public override async Task<SchoolYearSettings> LoadSchoolSettings()
-        {
-            await Task.Yield();
-            return GetDefault();
-        }
+        //public override async Task<SchoolYearSettings> LoadSchoolSettings()
+        //{
+        //    await Task.Yield();
+        //    return GetDefault();
+        //}
     }
 }

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
              x:Class="LoveCCA.Views.MilkOrderPage"
              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
              xmlns:model="clr-namespace:LoveCCA.Models"  
@@ -38,7 +40,7 @@
                     </StackLayout>
                 </StackLayout>
             </DataTemplate>
-            <DataTemplate x:Key="validPersonTemplate">
+            <DataTemplate x:Key="validTemplate">
                 <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="White">
                     <StackLayout Orientation="Horizontal">
                         <StackLayout HorizontalOptions="StartAndExpand">
@@ -57,7 +59,7 @@
                     </StackLayout>
                 </StackLayout>
             </DataTemplate>
-            <DataTemplate x:Key="invalidPersonTemplate">
+            <DataTemplate x:Key="invalidTemplate">
                 <StackLayout Padding="20" x:DataType="model:Day" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray">
                     <StackLayout Orientation="Horizontal">
                         <StackLayout HorizontalOptions="StartAndExpand">
@@ -94,9 +96,9 @@
                     </StackLayout>
                 </StackLayout>
             </DataTemplate>
-            <local:PersonDataTemplateSelector x:Key="personDataTemplateSelector"
-                ValidTemplate="{StaticResource validPersonTemplate}"
-                InvalidTemplate="{StaticResource invalidPersonTemplate}" 
+            <local:MilkOrderDataTemplateSelector x:Key="milkDataTemplateSelector"
+                ValidTemplate="{StaticResource validTemplate}"
+                InvalidTemplate="{StaticResource invalidTemplate}" 
                 WeekendTemplate="{StaticResource weekendTemplate}"
                 PreviouslyOrderedTemplate="{StaticResource previousOrderTemplate}"
             />
@@ -126,7 +128,7 @@
                 IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
-                ItemTemplate="{StaticResource personDataTemplateSelector}"                                
+                ItemTemplate="{StaticResource milkDataTemplateSelector}"                                
                 SelectionMode="None">
                 </CollectionView>
             </RefreshView>

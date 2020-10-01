@@ -33,9 +33,7 @@ namespace LoveCCA.Services
 
         public async Task Initialize()
         {
-            string email = UserProfileService.Instance.CurrentUserProfile.Email;
-
-            await LoadProducts();
+            _products = await ProductService.LoadProducts();
             await _orderHistoryService.LoadOrders();
             LoadCart();
         }
@@ -45,10 +43,7 @@ namespace LoveCCA.Services
             CartItems.Clear();
             GrandTotal = 0;
             var kids = UserProfileService.Instance.CurrentUserProfile.Kids;
-            if (kids == null || kids.Count == 0)
-            {
-                kids = new List<Student>() { new Student { LastName = "My Child" } };
-            }
+
             foreach (var product in Products)
             {
                 var productOrders = _orderHistoryService.Orders.Where(o => o.ProductType == product.Name && o.Status == (int)OrderStatus.Pending);
@@ -96,24 +91,7 @@ namespace LoveCCA.Services
 
         public decimal GrandTotal { get; private set; }
 
-        private async Task LoadProducts()
-        {
-            try
-            {
-                    _products.Clear();
-                    var query = await CrossCloudFirestore.Current
-                                .Instance
-                                .GetCollection("products")
-                                .GetDocumentsAsync();
 
-                    _products = query.ToObjects<Product>().ToList();
-            }
-            catch (System.Exception)
-            {
-
-                System.Diagnostics.Debug.WriteLine("Error loading products");
-            }
-        }
 
         public async Task PaymentComplete(string transactionID)
         {
