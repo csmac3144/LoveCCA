@@ -53,7 +53,12 @@ namespace LoveCCA.Services
 
             if (_schoolYearConfiguration == null)
                 _schoolYearConfiguration = await SchoolConfigurationService.Instance.GetSchoolConfiguration();
+
             _initWeekStart = initDate.StartOfWeek(DayOfWeek.Sunday);
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
+            {
+                _initWeekStart = _initWeekStart.AddDays(7);
+            }
             LoadWeeks();
 
         }

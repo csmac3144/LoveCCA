@@ -24,7 +24,10 @@ namespace LoveCCA.Views
             {
                 return WeekendTemplate;
             }
-            return ((Day)item).IsNotSchoolDay ? InvalidTemplate : ValidTemplate;
+
+            bool notSchoolDay = day.IsNotSchoolDay || day.Date.Date < DateTime.Now.Date;
+
+            return notSchoolDay ? InvalidTemplate : ValidTemplate;
         }
     }
     public class MealOrderDataTemplateSelector : DataTemplateSelector

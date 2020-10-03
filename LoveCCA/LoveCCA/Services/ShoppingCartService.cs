@@ -46,7 +46,7 @@ namespace LoveCCA.Services
 
             foreach (var product in Products)
             {
-                var productOrders = _orderHistoryService.Orders.Where(o => o.ProductType == product.Name && o.Status == (int)OrderStatus.Pending);
+                var productOrders = _orderHistoryService.Orders.Where(o => o.SelectedProductID == product.Id  && o.Status == (int)OrderStatus.Pending);
                 if (productOrders.Any())
                 {
                     foreach (var kid in kids)
@@ -64,7 +64,7 @@ namespace LoveCCA.Services
                             var cartItem = new CartItem
                             {
                                 Id = Guid.NewGuid().ToString(),
-                                Glyph = product.SelectionGlyph,
+                                Glyph = product.Glyph,
                                 Price = product.Price.ToString("C"),
                                 ProductType = product.Name,
                                 Kid = kid,
