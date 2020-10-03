@@ -20,10 +20,19 @@ namespace LoveCCA.Services.MealService
         {
             await base.Initialize(initDate, kid, productType);
             
-            await UpdateDays();
+            switch (productType)
+            {
+                case "Milk":
+                    await UpdateDaysForMilk();
+                    break;
+                case "Hot Meal":
+                    await UpdateDaysForHotMeal();
+                    break;
+            }
+
         }
 
-        public async Task UpdateDays()
+        public async Task UpdateDaysForHotMeal()
         {
             if (_products == null)
                 _products = await ProductService.LoadProducts();
@@ -32,7 +41,7 @@ namespace LoveCCA.Services.MealService
             {
                 var weekDays = base.WeekDays.Where(d => d.Date >= rotation.Date && d.Date < rotation.Date.AddDays(7));
                 
-                foreach (var day in weekDays)
+                foreach (var day in weekDays.Where(d => !d.IsNotSchoolDay))
                 {
                     var menu = base.SchoolYearSettings.HotLunchMenu.Where(m => m.MenuNumber == rotation.Menu &&
                             m.DayOfWeek == (int)day.Date.DayOfWeek).FirstOrDefault();
@@ -70,7 +79,38 @@ namespace LoveCCA.Services.MealService
             }
         }
 
+        public async Task UpdateDaysForMilk()
+        {
+            if (_products == null)
+                _products = await ProductService.LoadProducts();
 
+            var milkProduct = _products.FirstOrDefault(p => p.Name == "Milk");
+
+            foreach (var day in base.WeekDays)
+            {
+                if (!day.IsNotSchoolDay)
+                {
+                    day.Products = new ObservableCollection<Product>();
+                    var mo = new Product(day)
+                    {
+                        Id = milkProduct.Id,
+                        Description = milkProduct.Description,
+                        Price = milkProduct.Price,
+                        Glyph = milkProduct.Glyph,
+                    };
+                    day.Products.Add(mo);
+                    if (!string.IsNullOrEmpty(day.SelectedProductID))
+                    {
+                        var selected = day.Products.FirstOrDefault(o => o.Id == day.SelectedProductID);
+                        if (selected != null)
+                        {
+                            day.SelectedProduct = selected;
+                            selected.SelectionGlyph = "⚫";
+                        }
+                    }
+                }
+            }
+        }
 
     }
 }
