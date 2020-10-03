@@ -43,7 +43,7 @@ namespace LoveCCA.Models
                     continue;
                 if (opt.SelectionGlyph == "⚫")
                 {
-                    Parent.Subtotal -= opt.Price;
+                    ParentViewModel.Subtotal -= opt.Price;
                     break;
                 }
             }
@@ -59,18 +59,18 @@ namespace LoveCCA.Models
                 option.SelectionGlyph = "⚫";
                 SelectedProduct = option;
                 SelectedProductID = option.Id;
-                Parent.Subtotal += option.Price;
+                ParentViewModel.Subtotal += option.Price;
                 option.Notify();
                 OrderStatus = OrderStatus.Pending;
             }
             else
             {
-                Parent.Subtotal -= option.Price;
+                ParentViewModel.Subtotal -= option.Price;
                 option.SelectionGlyph = "⚪";
                 option.Notify();
                 OrderStatus = OrderStatus.None;
             }
-            await Parent.UpdateOrder(this);
+            await ParentViewModel.UpdateOrder(this);
         }
 
         public string DayOfWeekLabel {  
@@ -91,6 +91,6 @@ namespace LoveCCA.Models
         public Product SelectedProduct { get; set; }
         public string SelectedProductID { get; set; }
 
-        public MealOrderViewModel Parent { get; internal set; }
+        public ProductViewModel ParentViewModel { get; internal set; }
     }
 }

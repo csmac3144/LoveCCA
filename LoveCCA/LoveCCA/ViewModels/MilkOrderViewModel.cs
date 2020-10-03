@@ -15,7 +15,7 @@ using LoveCCA.Services.MealService;
 
 namespace LoveCCA.ViewModels
 {
-    public class MilkOrderViewModel : BaseViewModel
+    public class MilkOrderViewModel : ProductViewModel
     {
         private Item _selectedItem;
 
@@ -94,11 +94,22 @@ namespace LoveCCA.ViewModels
             try
             {
                 Items.Clear();
-                await _mealCalendarService.Initialize(DateTime.Now,_selectedKid,"Milk");
+                Subtotal = 0M;
+                await _mealCalendarService.Initialize(DateTime.Now, _selectedKid, "Milk");
                 foreach (var item in _mealCalendarService.WeekDays)
                 {
+                    item.ParentViewModel = this;
                     Items.Add(item);
+                    if (item.OrderStatus == OrderStatus.Pending)
+                    {
+
+                        if (item.SelectedProduct != null)
+                        {
+                            Subtotal += item.SelectedProduct.Price;
+                        }
+                    }
                 }
+                OnPropertyChanged(nameof(SubtotalLabel));
             }
             catch (Exception ex)
             {

@@ -44,29 +44,29 @@
                         <DataTemplate>
                             <Grid x:DataType="model:CartItem" Padding="10,10,10,10">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="15*"/>
-                                    <ColumnDefinition Width="25*"/>
-                                    <ColumnDefinition Width="40*"/>
+                                    <ColumnDefinition Width="10*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                    <ColumnDefinition Width="50*"/>
                                     <ColumnDefinition Width="20*"/>
                                 </Grid.ColumnDefinitions>
-                                <StackLayout Grid.Column="0">
-                                    <Label Text="{Binding Glyph}" 
-                                    LineBreakMode="NoWrap" HorizontalOptions="Center"
-                                    Style="{DynamicResource ListItemTextStyle}" 
-                                    FontSize="Title" />
-                                    <Label Text="{Binding ProductType}" HorizontalOptions="Center"
-                                    LineBreakMode="NoWrap"
-                                    Style="{DynamicResource ListItemDetailTextStyle}"
-                                    FontSize="Micro" />
-                                </StackLayout>
+                                <Label Grid.Column="0" Text="{Binding Glyph}" 
+                                LineBreakMode="NoWrap" HorizontalOptions="Center"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="Title" />
                                 <Label Grid.Column="1" Text="{Binding KidName}" VerticalTextAlignment="Center"
                                     LineBreakMode="NoWrap"
                                     Style="{DynamicResource ListItemDetailTextStyle}"
                                     FontSize="Medium" />
-                                <Label  Grid.Column="2" Text="{Binding QuantityPriceLabel}"  VerticalTextAlignment="Center"
-                                    LineBreakMode="NoWrap"
-                                    Style="{DynamicResource ListItemDetailTextStyle}"
-                                    FontSize="Medium" />
+                                <StackLayout Grid.Column="2">
+                                    <Label  Text="{Binding QuantityPriceLabel}"  VerticalTextAlignment="Center"
+                                        LineBreakMode="NoWrap"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="Small" />
+                                    <Label  Text="{Binding ShortDescription}"  VerticalTextAlignment="Center"
+                                        LineBreakMode="NoWrap"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="Small" />
+                                </StackLayout>
                                 <Label  Grid.Column="3" Text="{Binding Total}"  VerticalTextAlignment="Center"
                                     LineBreakMode="NoWrap"
                                     Style="{DynamicResource ListItemDetailTextStyle}"

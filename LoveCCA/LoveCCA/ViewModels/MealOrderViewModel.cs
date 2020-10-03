@@ -12,7 +12,7 @@ using Xamarin.Forms;
 
 namespace LoveCCA.ViewModels
 {
-    public class MealOrderViewModel : BaseViewModel
+    public class MealOrderViewModel : ProductViewModel
     {
         private Item _selectedItem;
 
@@ -22,7 +22,6 @@ namespace LoveCCA.ViewModels
         public Command DoneCommand { get; }
         public Command<Item> ItemTapped { get; }
         private MealCalendarService _mealCalendarService;
-        private IOrderHistoryService _orderHistoryService;
         public MealOrderViewModel()
         {
             Title = "Hot Meal Order";
@@ -36,7 +35,6 @@ namespace LoveCCA.ViewModels
             DoneCommand = new Command(async () => await Done());
 
             _mealCalendarService = new MealCalendarService();
-            _orderHistoryService = new OrderHistoryService();
 
             Kids = new List<Student>();
             if (UserProfileService.Instance.CurrentUserProfile.Kids != null &&
@@ -46,22 +44,7 @@ namespace LoveCCA.ViewModels
                 _selectedKid = Kids[0];
             }
             OnPropertyChanged("Kids");
-            _subTotal = 0M;
         }
-
-        private Decimal _subTotal;
-        public Decimal Subtotal { 
-            get
-            {
-                return _subTotal;
-            }
-            set
-            {
-                _subTotal = value;
-                OnPropertyChanged(nameof(SubtotalLabel));
-            }
-        }
-        public string SubtotalLabel => Subtotal.ToString("C");
 
 
         public async Task Done()
@@ -110,7 +93,7 @@ namespace LoveCCA.ViewModels
                 await _mealCalendarService.Initialize(DateTime.Now,_selectedKid,"Hot Meal");
                 foreach (var item in _mealCalendarService.WeekDays)
                 {
-                    item.Parent = this;
+                    item.ParentViewModel = this;
                     Items.Add(item);
                     if (item.OrderStatus == OrderStatus.Pending)
                     {
@@ -164,10 +147,5 @@ namespace LoveCCA.ViewModels
             //await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
 
-        internal async Task UpdateOrder(Day day)
-        {
-            string id = await _orderHistoryService.SaveMealOrder(day);
-            day.OrderId = id;
-        }
     }
 }
