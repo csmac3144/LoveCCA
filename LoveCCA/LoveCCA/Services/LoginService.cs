@@ -96,7 +96,6 @@ namespace LoveCCA.Services
             }
             catch (Exception)
             {
-                throw;
             }
             return IsAuthenticated;
         }

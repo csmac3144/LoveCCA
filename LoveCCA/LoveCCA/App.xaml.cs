@@ -13,11 +13,22 @@ namespace LoveCCA
         public App()
         {
             InitializeComponent();
+            Xamarin.Essentials.Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
             MainPage = new AppShell();
         }
 
         protected override void OnStart()
         {
+        }
+
+        private async void Connectivity_ConnectivityChanged(object sender, Xamarin.Essentials.ConnectivityChangedEventArgs e)
+        {
+            if (e.NetworkAccess == Xamarin.Essentials.NetworkAccess.Internet || 
+                e.NetworkAccess == Xamarin.Essentials.NetworkAccess.ConstrainedInternet)
+            {
+                return;
+            }
+            await MainPage.Navigation.PushModalAsync(new ConnectivityPage());
         }
 
         protected override void OnSleep()

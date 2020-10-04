@@ -165,6 +165,9 @@
     <PackageReference Include="Plugin.CloudFirestore">
       <Version>3.1.0.2</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.Connectivity">
+      <Version>4.0.0.190-beta</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Firebase.iOS.Auth">
       <Version>6.5.1</Version>
     </PackageReference>

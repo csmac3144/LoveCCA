@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Plugin.FirebasePushNotification;
+using Xamarin.Forms;
 
 namespace LoveCCA.Services
 {
@@ -21,7 +24,12 @@ namespace LoveCCA.Services
             CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
             {
                 System.Diagnostics.Debug.WriteLine("Received");
-
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    string title = p.Data.Values.ToArray()[1] as string;
+                    string message = p.Data.Values.ToArray()[0] as string;
+                    await UserDialogs.Instance.AlertAsync(message, title);
+                });
             };
 
             CrossFirebasePushNotification.Current.OnNotificationOpened += (s, p) =>

@@ -80,7 +80,7 @@ namespace LoveCCA.Services
             }
             catch (Exception)
             {
-                throw;
+                
             }
         }
 
@@ -109,33 +109,44 @@ namespace LoveCCA.Services
 
         public async Task UpdateCurrentProfile()
         {
-            await CrossCloudFirestore.Current
-             .Instance
-             .GetCollection("user_profiles")
-             .GetDocument(CurrentUserProfile.Id)
-             .UpdateDataAsync(new { Email = CurrentUserProfile.Email, 
-                Name = CurrentUserProfile.Name,
-                CellPhone = CurrentUserProfile.CellPhone,
-                AllowNotifications = CurrentUserProfile.AllowNotifications,
-                UrgentNotificationsOnly = CurrentUserProfile.UrgentNotificationsOnly,
-                FCMTokens = CurrentUserProfile.FCMTokens,
-                Kids =  CurrentUserProfile.Kids});
-            if (CurrentUserProfile.AllowNotifications)
+            try
             {
-                if (CurrentUserProfile.UrgentNotificationsOnly)
+                await CrossCloudFirestore.Current
+                 .Instance
+                 .GetCollection("user_profiles")
+                 .GetDocument(CurrentUserProfile.Id)
+                 .UpdateDataAsync(new
+                 {
+                     Email = CurrentUserProfile.Email,
+                     Name = CurrentUserProfile.Name,
+                     CellPhone = CurrentUserProfile.CellPhone,
+                     AllowNotifications = CurrentUserProfile.AllowNotifications,
+                     UrgentNotificationsOnly = CurrentUserProfile.UrgentNotificationsOnly,
+                     FCMTokens = CurrentUserProfile.FCMTokens,
+                     Kids = CurrentUserProfile.Kids
+                 });
+                if (CurrentUserProfile.AllowNotifications)
                 {
-                    PushNotificationService.Instance.Unsubscribe("information");
-                    PushNotificationService.Instance.Subscribe("urgent");
+                    if (CurrentUserProfile.UrgentNotificationsOnly)
+                    {
+                        PushNotificationService.Instance.Unsubscribe("information");
+                        PushNotificationService.Instance.Subscribe("urgent");
+                    }
+                    else
+                    {
+                        PushNotificationService.Instance.Subscribe(new string[] { "urgent", "information" });
+                    }
                 }
                 else
                 {
-                    PushNotificationService.Instance.Subscribe(new string[] { "urgent", "information" });
+                    PushNotificationService.Instance.UnsubscribeAll();
                 }
             }
-            else
+            catch (Exception)
             {
-                PushNotificationService.Instance.UnsubscribeAll();
+
             }
+
         }
 
         public async Task AddKid(Student kid)

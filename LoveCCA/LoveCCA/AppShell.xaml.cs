@@ -24,6 +24,7 @@ namespace LoveCCA
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(EditKidPage), typeof(EditKidPage));
             Routing.RegisterRoute(nameof(SchoolCalendarPage), typeof(SchoolCalendarPage));
+            Routing.RegisterRoute(nameof(ConnectivityPage), typeof(ConnectivityPage));
 
             Device.BeginInvokeOnMainThread(async () =>
             {

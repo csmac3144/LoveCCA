@@ -71,6 +71,9 @@
     <PackageReference Include="Plugin.FirebasePushNotification">
       <Version>3.3.10</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.Connectivity">
+      <Version>4.0.0.190-beta</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0.1" />
     <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.0.0.1" />
     <PackageReference Include="Xamarin.Firebase.Iid">

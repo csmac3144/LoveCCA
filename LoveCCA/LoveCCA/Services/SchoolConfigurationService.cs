@@ -57,7 +57,6 @@ namespace LoveCCA.Services
             catch (Exception ex)
             {
 
-                throw;
             }
         }
 
@@ -171,63 +170,63 @@ namespace LoveCCA.Services
 
             var prods = new List<Product>
             {
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍱", MenuIndex = 1,
+                new Product { Id = "2020-0001", Name = "Hot Meal", Glyph = "🍱", MenuIndex = 1,
                 ShortDescription = "Lunchbox (ham and cheese)",
                 Description = "Lunchboxes - 1/2 Sub - Ham and cheese with mayo and lettuce, pkg of goldfish crackers, applesauce and juicebox.",
                 Price = 5 },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍱", MenuIndex = 2,
+                new Product { Id = "2020-0002", Name = "Hot Meal", Glyph = "🍱", MenuIndex = 2,
                 ShortDescription = "Lunchbox (ham and salami)",
                 Description = "Lunchboxes - 1/2 Sub - Cold cut (ham and salami) with mayo and lettuce, pkg of goldfish crackers, applesauce and juicebox.",
                 Price = 5 },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍱", MenuIndex = 3,
+                new Product { Id = "2020-0003", Name = "Hot Meal", Glyph = "🍱", MenuIndex = 3,
                 ShortDescription = "Lunchbox (sliced turkey)",
                 Description = "Lunchboxes - 1/2 Sub - Sliced turkey with mayo and lettuce, pkg of goldfish crackers, applesauce and juicebox.",
                 Price = 5 },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥗", MenuIndex = 4,
+                new Product { Id = "2020-0004", Name = "Hot Meal", Glyph = "🥗", MenuIndex = 4,
                 ShortDescription = "Caesar Salad.",
                 Description = "Caesar Salad.",
                 Price = 3 },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥖", MenuIndex = 5,
+                new Product { Id = "2020-0005", Name = "Hot Meal", Glyph = "🥖", MenuIndex = 5,
                 ShortDescription = "Sub (ham and cheese)",
                 Description = "Sub (approx. 9 inch) Ham and cheese with mayo and lettuce.",
                 Price = 4 },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥖", MenuIndex = 6,
+                new Product { Id = "2020-0006", Name = "Hot Meal", Glyph = "🥖", MenuIndex = 6,
                 ShortDescription = "Sub (ham and salami)",
                 Description = "Sub (approx. 9 inch) Cold cut (ham and salami) with mayo and lettuce.",
                 Price = 4 },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥖", MenuIndex = 7,
+                new Product { Id = "2020-0007", Name = "Hot Meal", Glyph = "🥖", MenuIndex = 7,
                 ShortDescription = "Sub (sliced turkey)",
                 Description = "Sub (approx. 9 inch) Sliced turkey with mayo and lettuce.",
                 Price = 4 },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍽️", MenuIndex = 9,
+                new Product { Id = "2020-0008", Name = "Hot Meal", Glyph = "🍽️", MenuIndex = 9,
                 ShortDescription = "Shepherd's Pie",
                 Description = "Shepherd's Pie.",
                 Price = 4 },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥗", MenuIndex = 10,
+                new Product { Id = "2020-0009", Name = "Hot Meal", Glyph = "🥗", MenuIndex = 10,
                 ShortDescription = "Garden Salad",
                 Description = "Garden Salad.",
                 Price = 3 },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🌯", MenuIndex = 11,
+                new Product { Id = "2020-0010", Name = "Hot Meal", Glyph = "🌯", MenuIndex = 11,
                 ShortDescription = "Quesadilla (chicken and cheese)",
                 Description = "Quesadillas - chicken and cheese",
                 Price = 4.5M },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🌯", MenuIndex = 12,
+                new Product { Id = "2020-0011", Name = "Hot Meal", Glyph = "🌯", MenuIndex = 12,
                 ShortDescription = "Quesadilla (cheese)",
                 Description = "Quesadillas - cheese",
                 Price = 4.5M },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍕", MenuIndex = 14,
+                new Product { Id = "2020-0012", Name = "Hot Meal", Glyph = "🍕", MenuIndex = 14,
                 ShortDescription = "Pepperoni Pizza",
                 Description = "Pepperoni Pizza from Mario's Pizza.",
                 Price = 2.5M },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🍕", MenuIndex = 15,
+                new Product { Id = "2020-0013", Name = "Hot Meal", Glyph = "🍕", MenuIndex = 15,
                 ShortDescription = "Cheese Pizza",
                 Description = "Cheese Pizza from Mario's Pizza.",
                 Price = 2.5M },
-                new Product { Id = Guid.NewGuid().ToString(), Name = "Hot Meal", Glyph = "🥙", MenuIndex = 16,
+                new Product { Id = "2020-0014", Name = "Hot Meal", Glyph = "🥙", MenuIndex = 16,
                 ShortDescription = "Chicken Shawarma",
                 Description = "Chicken Shawarma wrap with lettuce and mayo, from Mezza Lebanese",
                 Price = 5M },
-                new Product { Id = Guid.NewGuid().ToString(),
+                new Product { Id = "2020-0015",
                 ShortDescription = "Milk", Name = "Milk", Glyph = "🥛", MenuIndex = 0,
                 Description = "Single Serving of Milk", 
                 Price = 0.45M }
@@ -285,7 +284,7 @@ namespace LoveCCA.Services
             settings.SpecialDays = specialDays;
             settings.MealWeekMenuRotationSchedule = slots;
             settings.HotLunchMenu = items;
-            settings.Id = Guid.NewGuid().ToString();
+            settings.Id = "2020-0001";
             await UpdateSchoolSettings(settings);
         }
     }

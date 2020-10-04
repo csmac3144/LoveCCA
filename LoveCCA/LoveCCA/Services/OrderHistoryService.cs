@@ -77,7 +77,6 @@ namespace LoveCCA.Services
             catch (Exception ex)
             {
                 Debug.WriteLine("Error updating order status " + ex.Message);
-                throw;
             }
             return id;
         }
