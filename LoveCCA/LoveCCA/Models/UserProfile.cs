@@ -28,6 +28,7 @@ namespace LoveCCA.Models
         public string CellPhone { get; set; }
         public List<Student> Kids { get; set; }
         public bool AllowNotifications { get; set; }
+        public bool UrgentNotificationsOnly { get; internal set; }
         public List<Order> OrderHistory { get; set; }
         public List<string> FCMTokens { get; internal set; }
     }

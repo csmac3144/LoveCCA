@@ -20,7 +20,7 @@ namespace LoveCCA.Views
 #if DEBUG
             var b = new Button { Text = "Run Data Tasks" };
             Grid grid = this.FindByName("SettingsGrid") as Grid;
-            grid.Children.Add(b, 0, 4);
+            grid.Children.Add(b, 0, 5);
             b.Clicked += async (object sender, System.EventArgs e) => {
                 var service = new SchoolConfigurationService();
                 await service.GenerateConfig();

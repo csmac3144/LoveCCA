@@ -36,6 +36,8 @@
             <Entry Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Placeholder="My Mobile Phone Number" Text="{Binding CellPhone}" />
             <Label Grid.Row="3" Grid.Column="0" Text="Allow Notifications" FontSize="Medium"/>
             <Switch  Grid.Row="3" Grid.Column="1" IsToggled="{Binding AllowNotificaitons}"/>
+            <Label Grid.Row="4" Grid.Column="0" Text="Urgent Notifications Only" FontSize="Medium"/>
+            <Switch  Grid.Row="4" Grid.Column="1" IsToggled="{Binding UrgentNotificationsOnly}"/>
         </Grid>
         </ScrollView>
 </ContentPage>
