@@ -8,15 +8,16 @@
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#10448C</Color>
+            <Color x:Key="Complimentary">#108c58</Color>
             <Color x:Key="Accent">#D9E7F3</Color>
-            <!--<Style TargetType="Button">
+            <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Complimentary}" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Disabled">
@@ -27,7 +28,7 @@
                         </VisualStateGroup>
                     </VisualStateGroupList>
                 </Setter>
-            </Style>-->
+            </Style>
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="Medium"></Setter>
                 <Setter Property="TextColor" Value="Black"></Setter>

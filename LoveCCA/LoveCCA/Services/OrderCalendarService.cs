@@ -1,5 +1,4 @@
 ﻿using LoveCCA.Models;
-using Plugin.CloudFirestore.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -153,45 +152,6 @@ namespace LoveCCA.Services
             schoolDay.OrderKid = Kid;
             schoolDay.OrderProductType = ProductType;
         }
-    }
-
-
-
-    public class SchoolYearConfiguration
-    {
-        public SchoolYearConfiguration()
-        {
-            SpecialDays = new List<SpecialDay>();
-            MealWeekMenuRotationSchedule = new List<MealWeekRotation>();
-        }
-        [Id]
-        public string Id { get; set; }
-        public DateTime YearStart { get; set; }
-        public DateTime YearEnd { get; set; }
-        public List<SpecialDay> SpecialDays { get; set; }
-        public List<MealWeekRotation> MealWeekMenuRotationSchedule { get; set; }
-        public List<HotLunchMenu> HotLunchMenu { get; set; }
-    }
-
-    public class SpecialDay
-    {
-        public SpecialDay()
-        {
-            EndDate = DateTime.MinValue;
-        }
-        [Ignored]
-        public bool IsRange
-        {
-            get
-            {
-                return EndDate > Date;
-            }
-        }
-        public bool IsSchoolDay { get; set; }
-        public bool IsEarlyDismissal { get; set; }
-        public DateTime Date { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Description { get; set; }
     }
 
 

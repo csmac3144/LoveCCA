@@ -1,4 +1,5 @@
 ﻿using LoveCCA.Models;
+using LoveCCA.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,4 +51,23 @@ namespace LoveCCA.Views
             return day.IsNotSchoolDay || !day.Products.Any() ? InvalidTemplate : ValidTemplate;
         }
     }
+
+    public class CalendarDataTemplateSelector : DataTemplateSelector
+    {
+        public DataTemplate SchoolDayTemplate { get; set; }
+        public DataTemplate NotSchoolDayTemplate { get; set; }
+        public DataTemplate EarlyDismissalTemplate { get; set; }
+
+        protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+        {
+            var day = (SpecialDay)item;
+            if (day.IsEarlyDismissal)
+            {
+                return EarlyDismissalTemplate;
+            }
+            return day.IsSchoolDay ? SchoolDayTemplate : NotSchoolDayTemplate;
+        }
+    }
+
+
 }

@@ -170,7 +170,7 @@
                              VerticalOptions="CenterAndExpand" >
                     <Picker x:Name="ChildPicker" ItemsSource="{Binding Kids}" ItemDisplayBinding="{Binding Name}"
                             SelectedItem="{Binding SelectedKid}" HorizontalOptions="StartAndExpand" />
-                    <Button Text="Done" Command="{Binding DoneCommand}" HorizontalOptions="EndAndExpand"/>
+                    <Button Text="Done" Command="{Binding DoneCommand}" HorizontalOptions="EndAndExpand" WidthRequest="100"/>
                 </StackLayout>
 
             </Grid>

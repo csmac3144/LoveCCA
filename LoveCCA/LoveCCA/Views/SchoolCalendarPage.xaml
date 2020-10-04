@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
+             xmlns:model="clr-namespace:LoveCCA.Models"  
+             xmlns:local="clr-namespace:LoveCCA.Views"  
             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
               Title="{Binding Title}"
@@ -11,11 +13,76 @@
         <vm:SchoolCalendarViewModel />
     </ContentPage.BindingContext>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#D9E7F3</Color>
+            <Color x:Key="Primary">#10448C</Color>
+            <DataTemplate x:Key="notSchoolDayTemplate">
+                <StackLayout Padding="20" x:DataType="model:SpecialDay" BackgroundColor="LightPink"
+                             HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding Glyph}" FontSize="40" HorizontalOptions="End"/>
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding DateLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="Medium" />
+                            <Label Text="{Binding Description}" FontSize="Medium" />
+                            <Label Text="No School" FontSize="Small" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="schoolDayTemplate">
+                <StackLayout Padding="20" x:DataType="model:SpecialDay" BackgroundColor="LightGreen"
+                             HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding Glyph}" FontSize="40" HorizontalOptions="End"/>
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding DateLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="Medium" />
+                            <Label Text="{Binding Description}" FontSize="Medium" />
+                            <Label Text="Normal School Day" FontSize="Small" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="earlyDismissalTemplate">
+                <StackLayout Padding="20" x:DataType="model:SpecialDay" BackgroundColor="LightYellow"
+                             HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding Glyph}" FontSize="40" HorizontalOptions="End"/>
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding DateLabel}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="Medium" />
+                            <Label Text="{Binding Description}" FontSize="Medium" />
+                            <Label Text="Early Dismissal" FontSize="Small" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+            <local:CalendarDataTemplateSelector x:Key="calendarTemplateSelector"
+                SchoolDayTemplate="{StaticResource schoolDayTemplate}"
+                NotSchoolDayTemplate="{StaticResource notSchoolDayTemplate}" 
+                EarlyDismissalTemplate="{StaticResource earlyDismissalTemplate}"
+            />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="{StaticResource Accent}">
+            <RefreshView x:DataType="vm:SchoolCalendarViewModel" Command="{Binding LoadItemsCommand}" 
+                IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                ItemTemplate="{StaticResource calendarTemplateSelector}"                                
+                SelectionMode="None">
+                </CollectionView>
+            </RefreshView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
