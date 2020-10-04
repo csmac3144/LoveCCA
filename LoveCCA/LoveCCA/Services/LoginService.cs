@@ -94,8 +94,9 @@ namespace LoveCCA.Services
             {
                 Debug.WriteLine("Invalid login exception");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Debug.WriteLine(ex.Message);
             }
             return IsAuthenticated;
         }
