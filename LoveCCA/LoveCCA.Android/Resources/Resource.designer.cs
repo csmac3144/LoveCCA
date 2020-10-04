@@ -37,6 +37,18 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Animation.abc_slide_out_top = global::LoveCCA.Droid.Resource.Animation.abc_slide_out_top;
 			global::Acr.UserDialogs.Resource.Animation.abc_tooltip_enter = global::LoveCCA.Droid.Resource.Animation.abc_tooltip_enter;
 			global::Acr.UserDialogs.Resource.Animation.abc_tooltip_exit = global::LoveCCA.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
 			global::Acr.UserDialogs.Resource.Animation.design_bottom_sheet_slide_in = global::LoveCCA.Droid.Resource.Animation.design_bottom_sheet_slide_in;
 			global::Acr.UserDialogs.Resource.Animation.design_bottom_sheet_slide_out = global::LoveCCA.Droid.Resource.Animation.design_bottom_sheet_slide_out;
 			global::Acr.UserDialogs.Resource.Animation.design_snackbar_in = global::LoveCCA.Droid.Resource.Animation.design_snackbar_in;
@@ -144,6 +156,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Attribute.buttonBarNeutralButtonStyle = global::LoveCCA.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
 			global::Acr.UserDialogs.Resource.Attribute.buttonBarPositiveButtonStyle = global::LoveCCA.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
 			global::Acr.UserDialogs.Resource.Attribute.buttonBarStyle = global::LoveCCA.Droid.Resource.Attribute.buttonBarStyle;
+			global::Acr.UserDialogs.Resource.Attribute.buttonCompat = global::LoveCCA.Droid.Resource.Attribute.buttonCompat;
 			global::Acr.UserDialogs.Resource.Attribute.buttonGravity = global::LoveCCA.Droid.Resource.Attribute.buttonGravity;
 			global::Acr.UserDialogs.Resource.Attribute.buttonIconDimen = global::LoveCCA.Droid.Resource.Attribute.buttonIconDimen;
 			global::Acr.UserDialogs.Resource.Attribute.buttonPanelSideLayout = global::LoveCCA.Droid.Resource.Attribute.buttonPanelSideLayout;
@@ -237,7 +250,15 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Attribute.dividerHorizontal = global::LoveCCA.Droid.Resource.Attribute.dividerHorizontal;
 			global::Acr.UserDialogs.Resource.Attribute.dividerPadding = global::LoveCCA.Droid.Resource.Attribute.dividerPadding;
 			global::Acr.UserDialogs.Resource.Attribute.dividerVertical = global::LoveCCA.Droid.Resource.Attribute.dividerVertical;
+			global::Acr.UserDialogs.Resource.Attribute.drawableBottomCompat = global::LoveCCA.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Acr.UserDialogs.Resource.Attribute.drawableEndCompat = global::LoveCCA.Droid.Resource.Attribute.drawableEndCompat;
+			global::Acr.UserDialogs.Resource.Attribute.drawableLeftCompat = global::LoveCCA.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Acr.UserDialogs.Resource.Attribute.drawableRightCompat = global::LoveCCA.Droid.Resource.Attribute.drawableRightCompat;
 			global::Acr.UserDialogs.Resource.Attribute.drawableSize = global::LoveCCA.Droid.Resource.Attribute.drawableSize;
+			global::Acr.UserDialogs.Resource.Attribute.drawableStartCompat = global::LoveCCA.Droid.Resource.Attribute.drawableStartCompat;
+			global::Acr.UserDialogs.Resource.Attribute.drawableTint = global::LoveCCA.Droid.Resource.Attribute.drawableTint;
+			global::Acr.UserDialogs.Resource.Attribute.drawableTintMode = global::LoveCCA.Droid.Resource.Attribute.drawableTintMode;
+			global::Acr.UserDialogs.Resource.Attribute.drawableTopCompat = global::LoveCCA.Droid.Resource.Attribute.drawableTopCompat;
 			global::Acr.UserDialogs.Resource.Attribute.drawerArrowStyle = global::LoveCCA.Droid.Resource.Attribute.drawerArrowStyle;
 			global::Acr.UserDialogs.Resource.Attribute.dropdownListPreferredItemHeight = global::LoveCCA.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
 			global::Acr.UserDialogs.Resource.Attribute.dropDownListViewStyle = global::LoveCCA.Droid.Resource.Attribute.dropDownListViewStyle;
@@ -344,6 +365,8 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Attribute.lineHeight = global::LoveCCA.Droid.Resource.Attribute.lineHeight;
 			global::Acr.UserDialogs.Resource.Attribute.lineSpacing = global::LoveCCA.Droid.Resource.Attribute.lineSpacing;
 			global::Acr.UserDialogs.Resource.Attribute.listChoiceBackgroundIndicator = global::LoveCCA.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Acr.UserDialogs.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::LoveCCA.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Acr.UserDialogs.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::LoveCCA.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
 			global::Acr.UserDialogs.Resource.Attribute.listDividerAlertDialog = global::LoveCCA.Droid.Resource.Attribute.listDividerAlertDialog;
 			global::Acr.UserDialogs.Resource.Attribute.listItemLayout = global::LoveCCA.Droid.Resource.Attribute.listItemLayout;
 			global::Acr.UserDialogs.Resource.Attribute.listLayout = global::LoveCCA.Droid.Resource.Attribute.listLayout;
@@ -352,8 +375,10 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemHeight = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemHeight;
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemHeightLarge = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemHeightLarge;
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemHeightSmall = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemPaddingEnd = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemPaddingLeft = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemPaddingRight = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemPaddingStart = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Acr.UserDialogs.Resource.Attribute.logo = global::LoveCCA.Droid.Resource.Attribute.logo;
 			global::Acr.UserDialogs.Resource.Attribute.logoDescription = global::LoveCCA.Droid.Resource.Attribute.logoDescription;
 			global::Acr.UserDialogs.Resource.Attribute.materialButtonStyle = global::LoveCCA.Droid.Resource.Attribute.materialButtonStyle;
@@ -395,6 +420,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Attribute.ratingBarStyle = global::LoveCCA.Droid.Resource.Attribute.ratingBarStyle;
 			global::Acr.UserDialogs.Resource.Attribute.ratingBarStyleIndicator = global::LoveCCA.Droid.Resource.Attribute.ratingBarStyleIndicator;
 			global::Acr.UserDialogs.Resource.Attribute.ratingBarStyleSmall = global::LoveCCA.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Acr.UserDialogs.Resource.Attribute.recyclerViewStyle = global::LoveCCA.Droid.Resource.Attribute.recyclerViewStyle;
 			global::Acr.UserDialogs.Resource.Attribute.reverseLayout = global::LoveCCA.Droid.Resource.Attribute.reverseLayout;
 			global::Acr.UserDialogs.Resource.Attribute.rippleColor = global::LoveCCA.Droid.Resource.Attribute.rippleColor;
 			global::Acr.UserDialogs.Resource.Attribute.scrimAnimationDuration = global::LoveCCA.Droid.Resource.Attribute.scrimAnimationDuration;
@@ -495,6 +521,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Attribute.textColorSearchUrl = global::LoveCCA.Droid.Resource.Attribute.textColorSearchUrl;
 			global::Acr.UserDialogs.Resource.Attribute.textEndPadding = global::LoveCCA.Droid.Resource.Attribute.textEndPadding;
 			global::Acr.UserDialogs.Resource.Attribute.textInputStyle = global::LoveCCA.Droid.Resource.Attribute.textInputStyle;
+			global::Acr.UserDialogs.Resource.Attribute.textLocale = global::LoveCCA.Droid.Resource.Attribute.textLocale;
 			global::Acr.UserDialogs.Resource.Attribute.textStartPadding = global::LoveCCA.Droid.Resource.Attribute.textStartPadding;
 			global::Acr.UserDialogs.Resource.Attribute.theme = global::LoveCCA.Droid.Resource.Attribute.theme;
 			global::Acr.UserDialogs.Resource.Attribute.thickness = global::LoveCCA.Droid.Resource.Attribute.thickness;
@@ -719,6 +746,9 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::LoveCCA.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
 			global::Acr.UserDialogs.Resource.Dimension.abc_edit_text_inset_top_material = global::LoveCCA.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
 			global::Acr.UserDialogs.Resource.Dimension.abc_floating_window_z = global::LoveCCA.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Acr.UserDialogs.Resource.Dimension.abc_list_item_height_large_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Acr.UserDialogs.Resource.Dimension.abc_list_item_height_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Acr.UserDialogs.Resource.Dimension.abc_list_item_height_small_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_height_small_material;
 			global::Acr.UserDialogs.Resource.Dimension.abc_list_item_padding_horizontal_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
 			global::Acr.UserDialogs.Resource.Dimension.abc_panel_menu_list_width = global::LoveCCA.Droid.Resource.Dimension.abc_panel_menu_list_width;
 			global::Acr.UserDialogs.Resource.Dimension.abc_progress_bar_height_material = global::LoveCCA.Droid.Resource.Dimension.abc_progress_bar_height_material;
@@ -890,11 +920,13 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Drawable.abc_action_bar_item_background_material = global::LoveCCA.Droid.Resource.Drawable.abc_action_bar_item_background_material;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_borderless_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_borderless_material;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_check_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Acr.UserDialogs.Resource.Drawable.abc_btn_check_material_anim = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_material_anim;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_colored_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_colored_material;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_default_mtrl_shape = global::LoveCCA.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_radio_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Acr.UserDialogs.Resource.Drawable.abc_btn_radio_material_anim = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_material_anim;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
@@ -972,6 +1004,14 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Drawable.abc_vector_test = global::LoveCCA.Droid.Resource.Drawable.abc_vector_test;
 			global::Acr.UserDialogs.Resource.Drawable.avd_hide_password = global::LoveCCA.Droid.Resource.Drawable.avd_hide_password;
 			global::Acr.UserDialogs.Resource.Drawable.avd_show_password = global::LoveCCA.Droid.Resource.Drawable.avd_show_password;
+			global::Acr.UserDialogs.Resource.Drawable.btn_checkbox_checked_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Acr.UserDialogs.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Acr.UserDialogs.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Acr.UserDialogs.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Acr.UserDialogs.Resource.Drawable.btn_radio_off_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Acr.UserDialogs.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Acr.UserDialogs.Resource.Drawable.btn_radio_on_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Acr.UserDialogs.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
 			global::Acr.UserDialogs.Resource.Drawable.design_bottom_navigation_item_background = global::LoveCCA.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Acr.UserDialogs.Resource.Drawable.design_fab_background = global::LoveCCA.Droid.Resource.Drawable.design_fab_background;
 			global::Acr.UserDialogs.Resource.Drawable.design_ic_visibility = global::LoveCCA.Droid.Resource.Drawable.design_ic_visibility;
@@ -1002,6 +1042,39 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Drawable.roundedbgdark = global::LoveCCA.Droid.Resource.Drawable.roundedbgdark;
 			global::Acr.UserDialogs.Resource.Drawable.tooltip_frame_dark = global::LoveCCA.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Acr.UserDialogs.Resource.Drawable.tooltip_frame_light = global::LoveCCA.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Acr.UserDialogs.Resource.Id.accessibility_action_clickable_span = global::LoveCCA.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_0 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_1 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_10 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_11 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_12 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_13 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_14 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_15 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_16 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_17 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_18 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_19 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_2 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_20 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_21 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_22 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_23 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_24 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_25 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_26 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_27 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_28 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_29 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_3 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_30 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_31 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_4 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_5 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_6 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_7 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_8 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_9 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Acr.UserDialogs.Resource.Id.actions = global::LoveCCA.Droid.Resource.Id.actions;
 			global::Acr.UserDialogs.Resource.Id.action_bar = global::LoveCCA.Droid.Resource.Id.action_bar;
 			global::Acr.UserDialogs.Resource.Id.action_bar_activity_content = global::LoveCCA.Droid.Resource.Id.action_bar_activity_content;
@@ -1036,6 +1109,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Id.center_horizontal = global::LoveCCA.Droid.Resource.Id.center_horizontal;
 			global::Acr.UserDialogs.Resource.Id.center_vertical = global::LoveCCA.Droid.Resource.Id.center_vertical;
 			global::Acr.UserDialogs.Resource.Id.checkbox = global::LoveCCA.Droid.Resource.Id.checkbox;
+			global::Acr.UserDialogs.Resource.Id.@checked = global::LoveCCA.Droid.Resource.Id.@checked;
 			global::Acr.UserDialogs.Resource.Id.chronometer = global::LoveCCA.Droid.Resource.Id.chronometer;
 			global::Acr.UserDialogs.Resource.Id.clip_horizontal = global::LoveCCA.Droid.Resource.Id.clip_horizontal;
 			global::Acr.UserDialogs.Resource.Id.clip_vertical = global::LoveCCA.Droid.Resource.Id.clip_vertical;
@@ -1054,6 +1128,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Id.design_menu_item_action_area_stub = global::LoveCCA.Droid.Resource.Id.design_menu_item_action_area_stub;
 			global::Acr.UserDialogs.Resource.Id.design_menu_item_text = global::LoveCCA.Droid.Resource.Id.design_menu_item_text;
 			global::Acr.UserDialogs.Resource.Id.design_navigation_view = global::LoveCCA.Droid.Resource.Id.design_navigation_view;
+			global::Acr.UserDialogs.Resource.Id.dialog_button = global::LoveCCA.Droid.Resource.Id.dialog_button;
 			global::Acr.UserDialogs.Resource.Id.disableHome = global::LoveCCA.Droid.Resource.Id.disableHome;
 			global::Acr.UserDialogs.Resource.Id.edit_query = global::LoveCCA.Droid.Resource.Id.edit_query;
 			global::Acr.UserDialogs.Resource.Id.end = global::LoveCCA.Droid.Resource.Id.end;
@@ -1070,6 +1145,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Id.forever = global::LoveCCA.Droid.Resource.Id.forever;
 			global::Acr.UserDialogs.Resource.Id.FUNCTION = global::LoveCCA.Droid.Resource.Id.FUNCTION;
 			global::Acr.UserDialogs.Resource.Id.ghost_view = global::LoveCCA.Droid.Resource.Id.ghost_view;
+			global::Acr.UserDialogs.Resource.Id.ghost_view_holder = global::LoveCCA.Droid.Resource.Id.ghost_view_holder;
 			global::Acr.UserDialogs.Resource.Id.group_divider = global::LoveCCA.Droid.Resource.Id.group_divider;
 			global::Acr.UserDialogs.Resource.Id.home = global::LoveCCA.Droid.Resource.Id.home;
 			global::Acr.UserDialogs.Resource.Id.homeAsUp = global::LoveCCA.Droid.Resource.Id.homeAsUp;
@@ -1105,6 +1181,8 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Id.notification_background = global::LoveCCA.Droid.Resource.Id.notification_background;
 			global::Acr.UserDialogs.Resource.Id.notification_main_column = global::LoveCCA.Droid.Resource.Id.notification_main_column;
 			global::Acr.UserDialogs.Resource.Id.notification_main_column_container = global::LoveCCA.Droid.Resource.Id.notification_main_column_container;
+			global::Acr.UserDialogs.Resource.Id.off = global::LoveCCA.Droid.Resource.Id.off;
+			global::Acr.UserDialogs.Resource.Id.on = global::LoveCCA.Droid.Resource.Id.on;
 			global::Acr.UserDialogs.Resource.Id.outline = global::LoveCCA.Droid.Resource.Id.outline;
 			global::Acr.UserDialogs.Resource.Id.parallax = global::LoveCCA.Droid.Resource.Id.parallax;
 			global::Acr.UserDialogs.Resource.Id.parentPanel = global::LoveCCA.Droid.Resource.Id.parentPanel;
@@ -1117,6 +1195,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Id.right_icon = global::LoveCCA.Droid.Resource.Id.right_icon;
 			global::Acr.UserDialogs.Resource.Id.right_side = global::LoveCCA.Droid.Resource.Id.right_side;
 			global::Acr.UserDialogs.Resource.Id.save_non_transition_alpha = global::LoveCCA.Droid.Resource.Id.save_non_transition_alpha;
+			global::Acr.UserDialogs.Resource.Id.save_overlay_view = global::LoveCCA.Droid.Resource.Id.save_overlay_view;
 			global::Acr.UserDialogs.Resource.Id.screen = global::LoveCCA.Droid.Resource.Id.screen;
 			global::Acr.UserDialogs.Resource.Id.scroll = global::LoveCCA.Droid.Resource.Id.scroll;
 			global::Acr.UserDialogs.Resource.Id.scrollable = global::LoveCCA.Droid.Resource.Id.scrollable;
@@ -1156,6 +1235,11 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Id.submit_area = global::LoveCCA.Droid.Resource.Id.submit_area;
 			global::Acr.UserDialogs.Resource.Id.SYM = global::LoveCCA.Droid.Resource.Id.SYM;
 			global::Acr.UserDialogs.Resource.Id.tabMode = global::LoveCCA.Droid.Resource.Id.tabMode;
+			global::Acr.UserDialogs.Resource.Id.tag_accessibility_actions = global::LoveCCA.Droid.Resource.Id.tag_accessibility_actions;
+			global::Acr.UserDialogs.Resource.Id.tag_accessibility_clickable_spans = global::LoveCCA.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Acr.UserDialogs.Resource.Id.tag_accessibility_heading = global::LoveCCA.Droid.Resource.Id.tag_accessibility_heading;
+			global::Acr.UserDialogs.Resource.Id.tag_accessibility_pane_title = global::LoveCCA.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Acr.UserDialogs.Resource.Id.tag_screen_reader_focusable = global::LoveCCA.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Acr.UserDialogs.Resource.Id.tag_transition_group = global::LoveCCA.Droid.Resource.Id.tag_transition_group;
 			global::Acr.UserDialogs.Resource.Id.tag_unhandled_key_event_manager = global::LoveCCA.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Acr.UserDialogs.Resource.Id.tag_unhandled_key_listeners = global::LoveCCA.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -1181,6 +1265,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Id.transition_position = global::LoveCCA.Droid.Resource.Id.transition_position;
 			global::Acr.UserDialogs.Resource.Id.transition_scene_layoutid_cache = global::LoveCCA.Droid.Resource.Id.transition_scene_layoutid_cache;
 			global::Acr.UserDialogs.Resource.Id.transition_transform = global::LoveCCA.Droid.Resource.Id.transition_transform;
+			global::Acr.UserDialogs.Resource.Id.@unchecked = global::LoveCCA.Droid.Resource.Id.@unchecked;
 			global::Acr.UserDialogs.Resource.Id.uniform = global::LoveCCA.Droid.Resource.Id.uniform;
 			global::Acr.UserDialogs.Resource.Id.unlabeled = global::LoveCCA.Droid.Resource.Id.unlabeled;
 			global::Acr.UserDialogs.Resource.Id.up = global::LoveCCA.Droid.Resource.Id.up;
@@ -1204,6 +1289,13 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::LoveCCA.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
 			global::Acr.UserDialogs.Resource.Integer.show_password_duration = global::LoveCCA.Droid.Resource.Integer.show_password_duration;
 			global::Acr.UserDialogs.Resource.Integer.status_bar_notification_info_maxnum = global::LoveCCA.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Acr.UserDialogs.Resource.Interpolator.fast_out_slow_in = global::LoveCCA.Droid.Resource.Interpolator.fast_out_slow_in;
 			global::Acr.UserDialogs.Resource.Interpolator.mtrl_fast_out_linear_in = global::LoveCCA.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
 			global::Acr.UserDialogs.Resource.Interpolator.mtrl_fast_out_slow_in = global::LoveCCA.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
 			global::Acr.UserDialogs.Resource.Interpolator.mtrl_linear = global::LoveCCA.Droid.Resource.Interpolator.mtrl_linear;
@@ -1236,6 +1328,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Layout.abc_search_view = global::LoveCCA.Droid.Resource.Layout.abc_search_view;
 			global::Acr.UserDialogs.Resource.Layout.abc_select_dialog_material = global::LoveCCA.Droid.Resource.Layout.abc_select_dialog_material;
 			global::Acr.UserDialogs.Resource.Layout.abc_tooltip = global::LoveCCA.Droid.Resource.Layout.abc_tooltip;
+			global::Acr.UserDialogs.Resource.Layout.custom_dialog = global::LoveCCA.Droid.Resource.Layout.custom_dialog;
 			global::Acr.UserDialogs.Resource.Layout.design_bottom_navigation_item = global::LoveCCA.Droid.Resource.Layout.design_bottom_navigation_item;
 			global::Acr.UserDialogs.Resource.Layout.design_bottom_sheet_dialog = global::LoveCCA.Droid.Resource.Layout.design_bottom_sheet_dialog;
 			global::Acr.UserDialogs.Resource.Layout.design_layout_snackbar = global::LoveCCA.Droid.Resource.Layout.design_layout_snackbar;
@@ -1495,6 +1588,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_Spinner = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_TextView = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_Toolbar = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
@@ -1619,6 +1713,8 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Dark = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Light = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
@@ -1751,6 +1847,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_TextView = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_TextView;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Toolbar = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Toolbar;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
@@ -1912,11 +2009,21 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableTint = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableTintMode = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_fontFamily = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_lineHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_textAllCaps = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_textLocale = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_textLocale;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_actionBarDivider = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
@@ -1990,14 +2097,18 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_panelBackground = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
@@ -2146,6 +2257,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Styleable.ColorStateListItem_android_color = global::LoveCCA.Droid.Resource.Styleable.ColorStateListItem_android_color;
 			global::Acr.UserDialogs.Resource.Styleable.CompoundButton = global::LoveCCA.Droid.Resource.Styleable.CompoundButton;
 			global::Acr.UserDialogs.Resource.Styleable.CompoundButton_android_button = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Acr.UserDialogs.Resource.Styleable.CompoundButton_buttonCompat = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_buttonCompat;
 			global::Acr.UserDialogs.Resource.Styleable.CompoundButton_buttonTint = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_buttonTint;
 			global::Acr.UserDialogs.Resource.Styleable.CompoundButton_buttonTintMode = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
 			global::Acr.UserDialogs.Resource.Styleable.CoordinatorLayout = global::LoveCCA.Droid.Resource.Styleable.CoordinatorLayout;
@@ -2376,6 +2488,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::LoveCCA.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Acr.UserDialogs.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::LoveCCA.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
 			global::Acr.UserDialogs.Resource.Styleable.RecyclerView = global::LoveCCA.Droid.Resource.Styleable.RecyclerView;
+			global::Acr.UserDialogs.Resource.Styleable.RecyclerView_android_clipToPadding = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
 			global::Acr.UserDialogs.Resource.Styleable.RecyclerView_android_descendantFocusability = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
 			global::Acr.UserDialogs.Resource.Styleable.RecyclerView_android_orientation = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_android_orientation;
 			global::Acr.UserDialogs.Resource.Styleable.RecyclerView_fastScrollEnabled = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
@@ -2485,11 +2598,14 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textColor = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textColor;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textColorHint = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textColorLink = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textFontWeight = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textSize = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textSize;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textStyle = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textStyle;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_typeface = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_typeface;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_fontFamily = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_fontVariationSettings = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_textAllCaps = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_textLocale = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_textLocale;
 			global::Acr.UserDialogs.Resource.Styleable.TextInputLayout = global::LoveCCA.Droid.Resource.Styleable.TextInputLayout;
 			global::Acr.UserDialogs.Resource.Styleable.TextInputLayout_android_hint = global::LoveCCA.Droid.Resource.Styleable.TextInputLayout_android_hint;
 			global::Acr.UserDialogs.Resource.Styleable.TextInputLayout_android_textColorHint = global::LoveCCA.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
@@ -2538,6 +2654,7 @@ namespace LoveCCA.Droid
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_logo = global::LoveCCA.Droid.Resource.Styleable.Toolbar_logo;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_logoDescription = global::LoveCCA.Droid.Resource.Styleable.Toolbar_logoDescription;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_maxButtonHeight = global::LoveCCA.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Acr.UserDialogs.Resource.Styleable.Toolbar_menu = global::LoveCCA.Droid.Resource.Styleable.Toolbar_menu;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_navigationContentDescription = global::LoveCCA.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_navigationIcon = global::LoveCCA.Droid.Resource.Styleable.Toolbar_navigationIcon;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_popupTheme = global::LoveCCA.Droid.Resource.Styleable.Toolbar_popupTheme;
@@ -3206,6 +3323,39 @@ namespace LoveCCA.Droid
 			global::Xamarin.Essentials.Resource.Drawable.notification_template_icon_low_bg = global::LoveCCA.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notification_tile_bg = global::LoveCCA.Droid.Resource.Drawable.notification_tile_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notify_panel_notification_icon_bg = global::LoveCCA.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Essentials.Resource.Id.accessibility_action_clickable_span = global::LoveCCA.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_0 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_1 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_10 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_11 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_12 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_13 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_14 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_15 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_16 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_17 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_18 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_19 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_2 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_20 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_21 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_22 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_23 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_24 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_25 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_26 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_27 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_28 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_29 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_3 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_30 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_31 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_4 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_5 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_6 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_7 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_8 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_9 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Xamarin.Essentials.Resource.Id.actions = global::LoveCCA.Droid.Resource.Id.actions;
 			global::Xamarin.Essentials.Resource.Id.action_container = global::LoveCCA.Droid.Resource.Id.action_container;
 			global::Xamarin.Essentials.Resource.Id.action_divider = global::LoveCCA.Droid.Resource.Id.action_divider;
@@ -3226,6 +3376,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Essentials.Resource.Id.chronometer = global::LoveCCA.Droid.Resource.Id.chronometer;
 			global::Xamarin.Essentials.Resource.Id.clip_horizontal = global::LoveCCA.Droid.Resource.Id.clip_horizontal;
 			global::Xamarin.Essentials.Resource.Id.clip_vertical = global::LoveCCA.Droid.Resource.Id.clip_vertical;
+			global::Xamarin.Essentials.Resource.Id.dialog_button = global::LoveCCA.Droid.Resource.Id.dialog_button;
 			global::Xamarin.Essentials.Resource.Id.end = global::LoveCCA.Droid.Resource.Id.end;
 			global::Xamarin.Essentials.Resource.Id.fill = global::LoveCCA.Droid.Resource.Id.fill;
 			global::Xamarin.Essentials.Resource.Id.fill_horizontal = global::LoveCCA.Droid.Resource.Id.fill_horizontal;
@@ -3247,6 +3398,11 @@ namespace LoveCCA.Droid
 			global::Xamarin.Essentials.Resource.Id.right_icon = global::LoveCCA.Droid.Resource.Id.right_icon;
 			global::Xamarin.Essentials.Resource.Id.right_side = global::LoveCCA.Droid.Resource.Id.right_side;
 			global::Xamarin.Essentials.Resource.Id.start = global::LoveCCA.Droid.Resource.Id.start;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_actions = global::LoveCCA.Droid.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_clickable_spans = global::LoveCCA.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_heading = global::LoveCCA.Droid.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_pane_title = global::LoveCCA.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.Essentials.Resource.Id.tag_screen_reader_focusable = global::LoveCCA.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Xamarin.Essentials.Resource.Id.tag_transition_group = global::LoveCCA.Droid.Resource.Id.tag_transition_group;
 			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_event_manager = global::LoveCCA.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_listeners = global::LoveCCA.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -3258,6 +3414,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Essentials.Resource.Integer.status_bar_notification_info_maxnum = global::LoveCCA.Droid.Resource.Integer.status_bar_notification_info_maxnum;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_page = global::LoveCCA.Droid.Resource.Layout.browser_actions_context_menu_page;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_row = global::LoveCCA.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Xamarin.Essentials.Resource.Layout.custom_dialog = global::LoveCCA.Droid.Resource.Layout.custom_dialog;
 			global::Xamarin.Essentials.Resource.Layout.notification_action = global::LoveCCA.Droid.Resource.Layout.notification_action;
 			global::Xamarin.Essentials.Resource.Layout.notification_action_tombstone = global::LoveCCA.Droid.Resource.Layout.notification_action_tombstone;
 			global::Xamarin.Essentials.Resource.Layout.notification_template_custom_big = global::LoveCCA.Droid.Resource.Layout.notification_template_custom_big;
@@ -3335,6 +3492,18 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_slide_out_top = global::LoveCCA.Droid.Resource.Animation.abc_slide_out_top;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_tooltip_enter = global::LoveCCA.Droid.Resource.Animation.abc_tooltip_enter;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_tooltip_exit = global::LoveCCA.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.design_bottom_sheet_slide_in = global::LoveCCA.Droid.Resource.Animation.design_bottom_sheet_slide_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.design_bottom_sheet_slide_out = global::LoveCCA.Droid.Resource.Animation.design_bottom_sheet_slide_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.design_snackbar_in = global::LoveCCA.Droid.Resource.Animation.design_snackbar_in;
@@ -3434,6 +3603,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonBarNeutralButtonStyle = global::LoveCCA.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonBarPositiveButtonStyle = global::LoveCCA.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonBarStyle = global::LoveCCA.Droid.Resource.Attribute.buttonBarStyle;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonCompat = global::LoveCCA.Droid.Resource.Attribute.buttonCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonGravity = global::LoveCCA.Droid.Resource.Attribute.buttonGravity;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonIconDimen = global::LoveCCA.Droid.Resource.Attribute.buttonIconDimen;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonPanelSideLayout = global::LoveCCA.Droid.Resource.Attribute.buttonPanelSideLayout;
@@ -3528,7 +3698,15 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dividerHorizontal = global::LoveCCA.Droid.Resource.Attribute.dividerHorizontal;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dividerPadding = global::LoveCCA.Droid.Resource.Attribute.dividerPadding;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dividerVertical = global::LoveCCA.Droid.Resource.Attribute.dividerVertical;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableBottomCompat = global::LoveCCA.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableEndCompat = global::LoveCCA.Droid.Resource.Attribute.drawableEndCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableLeftCompat = global::LoveCCA.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableRightCompat = global::LoveCCA.Droid.Resource.Attribute.drawableRightCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableSize = global::LoveCCA.Droid.Resource.Attribute.drawableSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableStartCompat = global::LoveCCA.Droid.Resource.Attribute.drawableStartCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableTint = global::LoveCCA.Droid.Resource.Attribute.drawableTint;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableTintMode = global::LoveCCA.Droid.Resource.Attribute.drawableTintMode;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableTopCompat = global::LoveCCA.Droid.Resource.Attribute.drawableTopCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawerArrowStyle = global::LoveCCA.Droid.Resource.Attribute.drawerArrowStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dropdownListPreferredItemHeight = global::LoveCCA.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dropDownListViewStyle = global::LoveCCA.Droid.Resource.Attribute.dropDownListViewStyle;
@@ -3635,6 +3813,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.lineHeight = global::LoveCCA.Droid.Resource.Attribute.lineHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.lineSpacing = global::LoveCCA.Droid.Resource.Attribute.lineSpacing;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listChoiceBackgroundIndicator = global::LoveCCA.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::LoveCCA.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::LoveCCA.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listDividerAlertDialog = global::LoveCCA.Droid.Resource.Attribute.listDividerAlertDialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listItemLayout = global::LoveCCA.Droid.Resource.Attribute.listItemLayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listLayout = global::LoveCCA.Droid.Resource.Attribute.listLayout;
@@ -3643,8 +3823,10 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemHeight = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemHeightLarge = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemHeightSmall = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemPaddingEnd = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemPaddingLeft = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemPaddingRight = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemPaddingStart = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.logo = global::LoveCCA.Droid.Resource.Attribute.logo;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.logoDescription = global::LoveCCA.Droid.Resource.Attribute.logoDescription;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.materialButtonStyle = global::LoveCCA.Droid.Resource.Attribute.materialButtonStyle;
@@ -3686,6 +3868,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.ratingBarStyle = global::LoveCCA.Droid.Resource.Attribute.ratingBarStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.ratingBarStyleIndicator = global::LoveCCA.Droid.Resource.Attribute.ratingBarStyleIndicator;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.ratingBarStyleSmall = global::LoveCCA.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.recyclerViewStyle = global::LoveCCA.Droid.Resource.Attribute.recyclerViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.reverseLayout = global::LoveCCA.Droid.Resource.Attribute.reverseLayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.rippleColor = global::LoveCCA.Droid.Resource.Attribute.rippleColor;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.scrimAnimationDuration = global::LoveCCA.Droid.Resource.Attribute.scrimAnimationDuration;
@@ -3786,6 +3969,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textColorSearchUrl = global::LoveCCA.Droid.Resource.Attribute.textColorSearchUrl;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textEndPadding = global::LoveCCA.Droid.Resource.Attribute.textEndPadding;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textInputStyle = global::LoveCCA.Droid.Resource.Attribute.textInputStyle;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textLocale = global::LoveCCA.Droid.Resource.Attribute.textLocale;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textStartPadding = global::LoveCCA.Droid.Resource.Attribute.textStartPadding;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.theme = global::LoveCCA.Droid.Resource.Attribute.theme;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.thickness = global::LoveCCA.Droid.Resource.Attribute.thickness;
@@ -4011,6 +4195,9 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::LoveCCA.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_edit_text_inset_top_material = global::LoveCCA.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_floating_window_z = global::LoveCCA.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_list_item_height_large_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_list_item_height_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_list_item_height_small_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_height_small_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_list_item_padding_horizontal_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_panel_menu_list_width = global::LoveCCA.Droid.Resource.Dimension.abc_panel_menu_list_width;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_progress_bar_height_material = global::LoveCCA.Droid.Resource.Dimension.abc_progress_bar_height_material;
@@ -4186,11 +4373,13 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_action_bar_item_background_material = global::LoveCCA.Droid.Resource.Drawable.abc_action_bar_item_background_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_borderless_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_borderless_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_check_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_check_material_anim = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_material_anim;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_colored_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_colored_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_default_mtrl_shape = global::LoveCCA.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_radio_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_radio_material_anim = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_material_anim;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
@@ -4268,6 +4457,14 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_vector_test = global::LoveCCA.Droid.Resource.Drawable.abc_vector_test;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.avd_hide_password = global::LoveCCA.Droid.Resource.Drawable.avd_hide_password;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.avd_show_password = global::LoveCCA.Droid.Resource.Drawable.avd_show_password;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_checkbox_checked_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_off_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_on_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_bottom_navigation_item_background = global::LoveCCA.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_fab_background = global::LoveCCA.Droid.Resource.Drawable.design_fab_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_ic_visibility = global::LoveCCA.Droid.Resource.Drawable.design_ic_visibility;
@@ -4294,6 +4491,39 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::LoveCCA.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.tooltip_frame_dark = global::LoveCCA.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.tooltip_frame_light = global::LoveCCA.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_action_clickable_span = global::LoveCCA.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_0 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_1 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_10 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_11 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_12 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_13 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_14 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_15 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_16 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_17 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_18 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_19 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_2 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_20 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_21 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_22 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_23 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_24 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_25 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_26 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_27 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_28 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_29 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_3 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_30 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_31 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_4 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_5 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_6 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_7 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_8 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_9 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.action0 = global::LoveCCA.Droid.Resource.Id.action0;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.actions = global::LoveCCA.Droid.Resource.Id.actions;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.action_bar = global::LoveCCA.Droid.Resource.Id.action_bar;
@@ -4332,6 +4562,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.center_horizontal = global::LoveCCA.Droid.Resource.Id.center_horizontal;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.center_vertical = global::LoveCCA.Droid.Resource.Id.center_vertical;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.checkbox = global::LoveCCA.Droid.Resource.Id.checkbox;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.@checked = global::LoveCCA.Droid.Resource.Id.@checked;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.chronometer = global::LoveCCA.Droid.Resource.Id.chronometer;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.clip_horizontal = global::LoveCCA.Droid.Resource.Id.clip_horizontal;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.clip_vertical = global::LoveCCA.Droid.Resource.Id.clip_vertical;
@@ -4350,6 +4581,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.design_menu_item_action_area_stub = global::LoveCCA.Droid.Resource.Id.design_menu_item_action_area_stub;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.design_menu_item_text = global::LoveCCA.Droid.Resource.Id.design_menu_item_text;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.design_navigation_view = global::LoveCCA.Droid.Resource.Id.design_navigation_view;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.dialog_button = global::LoveCCA.Droid.Resource.Id.dialog_button;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.disableHome = global::LoveCCA.Droid.Resource.Id.disableHome;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.edit_query = global::LoveCCA.Droid.Resource.Id.edit_query;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.end = global::LoveCCA.Droid.Resource.Id.end;
@@ -4369,6 +4601,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.forever = global::LoveCCA.Droid.Resource.Id.forever;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.FUNCTION = global::LoveCCA.Droid.Resource.Id.FUNCTION;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.ghost_view = global::LoveCCA.Droid.Resource.Id.ghost_view;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.ghost_view_holder = global::LoveCCA.Droid.Resource.Id.ghost_view_holder;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.group_divider = global::LoveCCA.Droid.Resource.Id.group_divider;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.home = global::LoveCCA.Droid.Resource.Id.home;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.homeAsUp = global::LoveCCA.Droid.Resource.Id.homeAsUp;
@@ -4406,6 +4639,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.notification_background = global::LoveCCA.Droid.Resource.Id.notification_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.notification_main_column = global::LoveCCA.Droid.Resource.Id.notification_main_column;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.notification_main_column_container = global::LoveCCA.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.off = global::LoveCCA.Droid.Resource.Id.off;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.on = global::LoveCCA.Droid.Resource.Id.on;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.outline = global::LoveCCA.Droid.Resource.Id.outline;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.parallax = global::LoveCCA.Droid.Resource.Id.parallax;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.parentPanel = global::LoveCCA.Droid.Resource.Id.parentPanel;
@@ -4418,6 +4653,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.right_icon = global::LoveCCA.Droid.Resource.Id.right_icon;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.right_side = global::LoveCCA.Droid.Resource.Id.right_side;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.save_non_transition_alpha = global::LoveCCA.Droid.Resource.Id.save_non_transition_alpha;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.save_overlay_view = global::LoveCCA.Droid.Resource.Id.save_overlay_view;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.screen = global::LoveCCA.Droid.Resource.Id.screen;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.scroll = global::LoveCCA.Droid.Resource.Id.scroll;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.scrollable = global::LoveCCA.Droid.Resource.Id.scrollable;
@@ -4443,6 +4679,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.showCustom = global::LoveCCA.Droid.Resource.Id.showCustom;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.showHome = global::LoveCCA.Droid.Resource.Id.showHome;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.showTitle = global::LoveCCA.Droid.Resource.Id.showTitle;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.sliding_tabs = global::LoveCCA.Droid.Resource.Id.sliding_tabs;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.smallLabel = global::LoveCCA.Droid.Resource.Id.smallLabel;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.snackbar_action = global::LoveCCA.Droid.Resource.Id.snackbar_action;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.snackbar_text = global::LoveCCA.Droid.Resource.Id.snackbar_text;
@@ -4460,6 +4697,11 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.submit_area = global::LoveCCA.Droid.Resource.Id.submit_area;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.SYM = global::LoveCCA.Droid.Resource.Id.SYM;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.tabMode = global::LoveCCA.Droid.Resource.Id.tabMode;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_accessibility_actions = global::LoveCCA.Droid.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_accessibility_clickable_spans = global::LoveCCA.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_accessibility_heading = global::LoveCCA.Droid.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_accessibility_pane_title = global::LoveCCA.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_screen_reader_focusable = global::LoveCCA.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_transition_group = global::LoveCCA.Droid.Resource.Id.tag_transition_group;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_unhandled_key_event_manager = global::LoveCCA.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_unhandled_key_listeners = global::LoveCCA.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -4476,6 +4718,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.title = global::LoveCCA.Droid.Resource.Id.title;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.titleDividerNoCustom = global::LoveCCA.Droid.Resource.Id.titleDividerNoCustom;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.title_template = global::LoveCCA.Droid.Resource.Id.title_template;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.toolbar = global::LoveCCA.Droid.Resource.Id.toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.top = global::LoveCCA.Droid.Resource.Id.top;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.topPanel = global::LoveCCA.Droid.Resource.Id.topPanel;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.touch_outside = global::LoveCCA.Droid.Resource.Id.touch_outside;
@@ -4484,6 +4727,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.transition_position = global::LoveCCA.Droid.Resource.Id.transition_position;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.transition_scene_layoutid_cache = global::LoveCCA.Droid.Resource.Id.transition_scene_layoutid_cache;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.transition_transform = global::LoveCCA.Droid.Resource.Id.transition_transform;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.@unchecked = global::LoveCCA.Droid.Resource.Id.@unchecked;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.uniform = global::LoveCCA.Droid.Resource.Id.uniform;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.unlabeled = global::LoveCCA.Droid.Resource.Id.unlabeled;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.up = global::LoveCCA.Droid.Resource.Id.up;
@@ -4507,6 +4751,13 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::LoveCCA.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
 			global::Xamarin.Forms.Platform.Android.Resource.Integer.show_password_duration = global::LoveCCA.Droid.Resource.Integer.show_password_duration;
 			global::Xamarin.Forms.Platform.Android.Resource.Integer.status_bar_notification_info_maxnum = global::LoveCCA.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.fast_out_slow_in = global::LoveCCA.Droid.Resource.Interpolator.fast_out_slow_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.mtrl_fast_out_linear_in = global::LoveCCA.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.mtrl_fast_out_slow_in = global::LoveCCA.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.mtrl_linear = global::LoveCCA.Droid.Resource.Interpolator.mtrl_linear;
@@ -4540,6 +4791,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.abc_select_dialog_material = global::LoveCCA.Droid.Resource.Layout.abc_select_dialog_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.abc_tooltip = global::LoveCCA.Droid.Resource.Layout.abc_tooltip;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.BottomTabLayout = global::LoveCCA.Droid.Resource.Layout.BottomTabLayout;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.custom_dialog = global::LoveCCA.Droid.Resource.Layout.custom_dialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_bottom_navigation_item = global::LoveCCA.Droid.Resource.Layout.design_bottom_navigation_item;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_bottom_sheet_dialog = global::LoveCCA.Droid.Resource.Layout.design_bottom_sheet_dialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_layout_snackbar = global::LoveCCA.Droid.Resource.Layout.design_layout_snackbar;
@@ -4554,6 +4806,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_navigation_menu = global::LoveCCA.Droid.Resource.Layout.design_navigation_menu;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_navigation_menu_item = global::LoveCCA.Droid.Resource.Layout.design_navigation_menu_item;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_text_input_password_icon = global::LoveCCA.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.FallbackTabbarDoNotUse = global::LoveCCA.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.FallbackToolbarDoNotUse = global::LoveCCA.Droid.Resource.Layout.FallbackToolbarDoNotUse;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.FlyoutContent = global::LoveCCA.Droid.Resource.Layout.FlyoutContent;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.mtrl_layout_snackbar = global::LoveCCA.Droid.Resource.Layout.mtrl_layout_snackbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.mtrl_layout_snackbar_include = global::LoveCCA.Droid.Resource.Layout.mtrl_layout_snackbar_include;
@@ -4578,6 +4832,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.select_dialog_singlechoice_material = global::LoveCCA.Droid.Resource.Layout.select_dialog_singlechoice_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.ShellContent = global::LoveCCA.Droid.Resource.Layout.ShellContent;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::LoveCCA.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.Tabbar = global::LoveCCA.Droid.Resource.Layout.Tabbar;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.Toolbar = global::LoveCCA.Droid.Resource.Layout.Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_bar_home_description = global::LoveCCA.Droid.Resource.String.abc_action_bar_home_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_bar_up_description = global::LoveCCA.Droid.Resource.String.abc_action_bar_up_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_menu_overflow_description = global::LoveCCA.Droid.Resource.String.abc_action_menu_overflow_description;
@@ -4809,6 +5065,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_Spinner = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_TextView = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_Toolbar = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
@@ -4942,6 +5199,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dark = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Light = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
@@ -5074,6 +5333,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_TextView = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Toolbar = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
@@ -5235,11 +5495,21 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableTint = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableTintMode = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_fontFamily = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_lineHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_textAllCaps = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_textLocale = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_textLocale;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarDivider = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
@@ -5313,14 +5583,18 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_panelBackground = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
@@ -5469,6 +5743,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ColorStateListItem_android_color = global::LoveCCA.Droid.Resource.Styleable.ColorStateListItem_android_color;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton = global::LoveCCA.Droid.Resource.Styleable.CompoundButton;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton_android_button = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton_buttonCompat = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_buttonCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton_buttonTint = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_buttonTint;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton_buttonTintMode = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CoordinatorLayout = global::LoveCCA.Droid.Resource.Styleable.CoordinatorLayout;
@@ -5688,6 +5963,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::LoveCCA.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::LoveCCA.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView = global::LoveCCA.Droid.Resource.Styleable.RecyclerView;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView_android_clipToPadding = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView_android_orientation = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_android_orientation;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView_fastScrollEnabled = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
@@ -5797,11 +6073,14 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textColor = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textColor;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textColorHint = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textColorLink = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textFontWeight = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textSize = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textSize;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textStyle = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_typeface = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_typeface;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_fontFamily = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_fontVariationSettings = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_textAllCaps = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_textLocale = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_textLocale;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextInputLayout = global::LoveCCA.Droid.Resource.Styleable.TextInputLayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextInputLayout_android_hint = global::LoveCCA.Droid.Resource.Styleable.TextInputLayout_android_hint;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextInputLayout_android_textColorHint = global::LoveCCA.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
@@ -5850,6 +6129,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_logo = global::LoveCCA.Droid.Resource.Styleable.Toolbar_logo;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_logoDescription = global::LoveCCA.Droid.Resource.Styleable.Toolbar_logoDescription;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_maxButtonHeight = global::LoveCCA.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_menu = global::LoveCCA.Droid.Resource.Styleable.Toolbar_menu;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_navigationContentDescription = global::LoveCCA.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_navigationIcon = global::LoveCCA.Droid.Resource.Styleable.Toolbar_navigationIcon;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_popupTheme = global::LoveCCA.Droid.Resource.Styleable.Toolbar_popupTheme;
@@ -5891,6 +6171,18 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_slide_out_top = global::LoveCCA.Droid.Resource.Animation.abc_slide_out_top;
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_tooltip_enter = global::LoveCCA.Droid.Resource.Animation.abc_tooltip_enter;
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_tooltip_exit = global::LoveCCA.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::LoveCCA.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::LoveCCA.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
 			global::Xamarin.Forms.Platform.Resource.Animation.design_bottom_sheet_slide_in = global::LoveCCA.Droid.Resource.Animation.design_bottom_sheet_slide_in;
 			global::Xamarin.Forms.Platform.Resource.Animation.design_bottom_sheet_slide_out = global::LoveCCA.Droid.Resource.Animation.design_bottom_sheet_slide_out;
 			global::Xamarin.Forms.Platform.Resource.Animation.design_snackbar_in = global::LoveCCA.Droid.Resource.Animation.design_snackbar_in;
@@ -5990,6 +6282,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonBarNeutralButtonStyle = global::LoveCCA.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonBarPositiveButtonStyle = global::LoveCCA.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonBarStyle = global::LoveCCA.Droid.Resource.Attribute.buttonBarStyle;
+			global::Xamarin.Forms.Platform.Resource.Attribute.buttonCompat = global::LoveCCA.Droid.Resource.Attribute.buttonCompat;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonGravity = global::LoveCCA.Droid.Resource.Attribute.buttonGravity;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonIconDimen = global::LoveCCA.Droid.Resource.Attribute.buttonIconDimen;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonPanelSideLayout = global::LoveCCA.Droid.Resource.Attribute.buttonPanelSideLayout;
@@ -6084,7 +6377,15 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.dividerHorizontal = global::LoveCCA.Droid.Resource.Attribute.dividerHorizontal;
 			global::Xamarin.Forms.Platform.Resource.Attribute.dividerPadding = global::LoveCCA.Droid.Resource.Attribute.dividerPadding;
 			global::Xamarin.Forms.Platform.Resource.Attribute.dividerVertical = global::LoveCCA.Droid.Resource.Attribute.dividerVertical;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableBottomCompat = global::LoveCCA.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableEndCompat = global::LoveCCA.Droid.Resource.Attribute.drawableEndCompat;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableLeftCompat = global::LoveCCA.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableRightCompat = global::LoveCCA.Droid.Resource.Attribute.drawableRightCompat;
 			global::Xamarin.Forms.Platform.Resource.Attribute.drawableSize = global::LoveCCA.Droid.Resource.Attribute.drawableSize;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableStartCompat = global::LoveCCA.Droid.Resource.Attribute.drawableStartCompat;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableTint = global::LoveCCA.Droid.Resource.Attribute.drawableTint;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableTintMode = global::LoveCCA.Droid.Resource.Attribute.drawableTintMode;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableTopCompat = global::LoveCCA.Droid.Resource.Attribute.drawableTopCompat;
 			global::Xamarin.Forms.Platform.Resource.Attribute.drawerArrowStyle = global::LoveCCA.Droid.Resource.Attribute.drawerArrowStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.dropdownListPreferredItemHeight = global::LoveCCA.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Resource.Attribute.dropDownListViewStyle = global::LoveCCA.Droid.Resource.Attribute.dropDownListViewStyle;
@@ -6191,6 +6492,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.lineHeight = global::LoveCCA.Droid.Resource.Attribute.lineHeight;
 			global::Xamarin.Forms.Platform.Resource.Attribute.lineSpacing = global::LoveCCA.Droid.Resource.Attribute.lineSpacing;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listChoiceBackgroundIndicator = global::LoveCCA.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Platform.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::LoveCCA.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Platform.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::LoveCCA.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listDividerAlertDialog = global::LoveCCA.Droid.Resource.Attribute.listDividerAlertDialog;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listItemLayout = global::LoveCCA.Droid.Resource.Attribute.listItemLayout;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listLayout = global::LoveCCA.Droid.Resource.Attribute.listLayout;
@@ -6199,8 +6502,10 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemHeight = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemHeightLarge = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemHeightSmall = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemPaddingEnd = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemPaddingLeft = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemPaddingRight = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemPaddingStart = global::LoveCCA.Droid.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Platform.Resource.Attribute.logo = global::LoveCCA.Droid.Resource.Attribute.logo;
 			global::Xamarin.Forms.Platform.Resource.Attribute.logoDescription = global::LoveCCA.Droid.Resource.Attribute.logoDescription;
 			global::Xamarin.Forms.Platform.Resource.Attribute.materialButtonStyle = global::LoveCCA.Droid.Resource.Attribute.materialButtonStyle;
@@ -6242,6 +6547,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.ratingBarStyle = global::LoveCCA.Droid.Resource.Attribute.ratingBarStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.ratingBarStyleIndicator = global::LoveCCA.Droid.Resource.Attribute.ratingBarStyleIndicator;
 			global::Xamarin.Forms.Platform.Resource.Attribute.ratingBarStyleSmall = global::LoveCCA.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Xamarin.Forms.Platform.Resource.Attribute.recyclerViewStyle = global::LoveCCA.Droid.Resource.Attribute.recyclerViewStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.reverseLayout = global::LoveCCA.Droid.Resource.Attribute.reverseLayout;
 			global::Xamarin.Forms.Platform.Resource.Attribute.rippleColor = global::LoveCCA.Droid.Resource.Attribute.rippleColor;
 			global::Xamarin.Forms.Platform.Resource.Attribute.scrimAnimationDuration = global::LoveCCA.Droid.Resource.Attribute.scrimAnimationDuration;
@@ -6342,6 +6648,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.textColorSearchUrl = global::LoveCCA.Droid.Resource.Attribute.textColorSearchUrl;
 			global::Xamarin.Forms.Platform.Resource.Attribute.textEndPadding = global::LoveCCA.Droid.Resource.Attribute.textEndPadding;
 			global::Xamarin.Forms.Platform.Resource.Attribute.textInputStyle = global::LoveCCA.Droid.Resource.Attribute.textInputStyle;
+			global::Xamarin.Forms.Platform.Resource.Attribute.textLocale = global::LoveCCA.Droid.Resource.Attribute.textLocale;
 			global::Xamarin.Forms.Platform.Resource.Attribute.textStartPadding = global::LoveCCA.Droid.Resource.Attribute.textStartPadding;
 			global::Xamarin.Forms.Platform.Resource.Attribute.theme = global::LoveCCA.Droid.Resource.Attribute.theme;
 			global::Xamarin.Forms.Platform.Resource.Attribute.thickness = global::LoveCCA.Droid.Resource.Attribute.thickness;
@@ -6567,6 +6874,9 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::LoveCCA.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_edit_text_inset_top_material = global::LoveCCA.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_floating_window_z = global::LoveCCA.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Xamarin.Forms.Platform.Resource.Dimension.abc_list_item_height_large_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Xamarin.Forms.Platform.Resource.Dimension.abc_list_item_height_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Xamarin.Forms.Platform.Resource.Dimension.abc_list_item_height_small_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_height_small_material;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_list_item_padding_horizontal_material = global::LoveCCA.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_panel_menu_list_width = global::LoveCCA.Droid.Resource.Dimension.abc_panel_menu_list_width;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_progress_bar_height_material = global::LoveCCA.Droid.Resource.Dimension.abc_progress_bar_height_material;
@@ -6742,11 +7052,13 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_action_bar_item_background_material = global::LoveCCA.Droid.Resource.Drawable.abc_action_bar_item_background_material;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_borderless_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_borderless_material;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_check_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_check_material_anim = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_material_anim;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_colored_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_colored_material;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_default_mtrl_shape = global::LoveCCA.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_radio_material = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_radio_material_anim = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_material_anim;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::LoveCCA.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
@@ -6824,6 +7136,14 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_vector_test = global::LoveCCA.Droid.Resource.Drawable.abc_vector_test;
 			global::Xamarin.Forms.Platform.Resource.Drawable.avd_hide_password = global::LoveCCA.Droid.Resource.Drawable.avd_hide_password;
 			global::Xamarin.Forms.Platform.Resource.Drawable.avd_show_password = global::LoveCCA.Droid.Resource.Drawable.avd_show_password;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_checkbox_checked_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_off_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_on_mtrl = global::LoveCCA.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::LoveCCA.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
 			global::Xamarin.Forms.Platform.Resource.Drawable.design_bottom_navigation_item_background = global::LoveCCA.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Xamarin.Forms.Platform.Resource.Drawable.design_fab_background = global::LoveCCA.Droid.Resource.Drawable.design_fab_background;
 			global::Xamarin.Forms.Platform.Resource.Drawable.design_ic_visibility = global::LoveCCA.Droid.Resource.Drawable.design_ic_visibility;
@@ -6850,6 +7170,39 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Drawable.notify_panel_notification_icon_bg = global::LoveCCA.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
 			global::Xamarin.Forms.Platform.Resource.Drawable.tooltip_frame_dark = global::LoveCCA.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Xamarin.Forms.Platform.Resource.Drawable.tooltip_frame_light = global::LoveCCA.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_action_clickable_span = global::LoveCCA.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_0 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_1 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_10 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_11 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_12 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_13 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_14 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_15 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_16 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_17 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_18 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_19 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_2 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_20 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_21 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_22 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_23 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_24 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_25 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_26 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_27 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_28 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_29 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_3 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_30 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_31 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_4 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_5 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_6 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_7 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_8 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_9 = global::LoveCCA.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Xamarin.Forms.Platform.Resource.Id.action0 = global::LoveCCA.Droid.Resource.Id.action0;
 			global::Xamarin.Forms.Platform.Resource.Id.actions = global::LoveCCA.Droid.Resource.Id.actions;
 			global::Xamarin.Forms.Platform.Resource.Id.action_bar = global::LoveCCA.Droid.Resource.Id.action_bar;
@@ -6888,6 +7241,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.center_horizontal = global::LoveCCA.Droid.Resource.Id.center_horizontal;
 			global::Xamarin.Forms.Platform.Resource.Id.center_vertical = global::LoveCCA.Droid.Resource.Id.center_vertical;
 			global::Xamarin.Forms.Platform.Resource.Id.checkbox = global::LoveCCA.Droid.Resource.Id.checkbox;
+			global::Xamarin.Forms.Platform.Resource.Id.@checked = global::LoveCCA.Droid.Resource.Id.@checked;
 			global::Xamarin.Forms.Platform.Resource.Id.chronometer = global::LoveCCA.Droid.Resource.Id.chronometer;
 			global::Xamarin.Forms.Platform.Resource.Id.clip_horizontal = global::LoveCCA.Droid.Resource.Id.clip_horizontal;
 			global::Xamarin.Forms.Platform.Resource.Id.clip_vertical = global::LoveCCA.Droid.Resource.Id.clip_vertical;
@@ -6906,6 +7260,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.design_menu_item_action_area_stub = global::LoveCCA.Droid.Resource.Id.design_menu_item_action_area_stub;
 			global::Xamarin.Forms.Platform.Resource.Id.design_menu_item_text = global::LoveCCA.Droid.Resource.Id.design_menu_item_text;
 			global::Xamarin.Forms.Platform.Resource.Id.design_navigation_view = global::LoveCCA.Droid.Resource.Id.design_navigation_view;
+			global::Xamarin.Forms.Platform.Resource.Id.dialog_button = global::LoveCCA.Droid.Resource.Id.dialog_button;
 			global::Xamarin.Forms.Platform.Resource.Id.disableHome = global::LoveCCA.Droid.Resource.Id.disableHome;
 			global::Xamarin.Forms.Platform.Resource.Id.edit_query = global::LoveCCA.Droid.Resource.Id.edit_query;
 			global::Xamarin.Forms.Platform.Resource.Id.end = global::LoveCCA.Droid.Resource.Id.end;
@@ -6925,6 +7280,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.forever = global::LoveCCA.Droid.Resource.Id.forever;
 			global::Xamarin.Forms.Platform.Resource.Id.FUNCTION = global::LoveCCA.Droid.Resource.Id.FUNCTION;
 			global::Xamarin.Forms.Platform.Resource.Id.ghost_view = global::LoveCCA.Droid.Resource.Id.ghost_view;
+			global::Xamarin.Forms.Platform.Resource.Id.ghost_view_holder = global::LoveCCA.Droid.Resource.Id.ghost_view_holder;
 			global::Xamarin.Forms.Platform.Resource.Id.group_divider = global::LoveCCA.Droid.Resource.Id.group_divider;
 			global::Xamarin.Forms.Platform.Resource.Id.home = global::LoveCCA.Droid.Resource.Id.home;
 			global::Xamarin.Forms.Platform.Resource.Id.homeAsUp = global::LoveCCA.Droid.Resource.Id.homeAsUp;
@@ -6962,6 +7318,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.notification_background = global::LoveCCA.Droid.Resource.Id.notification_background;
 			global::Xamarin.Forms.Platform.Resource.Id.notification_main_column = global::LoveCCA.Droid.Resource.Id.notification_main_column;
 			global::Xamarin.Forms.Platform.Resource.Id.notification_main_column_container = global::LoveCCA.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Forms.Platform.Resource.Id.off = global::LoveCCA.Droid.Resource.Id.off;
+			global::Xamarin.Forms.Platform.Resource.Id.on = global::LoveCCA.Droid.Resource.Id.on;
 			global::Xamarin.Forms.Platform.Resource.Id.outline = global::LoveCCA.Droid.Resource.Id.outline;
 			global::Xamarin.Forms.Platform.Resource.Id.parallax = global::LoveCCA.Droid.Resource.Id.parallax;
 			global::Xamarin.Forms.Platform.Resource.Id.parentPanel = global::LoveCCA.Droid.Resource.Id.parentPanel;
@@ -6974,6 +7332,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.right_icon = global::LoveCCA.Droid.Resource.Id.right_icon;
 			global::Xamarin.Forms.Platform.Resource.Id.right_side = global::LoveCCA.Droid.Resource.Id.right_side;
 			global::Xamarin.Forms.Platform.Resource.Id.save_non_transition_alpha = global::LoveCCA.Droid.Resource.Id.save_non_transition_alpha;
+			global::Xamarin.Forms.Platform.Resource.Id.save_overlay_view = global::LoveCCA.Droid.Resource.Id.save_overlay_view;
 			global::Xamarin.Forms.Platform.Resource.Id.screen = global::LoveCCA.Droid.Resource.Id.screen;
 			global::Xamarin.Forms.Platform.Resource.Id.scroll = global::LoveCCA.Droid.Resource.Id.scroll;
 			global::Xamarin.Forms.Platform.Resource.Id.scrollable = global::LoveCCA.Droid.Resource.Id.scrollable;
@@ -6999,6 +7358,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.showCustom = global::LoveCCA.Droid.Resource.Id.showCustom;
 			global::Xamarin.Forms.Platform.Resource.Id.showHome = global::LoveCCA.Droid.Resource.Id.showHome;
 			global::Xamarin.Forms.Platform.Resource.Id.showTitle = global::LoveCCA.Droid.Resource.Id.showTitle;
+			global::Xamarin.Forms.Platform.Resource.Id.sliding_tabs = global::LoveCCA.Droid.Resource.Id.sliding_tabs;
 			global::Xamarin.Forms.Platform.Resource.Id.smallLabel = global::LoveCCA.Droid.Resource.Id.smallLabel;
 			global::Xamarin.Forms.Platform.Resource.Id.snackbar_action = global::LoveCCA.Droid.Resource.Id.snackbar_action;
 			global::Xamarin.Forms.Platform.Resource.Id.snackbar_text = global::LoveCCA.Droid.Resource.Id.snackbar_text;
@@ -7016,6 +7376,11 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.submit_area = global::LoveCCA.Droid.Resource.Id.submit_area;
 			global::Xamarin.Forms.Platform.Resource.Id.SYM = global::LoveCCA.Droid.Resource.Id.SYM;
 			global::Xamarin.Forms.Platform.Resource.Id.tabMode = global::LoveCCA.Droid.Resource.Id.tabMode;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_accessibility_actions = global::LoveCCA.Droid.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_accessibility_clickable_spans = global::LoveCCA.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_accessibility_heading = global::LoveCCA.Droid.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_accessibility_pane_title = global::LoveCCA.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_screen_reader_focusable = global::LoveCCA.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Xamarin.Forms.Platform.Resource.Id.tag_transition_group = global::LoveCCA.Droid.Resource.Id.tag_transition_group;
 			global::Xamarin.Forms.Platform.Resource.Id.tag_unhandled_key_event_manager = global::LoveCCA.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Xamarin.Forms.Platform.Resource.Id.tag_unhandled_key_listeners = global::LoveCCA.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -7032,6 +7397,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.title = global::LoveCCA.Droid.Resource.Id.title;
 			global::Xamarin.Forms.Platform.Resource.Id.titleDividerNoCustom = global::LoveCCA.Droid.Resource.Id.titleDividerNoCustom;
 			global::Xamarin.Forms.Platform.Resource.Id.title_template = global::LoveCCA.Droid.Resource.Id.title_template;
+			global::Xamarin.Forms.Platform.Resource.Id.toolbar = global::LoveCCA.Droid.Resource.Id.toolbar;
 			global::Xamarin.Forms.Platform.Resource.Id.top = global::LoveCCA.Droid.Resource.Id.top;
 			global::Xamarin.Forms.Platform.Resource.Id.topPanel = global::LoveCCA.Droid.Resource.Id.topPanel;
 			global::Xamarin.Forms.Platform.Resource.Id.touch_outside = global::LoveCCA.Droid.Resource.Id.touch_outside;
@@ -7040,6 +7406,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.transition_position = global::LoveCCA.Droid.Resource.Id.transition_position;
 			global::Xamarin.Forms.Platform.Resource.Id.transition_scene_layoutid_cache = global::LoveCCA.Droid.Resource.Id.transition_scene_layoutid_cache;
 			global::Xamarin.Forms.Platform.Resource.Id.transition_transform = global::LoveCCA.Droid.Resource.Id.transition_transform;
+			global::Xamarin.Forms.Platform.Resource.Id.@unchecked = global::LoveCCA.Droid.Resource.Id.@unchecked;
 			global::Xamarin.Forms.Platform.Resource.Id.uniform = global::LoveCCA.Droid.Resource.Id.uniform;
 			global::Xamarin.Forms.Platform.Resource.Id.unlabeled = global::LoveCCA.Droid.Resource.Id.unlabeled;
 			global::Xamarin.Forms.Platform.Resource.Id.up = global::LoveCCA.Droid.Resource.Id.up;
@@ -7063,6 +7430,13 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::LoveCCA.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
 			global::Xamarin.Forms.Platform.Resource.Integer.show_password_duration = global::LoveCCA.Droid.Resource.Integer.show_password_duration;
 			global::Xamarin.Forms.Platform.Resource.Integer.status_bar_notification_info_maxnum = global::LoveCCA.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::LoveCCA.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::LoveCCA.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.fast_out_slow_in = global::LoveCCA.Droid.Resource.Interpolator.fast_out_slow_in;
 			global::Xamarin.Forms.Platform.Resource.Interpolator.mtrl_fast_out_linear_in = global::LoveCCA.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
 			global::Xamarin.Forms.Platform.Resource.Interpolator.mtrl_fast_out_slow_in = global::LoveCCA.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
 			global::Xamarin.Forms.Platform.Resource.Interpolator.mtrl_linear = global::LoveCCA.Droid.Resource.Interpolator.mtrl_linear;
@@ -7096,6 +7470,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Layout.abc_select_dialog_material = global::LoveCCA.Droid.Resource.Layout.abc_select_dialog_material;
 			global::Xamarin.Forms.Platform.Resource.Layout.abc_tooltip = global::LoveCCA.Droid.Resource.Layout.abc_tooltip;
 			global::Xamarin.Forms.Platform.Resource.Layout.BottomTabLayout = global::LoveCCA.Droid.Resource.Layout.BottomTabLayout;
+			global::Xamarin.Forms.Platform.Resource.Layout.custom_dialog = global::LoveCCA.Droid.Resource.Layout.custom_dialog;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_bottom_navigation_item = global::LoveCCA.Droid.Resource.Layout.design_bottom_navigation_item;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_bottom_sheet_dialog = global::LoveCCA.Droid.Resource.Layout.design_bottom_sheet_dialog;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_layout_snackbar = global::LoveCCA.Droid.Resource.Layout.design_layout_snackbar;
@@ -7110,6 +7485,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Layout.design_navigation_menu = global::LoveCCA.Droid.Resource.Layout.design_navigation_menu;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_navigation_menu_item = global::LoveCCA.Droid.Resource.Layout.design_navigation_menu_item;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_text_input_password_icon = global::LoveCCA.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Xamarin.Forms.Platform.Resource.Layout.FallbackTabbarDoNotUse = global::LoveCCA.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Xamarin.Forms.Platform.Resource.Layout.FallbackToolbarDoNotUse = global::LoveCCA.Droid.Resource.Layout.FallbackToolbarDoNotUse;
 			global::Xamarin.Forms.Platform.Resource.Layout.FlyoutContent = global::LoveCCA.Droid.Resource.Layout.FlyoutContent;
 			global::Xamarin.Forms.Platform.Resource.Layout.mtrl_layout_snackbar = global::LoveCCA.Droid.Resource.Layout.mtrl_layout_snackbar;
 			global::Xamarin.Forms.Platform.Resource.Layout.mtrl_layout_snackbar_include = global::LoveCCA.Droid.Resource.Layout.mtrl_layout_snackbar_include;
@@ -7134,6 +7511,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Layout.select_dialog_singlechoice_material = global::LoveCCA.Droid.Resource.Layout.select_dialog_singlechoice_material;
 			global::Xamarin.Forms.Platform.Resource.Layout.ShellContent = global::LoveCCA.Droid.Resource.Layout.ShellContent;
 			global::Xamarin.Forms.Platform.Resource.Layout.support_simple_spinner_dropdown_item = global::LoveCCA.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Xamarin.Forms.Platform.Resource.Layout.Tabbar = global::LoveCCA.Droid.Resource.Layout.Tabbar;
+			global::Xamarin.Forms.Platform.Resource.Layout.Toolbar = global::LoveCCA.Droid.Resource.Layout.Toolbar;
 			global::Xamarin.Forms.Platform.Resource.String.abc_action_bar_home_description = global::LoveCCA.Droid.Resource.String.abc_action_bar_home_description;
 			global::Xamarin.Forms.Platform.Resource.String.abc_action_bar_up_description = global::LoveCCA.Droid.Resource.String.abc_action_bar_up_description;
 			global::Xamarin.Forms.Platform.Resource.String.abc_action_menu_overflow_description = global::LoveCCA.Droid.Resource.String.abc_action_menu_overflow_description;
@@ -7365,6 +7744,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_Spinner = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_TextView = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_Toolbar = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::LoveCCA.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
@@ -7498,6 +7878,8 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Dark = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Light = global::LoveCCA.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
@@ -7630,6 +8012,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_TextView = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Toolbar = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::LoveCCA.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
@@ -7791,11 +8174,21 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableTint = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableTintMode = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_fontFamily = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_lineHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_textAllCaps = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_textLocale = global::LoveCCA.Droid.Resource.Styleable.AppCompatTextView_textLocale;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_actionBarDivider = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
@@ -7869,14 +8262,18 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_panelBackground = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::LoveCCA.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
@@ -8025,6 +8422,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.ColorStateListItem_android_color = global::LoveCCA.Droid.Resource.Styleable.ColorStateListItem_android_color;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton = global::LoveCCA.Droid.Resource.Styleable.CompoundButton;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton_android_button = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton_buttonCompat = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_buttonCompat;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton_buttonTint = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_buttonTint;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton_buttonTintMode = global::LoveCCA.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CoordinatorLayout = global::LoveCCA.Droid.Resource.Styleable.CoordinatorLayout;
@@ -8244,6 +8642,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::LoveCCA.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::LoveCCA.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView = global::LoveCCA.Droid.Resource.Styleable.RecyclerView;
+			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView_android_clipToPadding = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView_android_descendantFocusability = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView_android_orientation = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_android_orientation;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView_fastScrollEnabled = global::LoveCCA.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
@@ -8353,11 +8752,14 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textColor = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textColor;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textColorHint = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textColorLink = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textFontWeight = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textSize = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textSize;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textStyle = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_textStyle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_typeface = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_android_typeface;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_fontFamily = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_fontVariationSettings = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_textAllCaps = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_textLocale = global::LoveCCA.Droid.Resource.Styleable.TextAppearance_textLocale;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextInputLayout = global::LoveCCA.Droid.Resource.Styleable.TextInputLayout;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextInputLayout_android_hint = global::LoveCCA.Droid.Resource.Styleable.TextInputLayout_android_hint;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextInputLayout_android_textColorHint = global::LoveCCA.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
@@ -8406,6 +8808,7 @@ namespace LoveCCA.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_logo = global::LoveCCA.Droid.Resource.Styleable.Toolbar_logo;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_logoDescription = global::LoveCCA.Droid.Resource.Styleable.Toolbar_logoDescription;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_maxButtonHeight = global::LoveCCA.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_menu = global::LoveCCA.Droid.Resource.Styleable.Toolbar_menu;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_navigationContentDescription = global::LoveCCA.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_navigationIcon = global::LoveCCA.Droid.Resource.Styleable.Toolbar_navigationIcon;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_popupTheme = global::LoveCCA.Droid.Resource.Styleable.Toolbar_popupTheme;
@@ -13944,100 +14347,106 @@ namespace LoveCCA.Droid
 			public const int design_text_input_password_icon = 2131427399;
 			
 			// aapt resource value: 0x7F0B0048
-			public const int FlyoutContent = 2131427400;
+			public const int FallbackTabbarDoNotUse = 2131427400;
 			
 			// aapt resource value: 0x7F0B0049
-			public const int loading = 2131427401;
+			public const int FallbackToolbarDoNotUse = 2131427401;
 			
 			// aapt resource value: 0x7F0B004A
-			public const int loadingimage = 2131427402;
+			public const int FlyoutContent = 2131427402;
 			
 			// aapt resource value: 0x7F0B004B
-			public const int loadingprogress = 2131427403;
+			public const int loading = 2131427403;
 			
 			// aapt resource value: 0x7F0B004C
-			public const int mtrl_layout_snackbar = 2131427404;
+			public const int loadingimage = 2131427404;
 			
 			// aapt resource value: 0x7F0B004D
-			public const int mtrl_layout_snackbar_include = 2131427405;
+			public const int loadingprogress = 2131427405;
 			
 			// aapt resource value: 0x7F0B004E
-			public const int notification_action = 2131427406;
+			public const int mtrl_layout_snackbar = 2131427406;
 			
 			// aapt resource value: 0x7F0B004F
-			public const int notification_action_tombstone = 2131427407;
+			public const int mtrl_layout_snackbar_include = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
-			public const int notification_media_action = 2131427408;
+			public const int notification_action = 2131427408;
 			
 			// aapt resource value: 0x7F0B0051
-			public const int notification_media_cancel_action = 2131427409;
+			public const int notification_action_tombstone = 2131427409;
 			
 			// aapt resource value: 0x7F0B0052
-			public const int notification_template_big_media = 2131427410;
+			public const int notification_media_action = 2131427410;
 			
 			// aapt resource value: 0x7F0B0053
-			public const int notification_template_big_media_custom = 2131427411;
+			public const int notification_media_cancel_action = 2131427411;
 			
 			// aapt resource value: 0x7F0B0054
-			public const int notification_template_big_media_narrow = 2131427412;
+			public const int notification_template_big_media = 2131427412;
 			
 			// aapt resource value: 0x7F0B0055
-			public const int notification_template_big_media_narrow_custom = 2131427413;
+			public const int notification_template_big_media_custom = 2131427413;
 			
 			// aapt resource value: 0x7F0B0056
-			public const int notification_template_custom_big = 2131427414;
+			public const int notification_template_big_media_narrow = 2131427414;
 			
 			// aapt resource value: 0x7F0B0057
-			public const int notification_template_icon_group = 2131427415;
+			public const int notification_template_big_media_narrow_custom = 2131427415;
 			
 			// aapt resource value: 0x7F0B0058
-			public const int notification_template_lines_media = 2131427416;
+			public const int notification_template_custom_big = 2131427416;
 			
 			// aapt resource value: 0x7F0B0059
-			public const int notification_template_media = 2131427417;
+			public const int notification_template_icon_group = 2131427417;
 			
 			// aapt resource value: 0x7F0B005A
-			public const int notification_template_media_custom = 2131427418;
+			public const int notification_template_lines_media = 2131427418;
 			
 			// aapt resource value: 0x7F0B005B
-			public const int notification_template_part_chronometer = 2131427419;
+			public const int notification_template_media = 2131427419;
 			
 			// aapt resource value: 0x7F0B005C
-			public const int notification_template_part_time = 2131427420;
+			public const int notification_template_media_custom = 2131427420;
 			
 			// aapt resource value: 0x7F0B005D
-			public const int progress_view_2 = 2131427421;
+			public const int notification_template_part_chronometer = 2131427421;
 			
 			// aapt resource value: 0x7F0B005E
-			public const int RootLayout = 2131427422;
+			public const int notification_template_part_time = 2131427422;
 			
 			// aapt resource value: 0x7F0B005F
-			public const int select_dialog_item_material = 2131427423;
+			public const int progress_view_2 = 2131427423;
 			
 			// aapt resource value: 0x7F0B0060
-			public const int select_dialog_multichoice_material = 2131427424;
+			public const int RootLayout = 2131427424;
 			
 			// aapt resource value: 0x7F0B0061
-			public const int select_dialog_singlechoice_material = 2131427425;
+			public const int select_dialog_item_material = 2131427425;
 			
 			// aapt resource value: 0x7F0B0062
-			public const int ShellContent = 2131427426;
+			public const int select_dialog_multichoice_material = 2131427426;
 			
 			// aapt resource value: 0x7F0B0063
-			public const int support_simple_spinner_dropdown_item = 2131427427;
+			public const int select_dialog_singlechoice_material = 2131427427;
 			
 			// aapt resource value: 0x7F0B0064
-			public const int Tabbar = 2131427428;
+			public const int ShellContent = 2131427428;
 			
 			// aapt resource value: 0x7F0B0065
-			public const int text_info_body_view = 2131427429;
+			public const int support_simple_spinner_dropdown_item = 2131427429;
 			
 			// aapt resource value: 0x7F0B0066
-			public const int Toolbar = 2131427430;
+			public const int Tabbar = 2131427430;
 			
 			// aapt resource value: 0x7F0B0067
-			public const int wallet_test_layout = 2131427431;
+			public const int text_info_body_view = 2131427431;
+			
+			// aapt resource value: 0x7F0B0068
+			public const int Toolbar = 2131427432;
+			
+			// aapt resource value: 0x7F0B0069
+			public const int wallet_test_layout = 2131427433;
 			
 			static Layout()
 			{
