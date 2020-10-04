@@ -41,6 +41,7 @@ namespace LoveCCA.Services
 
                 if (profile == null)
                 {
+                    // First time use -- set up new profile
                     profile = new UserProfile
                     {
                         Id = email,
@@ -67,6 +68,14 @@ namespace LoveCCA.Services
 
                 if (CurrentUserProfile.Kids == null)
                     CurrentUserProfile.Kids = new List<Student>();
+
+                var result = await StorageVault.GetValue("notificationsRegistered");
+                if (result == null || !bool.Parse(result))
+                {
+                    PushNotificationService.Instance.Subscribe(new string[] { "urgent", "information" });
+                    await StorageVault.SetValue("notificationsRegistered", "true");
+                    Console.WriteLine("Intial registration of notifications complete;");
+                }
 
             }
             catch (Exception)
@@ -108,8 +117,25 @@ namespace LoveCCA.Services
                 Name = CurrentUserProfile.Name,
                 CellPhone = CurrentUserProfile.CellPhone,
                 AllowNotifications = CurrentUserProfile.AllowNotifications,
+                UrgentNotificationsOnly = CurrentUserProfile.UrgentNotificationsOnly,
                 FCMTokens = CurrentUserProfile.FCMTokens,
                 Kids =  CurrentUserProfile.Kids});
+            if (CurrentUserProfile.AllowNotifications)
+            {
+                if (CurrentUserProfile.UrgentNotificationsOnly)
+                {
+                    PushNotificationService.Instance.Unsubscribe("information");
+                    PushNotificationService.Instance.Subscribe("urgent");
+                }
+                else
+                {
+                    PushNotificationService.Instance.Subscribe(new string[] { "urgent", "information" });
+                }
+            }
+            else
+            {
+                PushNotificationService.Instance.UnsubscribeAll();
+            }
         }
 
         public async Task AddKid(Student kid)

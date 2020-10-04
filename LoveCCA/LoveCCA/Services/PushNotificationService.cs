@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Plugin.FirebasePushNotification;
 
 namespace LoveCCA.Services
 {
-    public interface IPushNotificationService
+    public class PushNotificationService
     {
 
-    }
+        private static PushNotificationService _instance { get; set; } 
+        public static PushNotificationService Instance { 
+            get {
+                if (_instance == null)
+                    _instance = new PushNotificationService();
+                return _instance;
+            } 
+        }
 
-    public class PushNotificationService : IPushNotificationService
-    {
         public PushNotificationService()
         {
             CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
@@ -50,6 +56,29 @@ namespace LoveCCA.Services
 
             };
 
+        }
+
+        public void Subscribe(string topic)
+        {
+            CrossFirebasePushNotification.Current.Subscribe(topic);
+        }
+
+        public void Subscribe(string[] topics)
+        {
+            CrossFirebasePushNotification.Current.Subscribe(topics);
+        }
+
+        public void Unsubscribe(string topic)
+        {
+            CrossFirebasePushNotification.Current.Unsubscribe(topic);
+        }
+        public void Unsubscribe(string[] topics)
+        {
+            CrossFirebasePushNotification.Current.Unsubscribe(topics);
+        }
+        public void UnsubscribeAll()
+        {
+            CrossFirebasePushNotification.Current.UnsubscribeAll();
         }
     }
 }

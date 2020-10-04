@@ -27,7 +27,6 @@ namespace LoveCCA.iOS
 
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental", "SwipeView_Experimental");
             global::Xamarin.Forms.Forms.Init();
-            global::Xamarin.Forms.DependencyService.RegisterSingleton<IPushNotificationService>(new PushNotificationService());
             global::Xamarin.Forms.DependencyService.RegisterSingleton<IHolidayService>(new HolidayService());
             global::Xamarin.Forms.DependencyService.RegisterSingleton<IOrderHistoryService>(new OrderHistoryService());
             global::Xamarin.Forms.DependencyService.RegisterSingleton<IShoppingCartService>(new ShoppingCartService());
