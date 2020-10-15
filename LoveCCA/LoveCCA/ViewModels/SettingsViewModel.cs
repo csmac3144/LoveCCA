@@ -13,7 +13,7 @@ namespace LoveCCA.ViewModels
         {
             Title = "Settings";
             AllowNotificaitons = UserProfileService.Instance.CurrentUserProfile.AllowNotifications;
-            UrgentNotificationsOnly = UserProfileService.Instance.CurrentUserProfile.UrgentNotificationsOnly;
+            //UrgentNotificationsOnly = UserProfileService.Instance.CurrentUserProfile.UrgentNotificationsOnly;
             Name = UserProfileService.Instance.CurrentUserProfile.Name;
             CellPhone = UserProfileService.Instance.CurrentUserProfile.CellPhone;
             DoneCommand = new Command(async () => await Done());
@@ -30,7 +30,7 @@ namespace LoveCCA.ViewModels
         internal async Task SaveChanges()
         {
             UserProfileService.Instance.CurrentUserProfile.AllowNotifications = AllowNotificaitons;
-            UserProfileService.Instance.CurrentUserProfile.UrgentNotificationsOnly = UrgentNotificationsOnly;
+            //UserProfileService.Instance.CurrentUserProfile.UrgentNotificationsOnly = UrgentNotificationsOnly;
             UserProfileService.Instance.CurrentUserProfile.Name = Name;
             UserProfileService.Instance.CurrentUserProfile.CellPhone = CellPhone;
             await UserProfileService.Instance.UpdateCurrentProfile();

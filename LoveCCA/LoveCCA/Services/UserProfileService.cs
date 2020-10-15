@@ -121,21 +121,22 @@ namespace LoveCCA.Services
                      Name = CurrentUserProfile.Name,
                      CellPhone = CurrentUserProfile.CellPhone,
                      AllowNotifications = CurrentUserProfile.AllowNotifications,
-                     UrgentNotificationsOnly = CurrentUserProfile.UrgentNotificationsOnly,
+                     //UrgentNotificationsOnly = CurrentUserProfile.UrgentNotificationsOnly,
                      FCMTokens = CurrentUserProfile.FCMTokens,
                      Kids = CurrentUserProfile.Kids
                  });
                 if (CurrentUserProfile.AllowNotifications)
                 {
-                    if (CurrentUserProfile.UrgentNotificationsOnly)
-                    {
-                        PushNotificationService.Instance.Unsubscribe("information");
-                        PushNotificationService.Instance.Subscribe("urgent");
-                    }
-                    else
-                    {
-                        PushNotificationService.Instance.Subscribe(new string[] { "urgent", "information" });
-                    }
+                    PushNotificationService.Instance.Subscribe(new string[] { "urgent", "information" });
+                    //if (CurrentUserProfile.UrgentNotificationsOnly)
+                    //{
+                    //    PushNotificationService.Instance.Unsubscribe("information");
+                    //    PushNotificationService.Instance.Subscribe("urgent");
+                    //}
+                    //else
+                    //{
+                    //    PushNotificationService.Instance.Subscribe(new string[] { "urgent", "information" });
+                    //}
                 }
                 else
                 {

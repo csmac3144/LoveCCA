@@ -26,9 +26,27 @@ namespace LoveCCA.Services
                 System.Diagnostics.Debug.WriteLine("Received");
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    string title = p.Data.Values.ToArray()[1] as string;
-                    string message = p.Data.Values.ToArray()[0] as string;
-                    await UserDialogs.Instance.AlertAsync(message, title);
+                    try
+                    {
+                        string title = "Message From CCA";
+                        string message = "No content was found";
+                        switch (p.Data.Values.Count)
+                        {
+                            case 0:
+                                break;
+                            case 1:
+                                message = p.Data.Values.ToArray()[0] as string;
+                                break;
+                            case 2:
+                                title = p.Data.Values.ToArray()[1] as string;
+                                message = p.Data.Values.ToArray()[0] as string;
+                                break;
+                        }
+                        await UserDialogs.Instance.AlertAsync(message, title);
+                    }
+                    catch (Exception)
+                    {
+                    }
                 });
             };
 
