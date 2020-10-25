@@ -31,7 +31,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="1" Text="Done" Command="{Binding DoneCommand}"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Done" Command="{Binding DoneCommand}" WidthRequest="100" />
             <Entry Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Placeholder="My Full Name" Text="{Binding Name}" />
             <Entry Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Placeholder="My Mobile Phone Number" Text="{Binding CellPhone}" />
             <Label Grid.Row="3" Grid.Column="0" Text="Allow Notifications" FontSize="Medium"/>

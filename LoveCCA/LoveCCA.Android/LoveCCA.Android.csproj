@@ -99,6 +99,15 @@
     <PackageReference Include="Xamarin.Firebase.Core">
       <Version>71.1601.4</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter">
+      <Version>3.4.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>3.4.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>3.4.3</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
