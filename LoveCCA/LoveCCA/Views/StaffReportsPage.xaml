@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
+             Title="{Binding Title}"
+             xmlns:model="clr-namespace:LoveCCA.Models"  
+             Shell.PresentationMode="ModalAnimated"
+             x:Class="LoveCCA.Views.StaffReportsPage">
+    <ContentPage.BindingContext>
+        <vm:StaffReportsViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#10448C</Color>
+            <Color x:Key="Accent">#D9E7F3</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="collectionView"
+                ItemsSource="{Binding Reports}">
+                <CollectionView.Header>
+                    <StackLayout Orientation="Horizontal" Padding="18">
+                        <Label FontAttributes="Bold" Text="Name" HorizontalOptions="StartAndExpand"/>
+                        <Label FontAttributes="Bold" Text="Grade" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="White" 
+                            Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="8*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Label Text="{Binding Icon}" HorizontalOptions="StartAndExpand"/>
+                                <Label Text="{Binding Description}" WidthRequest="40" HorizontalTextAlignment="End" HorizontalOptions="End"/>
+                            </StackLayout>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SelectCommand}" CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                            </Grid.GestureRecognizers>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

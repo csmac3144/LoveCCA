@@ -31,5 +31,6 @@ namespace LoveCCA.Models
         //public bool UrgentNotificationsOnly { get; internal set; }
         public List<Order> OrderHistory { get; set; }
         public List<string> FCMTokens { get; internal set; }
+        public bool IsStaffMember { get; set; }
     }
 }

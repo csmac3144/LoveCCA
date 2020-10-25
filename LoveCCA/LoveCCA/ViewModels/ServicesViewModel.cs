@@ -51,7 +51,8 @@ namespace LoveCCA.ViewModels
                     break;
                 case 4:
                     break;
-                case 5:
+                case 7:
+                    await Shell.Current.GoToAsync($"{nameof(StaffReportsPage)}");
                     break;
                 default:
                     break;
