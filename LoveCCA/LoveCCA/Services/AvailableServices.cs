@@ -1,13 +1,16 @@
 ﻿using LoveCCA.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LoveCCA.Services
 {
     class AvailableServices
     {
+        List<ServicesModel> _services;
+        List<ReportsModel> _reports;
         public AvailableServices()
         {
-            Services = new List<ServicesModel>
+            _services = new List<ServicesModel>
             {
                 new ServicesModel {Id = 0, Icon = "🍕", Description = "Order Hot Lunches", Active = true},
                 new ServicesModel {Id = 1,  Icon = "🥛", Description = "Order Milk", Active = true},
@@ -16,19 +19,27 @@ namespace LoveCCA.Services
                 new ServicesModel {Id = 4,  Icon = "🤒", Description = "Report Absence", Active = false},
                 new ServicesModel {Id = 5,  Icon = "🎟", Description = "Buy Tickets", Active = false},
                 new ServicesModel {Id = 6,  Icon = "😇", Description = "Donate To CCA!", Active = false},
-                new ServicesModel {Id = 7,  Icon = "📝", Description = "CCA Staff Reports", Active = true}
+                new ServicesModel {Id = 7,  Icon = "📋", Description = "CCA Staff Reports", Active = true, IsRestrictedToStaff = true}
             };
 
-            Reports = new List<ReportsModel>
+            _reports = new List<ReportsModel>
             {
-                new ReportsModel {Id = 0, Icon = "📋", Description = "Weekly Orders", Active = true},
+                new ReportsModel {Id = 0, Icon = "📝", Description = "Weekly Orders", Active = true},
             };
 
 
         }
 
 
-        public List<ServicesModel> Services { get; private set; }
-        public List<ReportsModel> Reports { get; private set; }
+        public List<ServicesModel> Services {  get
+            {
+                bool staff = UserProfileService.Instance.CurrentUserProfile.IsStaffMember;
+                if (staff)
+                    return _services.Where(s => s.Active).ToList();
+                else
+                    return _services.Where(s => s.Active && !s.IsRestrictedToStaff).ToList();
+            }
+        }
+        public List<ReportsModel> Reports => _reports;
     }
 }

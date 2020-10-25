@@ -11,13 +11,14 @@ using Xamarin.Forms.Xaml;
 namespace LoveCCA.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EditKidPage : ContentPage
+    public partial class OrdersReportPage : ContentPage
     {
-        EditKidViewModel _viewModel;
-        public EditKidPage()
+        private OrdersReportViewModel _viewModel;
+
+        public OrdersReportPage()
         {
             InitializeComponent();
-            this.BindingContext = _viewModel = new EditKidViewModel();
+            _viewModel = (OrdersReportViewModel)BindingContext;
         }
 
         protected override async void OnAppearing()

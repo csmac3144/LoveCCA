@@ -5,8 +5,8 @@
              ios:Page.UseSafeArea="true"
               xmlns:vm="clr-namespace:LoveCCA.ViewModels"
              Title="{Binding Title}"
+             xmlns:local="clr-namespace:LoveCCA.ViewModels"  
              xmlns:model="clr-namespace:LoveCCA.Models"  
-             Shell.PresentationMode="ModalAnimated"
              x:Class="LoveCCA.Views.StaffReportsPage">
     <ContentPage.BindingContext>
         <vm:StaffReportsViewModel />
@@ -21,36 +21,36 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <CollectionView x:Name="collectionView"
-                ItemsSource="{Binding Reports}">
-                <CollectionView.Header>
-                    <StackLayout Orientation="Horizontal" Padding="18">
-                        <Label FontAttributes="Bold" Text="Name" HorizontalOptions="StartAndExpand"/>
-                        <Label FontAttributes="Bold" Text="Grade" HorizontalOptions="EndAndExpand"/>
-                    </StackLayout>
-                </CollectionView.Header>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid BackgroundColor="White" 
-                            Padding="10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="8*"/>
-                            </Grid.ColumnDefinitions>
-                            <StackLayout Orientation="Horizontal" Padding="10">
-                                <Label Text="{Binding Icon}" HorizontalOptions="StartAndExpand"/>
-                                <Label Text="{Binding Description}" WidthRequest="40" HorizontalTextAlignment="End" HorizontalOptions="End"/>
-                            </StackLayout>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding SelectCommand}" CommandParameter="{Binding .}">
-                                </TapGestureRecognizer>
-                            </Grid.GestureRecognizers>
-
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <ScrollView Grid.Row="1">
+                    <CollectionView x:Name="ReportsListView"
+                ItemsSource="{Binding Reports}"
+                SelectionMode="Single">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand"
+                                             Padding="10" x:DataType="model:ReportsModel">
+                                    <Label FontSize="60" VerticalTextAlignment="Center" Text="{Binding Icon}" 
+                            LineBreakMode="NoWrap" />
+                                    <Label FontSize="Title" VerticalTextAlignment="Center"  Text="{Binding Description}" 
+                            LineBreakMode="NoWrap"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:StaffReportsViewModel}}, Path=ItemTappedCommand}"		
+                                CommandParameter="{Binding .}">
+                                        </TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+            </Grid>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

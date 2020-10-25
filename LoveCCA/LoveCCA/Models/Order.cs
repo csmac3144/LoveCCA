@@ -16,5 +16,6 @@ namespace LoveCCA.Models
         public string ProductDescription { get; set; }
         public int Quantity { get; set; }
         public string SelectedProductID { get; set; }
+        public string GradeId { get; set; }
     }
 }

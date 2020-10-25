@@ -19,5 +19,6 @@ namespace LoveCCA.Models
         public List<SpecialDay> SpecialDays { get; set; }
         public List<MealWeekRotation> MealWeekMenuRotationSchedule { get; set; }
         public List<HotLunchMenu> HotLunchMenu { get; set; }
+        public List<Grade> Grades { get; set; }
     }
 }

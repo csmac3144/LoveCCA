@@ -4,6 +4,7 @@ using LoveCCA.Services;
 using LoveCCA.Views;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -15,7 +16,7 @@ namespace LoveCCA.ViewModels
         {
             Title = "Services";
             var services = new AvailableServices();
-            Items = services.Services;
+            Items = services.Services.Where(s => s.Active).ToList();
             ItemTapped = new Command<ServicesModel>(OnItemSelected);
 
         }

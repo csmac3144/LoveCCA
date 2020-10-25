@@ -49,7 +49,7 @@
                               Padding="10">
                                 <StackLayout Orientation="Horizontal" Padding="10">
                                     <Label Text="{Binding Name}" HorizontalOptions="StartAndExpand"/>
-                                    <Label Text="{Binding Grade}" WidthRequest="40" HorizontalTextAlignment="End" HorizontalOptions="End"/>
+                                    <Label Text="{Binding GradeName}" WidthRequest="80" HorizontalTextAlignment="End" HorizontalOptions="End"/>
                                 </StackLayout>
                             </Grid>
                         </SwipeView>

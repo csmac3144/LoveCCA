@@ -10,6 +10,9 @@ namespace LoveCCA.Services
 {
     class ProductService
     {
+        private static List<string> _productClasses { get; set; }
+
+
         public static async Task<List<Product>> LoadProducts(string name)
         {
             try
@@ -66,6 +69,13 @@ namespace LoveCCA.Services
             }
         }
 
+        public static async Task<List<string>> GetProductClasses()
+        {
+            if (_productClasses == null)
+                await LoadProducts();
+            return _productClasses;
+        }
+
         public static async Task<List<Product>> LoadProducts()
         {
             try
@@ -75,7 +85,10 @@ namespace LoveCCA.Services
                             .GetCollection("products")
                             .GetDocumentsAsync();
 
-                return query.ToObjects<Product>().ToList();
+                var products = query.ToObjects<Product>().ToList();
+                _productClasses = products.Select(p => p.Name).Distinct().ToList();
+                return products;
+
             }
             catch (System.Exception)
             {

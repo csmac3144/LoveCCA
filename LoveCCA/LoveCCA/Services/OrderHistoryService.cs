@@ -1,4 +1,5 @@
 ﻿using LoveCCA.Models;
+using LoveCCA.Views;
 using Plugin.CloudFirestore;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace LoveCCA.Services
         Task<string> SaveMilkOrder(Day day, bool value);
         Task CompletePendingOrders();
         Task<string> SaveMealOrder(Day day);
+        Task<List<Order>> OrderQuery(DateTime date, string productType, Grade grade);
     }
 
     public class OrderHistoryService : IOrderHistoryService
@@ -58,10 +60,25 @@ namespace LoveCCA.Services
                 OrderDate = DateTime.Now.Date,
                 Status = (int)day.OrderStatus,
                 Quantity = 1,
-                SelectedProductID = day.SelectedProduct?.Id
+                SelectedProductID = day.SelectedProduct?.Id,
+                GradeId = day.OrderKid?.Grade?.GradeId
             };
             order = await AppendOrder(order);
             return order.Id;
+        }
+        public async Task<List<Order>> OrderQuery(DateTime date, string productType, Grade grade )
+        {
+            var query = await CrossCloudFirestore.Current
+                        .Instance
+                        .GetCollection("orders")
+                        .WhereEqualsTo("Status", (int)OrderStatus.Completed)
+                        .WhereEqualsTo("DeliveryDate", date)
+                        .WhereEqualsTo("ProductType", productType)
+                        .WhereEqualsTo("GradeId", grade.GradeId)
+                        .OrderBy("OrderDate", false)
+                        .GetDocumentsAsync();
+
+            return query.ToObjects<Order>().ToList();
         }
 
         private async Task<string> UpdateOrderStatus(string id, int status)

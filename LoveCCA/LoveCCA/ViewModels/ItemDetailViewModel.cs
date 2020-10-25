@@ -43,6 +43,7 @@ namespace LoveCCA.ViewModels
         {
             try
             {
+                await Task.Yield();
                 //var item = await DataStore.GetItemAsync(itemId);
                 //Id = item.Id;
                 //Text = item.Text;

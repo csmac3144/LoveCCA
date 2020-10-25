@@ -1,5 +1,6 @@
 ﻿using LoveCCA.Models;
 using LoveCCA.Services;
+using LoveCCA.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,19 +10,24 @@ namespace LoveCCA.ViewModels
 {
     public class StaffReportsViewModel : BaseViewModel
     {
-        //public Command DoneCommand { get; }
-        public Command SelectCommand { get; }
+        public Command<ReportsModel> ItemTappedCommand { get; }
 
         public StaffReportsViewModel()
         {
             Title = "CCA Staff Reports";
             Reports = (new AvailableServices().Reports);
-            SelectCommand = new Command(ServiceSelected);
+            ItemTappedCommand = new Command<ReportsModel>(ServiceSelected);
         }
 
-        private void ServiceSelected(object obj)
+        private async void ServiceSelected(ReportsModel report)
         {
-            throw new NotImplementedException();
+            switch (report.Id)
+            {
+                case 0: // Weekly Orders
+                    await Shell.Current.GoToAsync($"{nameof(OrdersReportPage)}");
+
+                    break;
+            }
         }
 
         public List<ReportsModel> Reports { get; }

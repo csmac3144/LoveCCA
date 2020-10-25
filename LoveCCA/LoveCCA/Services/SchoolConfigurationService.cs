@@ -228,7 +228,7 @@ namespace LoveCCA.Services
                 new Product { Id = "2020-0015",
                 ShortDescription = "Milk", Name = "Milk", Glyph = "🥛", MenuIndex = 0,
                 Description = "Single Serving of Milk", 
-                Price = 0.45M }
+                Price = 0.4M }
             };
 
             await ProductService.UpdateProducts(prods);
@@ -275,7 +275,16 @@ namespace LoveCCA.Services
                 new SpecialDay { Date = new DateTime(2021,6,18), Glyph="🏆", Description = "Awards Night (Location/Time TBA)"},
             };
 
-
+            var grades = new List<Grade>
+            {
+                new Grade {GradeId = "grade_primary", Name = "Pre-Primary/Primary", Teacher = "Mrs. Francien Zijlstra", Grades = new List<string>{ "Pre-primary", "Primary" } },
+                new Grade {GradeId = "grade_1_2", Name = "1-2", Teacher = "Mrs. Heather Wood", Grades = new List<string>{ "Primary" } },
+                new Grade {GradeId = "grade_3_4", Name = "3-4", Teacher = "Miss Stephanie Stokdijk", Grades = new List<string>{ "3", "4" } },
+                new Grade {GradeId = "grade_5_6", Name = "5-6", Teacher = "Miss Linda Dopson", Grades = new List<string>{ "5", "6" } },
+                new Grade {GradeId = "grade_7_8", Name = "7-8", Teacher = "Mrs. Angela Wellard", Grades = new List<string>{ "7", "8" } },
+                new Grade {GradeId = "grade_9_10", Name = "9-10", Teacher = "Mrs. Deanna Campbell ", Grades = new List<string>{ "9", "10" } },
+                new Grade {GradeId = "grade_11_12", Name = "11-12", Teacher = "Mr. Colin Murphy", Grades = new List<string>{ "11", "12" } }
+            };
 
             var settings = new SchoolYearConfiguration();
             settings.YearStart = new DateTime(2020, 9, 9);
@@ -283,6 +292,7 @@ namespace LoveCCA.Services
             settings.SpecialDays = specialDays;
             settings.MealWeekMenuRotationSchedule = slots;
             settings.HotLunchMenu = items;
+            settings.Grades = grades;
             settings.Id = "2020-0001";
             await UpdateSchoolSettings(settings);
         }
