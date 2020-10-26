@@ -26,6 +26,7 @@ namespace LoveCCA.Services
             _reports = new List<ReportsModel>
             {
                 new ReportsModel {Id = 0, Icon = "📝", Description = "Weekly Orders", Active = true},
+                new ReportsModel {Id = 1, Icon = "🤒", Description = "Absence Reports", Active = true},
             };
 
 

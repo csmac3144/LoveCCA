@@ -21,6 +21,10 @@
 
     <ContentPage.Content>
         <StackLayout>
+            <ContentView Padding="8">
+                <Label Text="Swipe right to delete a student" FontSize="Micro"/>
+            </ContentView>
+
             <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" HorizontalOptions="FillAndExpand">
                 <Button Text="Add Child" Command="{Binding AddCommand}" HorizontalOptions="FillAndExpand"/>
                 <Button Text="Done" Command="{Binding DoneCommand}" HorizontalOptions="FillAndExpand"/>

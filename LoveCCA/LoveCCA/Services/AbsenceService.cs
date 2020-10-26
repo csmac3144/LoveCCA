@@ -2,6 +2,8 @@
 using Plugin.CloudFirestore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +19,32 @@ namespace LoveCCA.Services
                         .GetCollection("absencereports")
                         .GetDocument(report.Id)
                         .SetDataAsync(report);
+        }
+        public async Task<List<AbsenceReport>> GetReports()
+        {
+            var query = await CrossCloudFirestore.Current
+                        .Instance
+                        .GetCollection("absencereports")
+                        .OrderBy("Date", true)
+                        .GetDocumentsAsync();
+
+            return query.ToObjects<AbsenceReport>().ToList();
+        }
+
+        public async Task DeleteReport(AbsenceReport report)
+        {
+            try
+            {
+                await CrossCloudFirestore.Current
+                                         .Instance
+                                         .GetCollection("absencereports")
+                                         .GetDocument(report.Id)
+                                         .DeleteDocumentAsync();
+            }
+            catch (Exception)
+            {
+                Debug.WriteLine("Error deleting order");
+            }
         }
     }
 }

@@ -88,6 +88,29 @@ namespace LoveCCA.Services
                     Console.WriteLine("Intial registration of notifications complete;");
                 }
 
+                bool subscribedAsStaff = false;
+                result = await StorageVault.GetValue("subscribedToStaffNotifications");
+                if (result != null && bool.Parse(result))
+                {
+                    subscribedAsStaff = true;
+                }
+
+                if (CurrentUserProfile.IsStaffMember && !subscribedAsStaff)
+                {
+                    PushNotificationService.Instance.UnsubscribeAll();
+                    PushNotificationService.Instance.Subscribe(new string[] { "urgent", "information", "staff" });
+                    await StorageVault.SetValue("subscribedToStaffNotifications", "true");
+                    Console.WriteLine("Registered for staff notifications");
+                }
+
+                if (!CurrentUserProfile.IsStaffMember && subscribedAsStaff)
+                {
+                    PushNotificationService.Instance.UnsubscribeAll();
+                    PushNotificationService.Instance.Subscribe(new string[] { "urgent", "information"});
+                    await StorageVault.SetValue("subscribedToStaffNotifications", "false");
+                    Console.WriteLine("Cleared registration for staff notifications");
+                }
+
             }
             catch (Exception)
             {

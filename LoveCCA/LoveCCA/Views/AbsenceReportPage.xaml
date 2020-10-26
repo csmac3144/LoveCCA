@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+              xmlns:vm="clr-namespace:LoveCCA.ViewModels"
+             Title="{Binding Title}"
+             x:Class="LoveCCA.Views.AbsenceReportPage">
+
+    <ContentPage.BindingContext>
+        <vm:AbsenceReportViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#10448C</Color>
+            <Color x:Key="Accent">#D9E7F3</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ContentView Padding="8">
+                <Label Text="Swipe right to delete a report" FontSize="Micro"/>
+            </ContentView>
+            <CollectionView x:Name="collectionView" ItemsSource="{Binding Reports}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView Padding="8">
+                            <SwipeView.LeftItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Delete"
+                                IconImageSource="cancel.png"
+                                BackgroundColor="LightPink"
+                                            Invoked="SwipeItem_Invoked"/>
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+                            <StackLayout>
+                                <Grid BackgroundColor="White" Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30*"/>
+                                        <ColumnDefinition Width="70*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Student" FontAttributes="Bold"/>
+                                    <Label Grid.Row="1" Grid.Column="0"  Text="Reported By" FontAttributes="Bold" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding StudentName}" />
+                                    <Label Grid.Row="1" Grid.Column="1"  Text="{Binding ReportedBy}" />
+                                    <Label Grid.Row="2" Grid.Column="0" Text="Grade" FontAttributes="Bold" />
+                                    <Label Grid.Row="3" Grid.Column="0"  Text="Date" FontAttributes="Bold" />
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding Grade}" />
+                                    <Label Grid.Row="3" Grid.Column="1"  Text="{Binding Date}" />
+                                </Grid>
+                                <BoxView Opacity="0.2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#10448C"/>
+                            </StackLayout>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

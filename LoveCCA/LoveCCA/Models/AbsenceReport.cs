@@ -15,5 +15,13 @@ namespace LoveCCA.Models
         public DateTime Date { get; set; }
         public string Comments { get; set; }
         public string ParentEmail { get; internal set; }
+        [Ignored]
+        public string ReportedBy {  get
+            {
+                if (string.IsNullOrEmpty(ParentName))
+                    return ParentEmail;
+                return $"{ParentName} ({ParentEmail})";
+            } 
+        }
     }
 }
