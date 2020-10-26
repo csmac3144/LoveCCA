@@ -17,5 +17,17 @@ namespace LoveCCA.Models
         public int Quantity { get; set; }
         public string SelectedProductID { get; set; }
         public string GradeId { get; set; }
+        [Ignored]
+        public string KidName => Kid?.Name;
+        [Ignored]
+        public string ProductLabel
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(ProductDescription))
+                    return $"{Quantity} x {ProductType}";
+                return $"{Quantity} x {ProductDescription}";
+            }
+        }
     }
 }

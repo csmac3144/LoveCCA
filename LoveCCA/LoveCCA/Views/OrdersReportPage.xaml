@@ -52,12 +52,11 @@
                 SelectionMode="Single">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand"
-                                             Padding="10" x:DataType="model:Order">
-                                    <Label FontSize="60" VerticalTextAlignment="Center" Text="{Binding Email}" 
-                            LineBreakMode="NoWrap" />
-                                    <Label FontSize="Title" VerticalTextAlignment="Center"  Text="{Binding ProductDescription}" 
-                            LineBreakMode="NoWrap"/>
+                                <StackLayout Spacing="8"
+                                             Padding="8" x:DataType="model:Order">
+                                    <Label Text="{Binding KidName}" FontSize="Medium" FontAttributes="Bold" />
+                                    <Label VerticalTextAlignment="Center"  Text="{Binding ProductLabel}"/>
+                                    <BoxView Opacity="0.2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#10448C"/>
                                 </StackLayout>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>

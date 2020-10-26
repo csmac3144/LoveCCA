@@ -11,14 +11,13 @@ using Xamarin.Forms.Xaml;
 namespace LoveCCA.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OrdersReportPage : ContentPage
+    public partial class StaffPage : ContentPage
     {
-        private OrdersReportViewModel _viewModel;
-
-        public OrdersReportPage()
+        StaffViewModel _viewModel;
+        public StaffPage()
         {
             InitializeComponent();
-            _viewModel = (OrdersReportViewModel)BindingContext;
+            _viewModel = BindingContext as StaffViewModel;
         }
 
         protected override async void OnAppearing()
@@ -27,5 +26,10 @@ namespace LoveCCA.Views
             await _viewModel.OnAppearing();
         }
 
+        protected override async void OnDisappearing()
+        {
+            base.OnDisappearing();
+            await _viewModel.OnDisappearing();
+        }
     }
 }

@@ -16,10 +16,11 @@ namespace LoveCCA.Services
                 new ServicesModel {Id = 1,  Icon = "🥛", Description = "Order Milk", Active = true},
                 new ServicesModel {Id = 2,  Icon = "📅", Description = "School Calendar", Active = true},
                 new ServicesModel {Id = 3,  Icon = "🙏", Description = "Prayer Requests", Active = false},
-                new ServicesModel {Id = 4,  Icon = "🤒", Description = "Report Absence", Active = false},
+                new ServicesModel {Id = 4,  Icon = "🤒", Description = "Report Absence", Active = true},
                 new ServicesModel {Id = 5,  Icon = "🎟", Description = "Buy Tickets", Active = false},
                 new ServicesModel {Id = 6,  Icon = "😇", Description = "Donate To CCA!", Active = false},
-                new ServicesModel {Id = 7,  Icon = "📋", Description = "CCA Staff Reports", Active = true, IsRestrictedToStaff = true}
+                new ServicesModel {Id = 7,  Icon = "📋", Description = "CCA Admin Reports", Active = true, IsRestrictedToStaff = true},
+                new ServicesModel {Id = 8,  Icon = "👩‍🏫", Description = "CCA Staff", Active = true, IsRestrictedToStaff = true}
             };
 
             _reports = new List<ReportsModel>

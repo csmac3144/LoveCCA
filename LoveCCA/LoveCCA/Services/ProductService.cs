@@ -11,26 +11,33 @@ namespace LoveCCA.Services
     class ProductService
     {
         private static List<string> _productClasses { get; set; }
+        private static List<Product> _products { get; set; }
 
 
         public static async Task<List<Product>> LoadProducts(string name)
         {
-            try
+            if (_products == null)
             {
-                var query = await CrossCloudFirestore.Current
-                            .Instance
-                            .GetCollection("products")
-                            .WhereEqualsTo("Name", name)
-                            .GetDocumentsAsync();
-
-                return query.ToObjects<Product>().ToList();
+                await LoadProducts();
             }
-            catch (System.Exception)
-            {
+            return _products.Where(p => p.Name == name).ToList();
 
-                System.Diagnostics.Debug.WriteLine("Error loading products");
-                return null;
-            }
+            //try
+            //{
+            //    var query = await CrossCloudFirestore.Current
+            //                .Instance
+            //                .GetCollection("products")
+            //                .WhereEqualsTo("Name", name)
+            //                .GetDocumentsAsync();
+
+            //    return query.ToObjects<Product>().ToList();
+            //}
+            //catch (System.Exception)
+            //{
+
+            //    System.Diagnostics.Debug.WriteLine("Error loading products");
+            //    return null;
+            //}
         }
 
         public static async Task UpdateProducts(List<Product> products)
@@ -78,6 +85,9 @@ namespace LoveCCA.Services
 
         public static async Task<List<Product>> LoadProducts()
         {
+            if (_products != null)
+                return _products;
+
             try
             {
                 var query = await CrossCloudFirestore.Current
@@ -86,6 +96,7 @@ namespace LoveCCA.Services
                             .GetDocumentsAsync();
 
                 var products = query.ToObjects<Product>().ToList();
+                _products = products;
                 _productClasses = products.Select(p => p.Name).Distinct().ToList();
                 return products;
 

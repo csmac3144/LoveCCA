@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:vm="clr-namespace:LoveCCA.ViewModels"
+             xmlns:model="clr-namespace:LoveCCA.Models"  
+             xmlns:local="clr-namespace:LoveCCA.Views"  
+             Shell.PresentationMode="ModalAnimated"
+             x:Class="LoveCCA.Views.AbsencePage">
+    <ContentPage.BindingContext>
+        <vm:AbsenceViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#10448C</Color>
+            <Color x:Key="Accent">#D9E7F3</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="10" HorizontalOptions="FillAndExpand" Padding="10">
+            <Picker x:Name="ChildPicker" ItemsSource="{Binding Kids}" ItemDisplayBinding="{Binding Name}"
+                    SelectedItem="{Binding SelectedStudent}" HorizontalOptions="StartAndExpand" />
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand">
+                <Label Text="Date" VerticalTextAlignment="Center"/>
+                <DatePicker Date="{Binding SelectedDate}" />
+            </StackLayout>
+            <Editor Placeholder="Comments (Optional)" HeightRequest="80" Text="{Binding Text}" HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" HorizontalOptions="FillAndExpand">
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Submit" Command="{Binding SubmitCommand}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

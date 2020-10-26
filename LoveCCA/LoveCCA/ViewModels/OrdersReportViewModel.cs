@@ -24,7 +24,8 @@ namespace LoveCCA.ViewModels
 
         private async void OnRunCommand(object obj)
         {
-            var orders = await _orderHistoryService.OrderQuery(SelectedDate, Products.ToArray()[SelectedProductIndex], Grades.ToArray()[SelectedGradeIndex]);
+            Orders = await _orderHistoryService.OrderQuery(SelectedDate, Products.ToArray()[SelectedProductIndex], Grades.ToArray()[SelectedGradeIndex]);
+            OnPropertyChanged(nameof(Orders));
         }
 
         private async void OnDoneCommand(object obj)
@@ -66,12 +67,17 @@ namespace LoveCCA.ViewModels
                 });
             }
         }
-        public List<string> Products { get; private set; } // TODO
+        public List<string> Products { get; private set; } 
         public List<Grade> Grades { get; private set; }
-        public List<Order> Orders { get; }
+        public List<Order> Orders { get; private set; }
         public DateTime SelectedDate { get; set; }
+
+        private bool _init;
         public async Task OnAppearing()
         {
+            if (_init)
+                return;
+            _init = true;
             var config = await SchoolConfigurationService.Instance.GetSchoolConfiguration();
             Grades = config.Grades;
             OnPropertyChanged(nameof(Grades));

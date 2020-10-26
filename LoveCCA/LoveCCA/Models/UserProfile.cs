@@ -31,6 +31,27 @@ namespace LoveCCA.Models
         //public bool UrgentNotificationsOnly { get; internal set; }
         public List<Order> OrderHistory { get; set; }
         public List<string> FCMTokens { get; internal set; }
-        public bool IsStaffMember { get; set; }
+        private bool _staff;
+        public bool IsStaffMember { 
+            get
+            {
+                return _staff;
+            }
+            set
+            {
+                _staff = value;
+                IsDirty = true;
+            }
+        }
+        [Ignored]
+        public string UserProfileLabel { get
+            {
+                if (string.IsNullOrEmpty(Name))
+                    return Email;
+                return Name;
+            } 
+        }
+        [Ignored]
+        public bool IsDirty { get; set; }
     }
 }

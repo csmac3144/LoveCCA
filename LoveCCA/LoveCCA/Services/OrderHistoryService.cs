@@ -51,16 +51,19 @@ namespace LoveCCA.Services
                 await RemoveOrder(day.OrderId);
             }
 
+            var product = (await ProductService.LoadProducts()).FirstOrDefault(p => p.Id == day.SelectedProductID);
+
             var order = new Order
             {
                 Email = UserProfileService.Instance.CurrentUserProfile.Email,
                 Kid = day.OrderKid,
                 ProductType = day.OrderProductType,
+                ProductDescription = product.ShortDescription,
                 DeliveryDate = day.Date.Date,
                 OrderDate = DateTime.Now.Date,
                 Status = (int)day.OrderStatus,
                 Quantity = 1,
-                SelectedProductID = day.SelectedProduct?.Id,
+                SelectedProductID = product.Id,
                 GradeId = day.OrderKid?.Grade?.GradeId
             };
             order = await AppendOrder(order);

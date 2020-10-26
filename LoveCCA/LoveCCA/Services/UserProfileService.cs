@@ -33,6 +33,17 @@ namespace LoveCCA.Services
 
         public UserProfile CurrentUserProfile { get; private set; }
 
+        public async Task<List<UserProfile>> GetUserProfiles()
+        {
+            var query = await CrossCloudFirestore.Current
+                     .Instance
+                     .GetCollection("user_profiles")
+                     .GetDocumentsAsync();
+
+            return query.ToObjects<UserProfile>().ToList();
+
+        }
+
         public async Task LoadUserProfile(string email)
         {
             try
@@ -81,6 +92,22 @@ namespace LoveCCA.Services
             catch (Exception)
             {
                 
+            }
+        }
+
+        public async Task UpdateStaffStatus(UserProfile user)
+        {
+            try
+            {
+                await CrossCloudFirestore.Current
+                         .Instance
+                         .GetCollection("user_profiles")
+                         .GetDocument(user.Id)
+                         .UpdateDataAsync(new { IsStaffMember = user.IsStaffMember });
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error updating profile status " + ex.Message);
             }
         }
 
@@ -153,7 +180,7 @@ namespace LoveCCA.Services
         public async Task AddKid(Student kid)
         {
             if (string.IsNullOrEmpty(kid.Id))
-                kid.Id = $"{kid.LastName.ToLower()}_{kid.FirstName.ToLower()}_{kid.Grade}";
+                kid.Id = $"{kid.LastName.ToLower()}_{kid.FirstName.ToLower()}_{kid.Grade.Name}";
             if (CurrentUserProfile != null)
             {
                 if (CurrentUserProfile.Kids != null)

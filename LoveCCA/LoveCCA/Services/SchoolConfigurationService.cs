@@ -278,7 +278,7 @@ namespace LoveCCA.Services
             var grades = new List<Grade>
             {
                 new Grade {GradeId = "grade_primary", Name = "Pre-Primary/Primary", Teacher = "Mrs. Francien Zijlstra", Grades = new List<string>{ "Pre-primary", "Primary" } },
-                new Grade {GradeId = "grade_1_2", Name = "1-2", Teacher = "Mrs. Heather Wood", Grades = new List<string>{ "Primary" } },
+                new Grade {GradeId = "grade_1_2", Name = "1-2", Teacher = "Mrs. Heather Wood", Grades = new List<string>{ "1", "2" } },
                 new Grade {GradeId = "grade_3_4", Name = "3-4", Teacher = "Miss Stephanie Stokdijk", Grades = new List<string>{ "3", "4" } },
                 new Grade {GradeId = "grade_5_6", Name = "5-6", Teacher = "Miss Linda Dopson", Grades = new List<string>{ "5", "6" } },
                 new Grade {GradeId = "grade_7_8", Name = "7-8", Teacher = "Mrs. Angela Wellard", Grades = new List<string>{ "7", "8" } },

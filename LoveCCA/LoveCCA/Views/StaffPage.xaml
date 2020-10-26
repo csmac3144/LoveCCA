@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoveCCA.Views.StaffPage"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+            xmlns:vm="clr-namespace:LoveCCA.ViewModels"
+             Title="{Binding Title}">
+
+
+    <ContentPage.BindingContext>
+        <vm:StaffViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#10448C</Color>
+            <Color x:Key="Accent">#D9E7F3</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="collectionView"
+                ItemsSource="{Binding Users}">
+                <CollectionView.Header>
+                    <StackLayout Orientation="Horizontal" Padding="18">
+                        <Label FontAttributes="Bold" Text="Account" HorizontalOptions="StartAndExpand"/>
+                        <Label FontAttributes="Bold" Text="Staff" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="White"
+                            Padding="10">
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Label Text="{Binding UserProfileLabel}" HorizontalOptions="StartAndExpand"/>
+                                <Switch IsToggled="{Binding IsStaffMember}" WidthRequest="80" HorizontalOptions="End"/>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
