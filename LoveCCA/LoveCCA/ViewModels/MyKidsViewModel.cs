@@ -15,7 +15,7 @@ namespace LoveCCA.ViewModels
         public Command DoneCommand { get; }
         public MyKidsViewModel()
         {
-            Title = "My Kids";
+            Title = "My CCA Students";
             DeleteCommand = new Command(OnDelete);
             AddCommand = new Command(async () => await OnAdd());
             DoneCommand = new Command(async () => await OnDone());
