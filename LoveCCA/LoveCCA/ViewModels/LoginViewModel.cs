@@ -52,7 +52,7 @@ namespace LoveCCA.ViewModels
                     ClearFields();
                     if (await LoginService.Instance.IsCurrentUserVerified(refresh: false))
                     {
-                        await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                        await Shell.Current.GoToAsync($"//{nameof(ServicesPage)}");
                     }
                     else
                     {

@@ -1,7 +1,5 @@
 ﻿using Plugin.CloudFirestore.Attributes;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LoveCCA.Models
 {
@@ -23,5 +21,9 @@ namespace LoveCCA.Models
                 return $"{ParentName} ({ParentEmail})";
             } 
         }
+
+        public DateTime ReportedDate { get; set; }
+        [Ignored]
+        public string ReportedDateLabel => ReportedDate.ToLocalTime().ToString("g");
     }
 }

@@ -16,6 +16,7 @@ namespace LoveCCA
             InitializeComponent();
 
 
+            //Routing.RegisterRoute(nameof(AboutPage), typeof(AboutPage));
             Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
             Routing.RegisterRoute(nameof(MilkOrderPage), typeof(MilkOrderPage));
             Routing.RegisterRoute(nameof(MealOrderPage), typeof(MealOrderPage));
@@ -75,6 +76,11 @@ namespace LoveCCA
         {
             Shell.Current.FlyoutIsPresented = false;
             await Shell.Current.GoToAsync($"{nameof(MyKidsPage)}");
+        }
+
+        private async void About_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"{nameof(AboutPage)}");
         }
     }
 }

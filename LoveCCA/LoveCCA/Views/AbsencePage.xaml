@@ -26,7 +26,7 @@
                 <Label Text="Date" VerticalTextAlignment="Center"/>
                 <DatePicker Date="{Binding SelectedDate}" />
             </StackLayout>
-            <Editor Placeholder="Comments (Optional)" HeightRequest="80" Text="{Binding Text}" HorizontalOptions="FillAndExpand"/>
+            <Entry Placeholder="Comments (Optional)" Text="{Binding Text}" HorizontalOptions="FillAndExpand" MaxLength="50"/>
             <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" HorizontalOptions="FillAndExpand">
                 <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
                 <Button Text="Submit" Command="{Binding SubmitCommand}" HorizontalOptions="FillAndExpand"/>

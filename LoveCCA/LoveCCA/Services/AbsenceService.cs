@@ -28,7 +28,8 @@ namespace LoveCCA.Services
                         .OrderBy("Date", true)
                         .GetDocumentsAsync();
 
-            return query.ToObjects<AbsenceReport>().ToList();
+            var reports = query.ToObjects<AbsenceReport>().ToList();
+            return reports;
         }
 
         public async Task DeleteReport(AbsenceReport report)

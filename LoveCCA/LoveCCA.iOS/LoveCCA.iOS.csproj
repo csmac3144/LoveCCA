@@ -75,6 +75,7 @@
     <Compile Include="AuthIOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\DatePickerRenderer.cs" />
     <Compile Include="Services\PayPalService.cs" />
     <None Include="Entitlements.plist" />
     <BundleResource Include="GoogleService-Info.plist" />
@@ -292,4 +293,9 @@
   <ItemGroup>
     <BundleResource Include="Resources\password%402x.png" />
   </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

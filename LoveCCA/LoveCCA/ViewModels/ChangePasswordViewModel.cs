@@ -60,7 +60,7 @@ namespace LoveCCA.ViewModels
                 if (await LoginService.Instance.UpdatePassword(NewPassword))
                 {
                     await StorageVault.SetCredentials(currentCredentials.Item1, NewPassword);
-                    await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                    await Shell.Current.GoToAsync($"//{nameof(ServicesPage)}");
                 } 
                 else
                 {

@@ -52,7 +52,7 @@ namespace LoveCCA.ViewModels
         {
             if (await LoginService.Instance.IsCurrentUserVerified(refresh: true))
             {
-                await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                await Shell.Current.GoToAsync($"//{nameof(ServicesPage)}");
             }
             else
             {

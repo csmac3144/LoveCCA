@@ -36,7 +36,7 @@
                                 </SwipeItems>
                             </SwipeView.LeftItems>
                             <StackLayout>
-                                <Grid BackgroundColor="White" Padding="10">
+                                <Grid BackgroundColor="White" Padding="10" HeightRequest="200">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="30*"/>
                                         <ColumnDefinition Width="70*"/>
@@ -45,16 +45,21 @@
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" Grid.Column="0" Text="Student" FontAttributes="Bold"/>
-                                    <Label Grid.Row="1" Grid.Column="0"  Text="Reported By" FontAttributes="Bold" />
                                     <Label Grid.Row="0" Grid.Column="1" Text="{Binding StudentName}" />
-                                    <Label Grid.Row="1" Grid.Column="1"  Text="{Binding ReportedBy}" />
-                                    <Label Grid.Row="2" Grid.Column="0" Text="Grade" FontAttributes="Bold" />
-                                    <Label Grid.Row="3" Grid.Column="0"  Text="Date" FontAttributes="Bold" />
-                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding Grade}" />
-                                    <Label Grid.Row="3" Grid.Column="1"  Text="{Binding Date}" />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="Grade" FontAttributes="Bold" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Grade}" />
+                                    <Label Grid.Row="2" Grid.Column="0"  Text="Date" FontAttributes="Bold" />
+                                    <Label Grid.Row="2" Grid.Column="1"  Text="{Binding Date, StringFormat='{0:MMMM dd}'}" />
+                                    <Label Grid.Row="3" Grid.Column="0"  Text="Reported By" FontAttributes="Bold" />
+                                    <Label Grid.Row="3" Grid.Column="1"  Text="{Binding ReportedBy}" />
+                                    <Label Grid.Row="4" Grid.Column="0"  Text="Reported On" FontAttributes="Bold" />
+                                    <Label Grid.Row="4" Grid.Column="1"  Text="{Binding ReportedDateLabel}" />
+                                    <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"  Text="{Binding Comments}" LineBreakMode="TailTruncation" />
                                 </Grid>
                                 <BoxView Opacity="0.2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#10448C"/>
                             </StackLayout>

@@ -30,7 +30,7 @@ namespace LoveCCA.ViewModels
 
         private async Task OnDone()
         {
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            await Shell.Current.GoToAsync($"//{nameof(ServicesPage)}");
         }
 
         private async void OnDelete(object obj)

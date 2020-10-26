@@ -81,8 +81,8 @@
     -->
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Services" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:ServicesPage}" />
-        <ShellContent Title="Cart" Icon="shopping_cart.png" ContentTemplate="{DataTemplate local:ShoppingCartPage}" />
+        <ShellContent Title="Services" Icon="tab_feed.png" Route="ServicesPage" ContentTemplate="{DataTemplate local:ServicesPage}" />
+        <ShellContent Title="Cart" Icon="shopping_cart.png" Route="ShoppingCartPage"  ContentTemplate="{DataTemplate local:ShoppingCartPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
@@ -92,6 +92,8 @@
     </MenuItem>
     <MenuItem Text="Sign Out" StyleClass="MenuItemLayoutStyle" Icon="exit.png"  Clicked="OnSignOutClicked">
     </MenuItem>
+    <!--<MenuItem Text="About" StyleClass="MenuItemLayoutStyle" Icon="tab_about.png"  Clicked="About_Clicked">
+    </MenuItem>-->
 
     <!--
         This defines content that won't show up in a flyout menu. When this content is active the flyout menu won't be available.

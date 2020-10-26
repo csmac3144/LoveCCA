@@ -30,6 +30,7 @@ namespace LoveCCA.ViewModels
             {
                 Id = Guid.NewGuid().ToString(),
                 Date = SelectedDate.Date,
+                ReportedDate = DateTime.Now,
                 StudentName = SelectedStudent.Name,
                 Grade = SelectedStudent.Grade.ToString(),
                 Comments = Text,
